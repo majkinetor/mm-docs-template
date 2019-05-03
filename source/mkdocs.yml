@@ -61,7 +61,9 @@ markdown_extensions:
     # Extra extensions
     - markdown_include.include:
         base_path: inc  
-    - plantuml_markdown
+    - plantuml_markdown:
+        cachedir: __pycache__
+
     - mdx_custom_span_class
 
 plugins:
