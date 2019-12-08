@@ -9,15 +9,27 @@ For more details about included tools see:
 - [PlantUML](http://plantuml.com)
 - [MathJax](https://www.mathjax.org/)
 
-## Typography
+## Text
 
-- **Bold text**
-- *Italic text*
-- ~~Strike Through~~
-- __underline__
-- ==Colored text==
-- `Inline code`
-- Hotkeys: ++enter++, ++"PgDown"++ ++"Non Existent Key"++
+### Basic effects
+
+|                Code                |       Output       |
+| ---------------------------------- | ------------------ |
+| `**Bold text**` or `__Bold text__` | **Bold text**      |
+| `*Italic text*` or `_Italic text_` | *Italic text*      |
+| `~~Strike Through~~`               | ~~Strike Through~~ |
+| `==Colored text==`                 | ==Colored text==   |
+| <code>\`Inline code\`</code>       | `Inline code`      |
+
+### Hotkeys
+
+|           Code           |         Output         |
+| ------------------------ | ---------------------- |
+| `++enter++`              | ++enter++              |
+| `++"PgDown"++`           | ++"PgDown"++           |
+| `++"Non Existent Key"++` | ++"Non Existent Key"++ |
+
+
 - Unicode: Мислим дакле постојим
 
 ## Links, footnotes and comments
