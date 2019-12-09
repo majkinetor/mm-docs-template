@@ -8,13 +8,17 @@ branches:
 #build:
 #  verbosity: minimal
 
+image: Visual Studio 2017
+
 environment:
   MM_DOCS_VERSION: 0.2.1
 
+init:
+  - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
+  - ps: $PSVersionTable
+
 install:
-- ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
-- ps: $PSVersionTable
-- ps: cinst invoke-build
+- ps: cinst invoke-build --no-progress
 
 build_script:
 - ps: Invoke-Build Build
