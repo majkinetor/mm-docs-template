@@ -18,7 +18,8 @@ init:
   - ps: $PSVersionTable
 
 install:
-- ps: cinst invoke-build --no-progress
+- cinst invoke-build --no-progress
+- ps: docker pull majkinetor/mm-docs:$Env:MM_DOCS_VERSION
 
 build_script:
 - ps: |
