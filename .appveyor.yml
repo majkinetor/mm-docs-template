@@ -21,7 +21,9 @@ install:
 - ps: cinst invoke-build --no-progress
 
 build_script:
-- ps: Invoke-Build Build
+- ps: |
+    $ErrorActionPreference = 'Continue'
+    Invoke-Build Build
 
 artifacts:
 - path: docs/site
