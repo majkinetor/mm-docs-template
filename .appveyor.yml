@@ -11,11 +11,11 @@ branches:
 image: Ubuntu
 
 init:
-- pwsh -c $PSVersionTable
+- pwsh -c '$PSVersionTable'
 
 install:
-# - pwsh -c Install-Module invoke-build -Force
 - docker pull majkinetor/mm-docs:0.2.1
+- pwsh -c 'Install-Module invoke-build -Force'
 
 build_script:
 - ps: |
