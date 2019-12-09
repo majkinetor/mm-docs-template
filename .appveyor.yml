@@ -8,18 +8,14 @@ branches:
 #build:
 #  verbosity: minimal
 
-image: Visual Studio 2017
-
-environment:
-  MM_DOCS_VERSION: 0.2.1
+image: Ubuntu
 
 init:
-  - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
-  - ps: $PSVersionTable
+- pwsh -c $PSVersionTable
 
 install:
-- cinst invoke-build --no-progress
-- ps: docker pull majkinetor/mm-docs:$Env:MM_DOCS_VERSION
+# - pwsh -c Install-Module invoke-build -Force
+- docker pull majkinetor/mm-docs:0.2.1
 
 build_script:
 - ps: |
