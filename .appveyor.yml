@@ -1,0 +1,33 @@
+# MM-DOCS template: https://github.com/majkinetor/mm-docs-template
+
+version: '{build}'
+max_jobs: 1
+branches:
+  only:
+  - master
+#build:
+#  verbosity: minimal
+
+environment:
+  MM_DOCS_VERSION: 0.2.1
+
+install:
+- ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
+- ps: $PSVersionTable
+- ps: cinst invoke-build
+
+build_script:
+- ps: Invoke-Build Build
+
+artifacts:
+- path: docs/site
+
+notifications:
+- provider: Email
+  to: $(mail_user)
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: true
+
+#on_finish:
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))

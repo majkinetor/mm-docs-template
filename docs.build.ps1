@@ -27,31 +27,6 @@ Enter-Build {
 
 task . Build
 
-# Synopsis: Get the last revision date for all files in the documentation
-task GitRevisionDates {
-    $dir = 'source/docs'
-    $out = "$dir/revision.md"
-
-"# Revizija dokumenata
-    
-**Build Date**: $((get-date -format s).Replace('T',' '))
-
-|Datum|Putanja|Komentar|
-|---|---|---|" | Out-File -Encoding utf8 $out
-
-    Get-GitRevisionDates -Path 'source/docs' -Ext '.md' -Skip '*.templates/*', '*/revision.md' | % {        
-        $fileSitePath = $_.File.Replace("$ProjectName/$dir/", "").Replace('.md','').Replace('index','')
-        $title = $fileSitePath.Replace('/', ' --> ')
-        if ($_.File.EndsWith('index.md')) {$title += 'index'}
-        
-        $comment = if (!(Test-Path (Join-Path $ProjectRoot $_.File))) { "(re)moved" }
-
-        "| {0} | [{1}](../{2}) |{3}|" -f $_.Date, $title, $fileSitePath, $comment
-    } | Out-File -Encoding utf8 -Append $out
-
-    Get-Content $out    
-}
-
 # Synopsis: Serve documentation site on localhost
 task Serve Stop, {
     $ContainerName = "$ContainerName-$aPort"
@@ -93,6 +68,32 @@ task Stop {
 
 # Synopsis: Clean generated documentation files (not docker images)
 task Clean { remove source\site, source\__pycache__ }
+
+
+# Synopsis: Get the last revision date for all files in the documentation
+task GitRevisionDates {
+    $dir = 'source/docs'
+    $out = "$dir/revision.md"
+
+"# Revisions
+    
+**Build Date**: $((get-date -format s).Replace('T',' '))
+
+|Date|Path|Comment|
+|---|---|---|" | Out-File -Encoding utf8 $out
+
+    Get-GitRevisionDates -Path 'source/docs' -Ext '.md' -Skip '*.templates/*', '*/revision.md' | % {        
+        $fileSitePath = $_.File.Replace("$ProjectName/$dir/", "").Replace('.md','').Replace('index','')
+        $title = $fileSitePath.Replace('/', ' --> ')
+        if ($_.File.EndsWith('index.md')) {$title += 'index'}
+        
+        $comment = if (!(Test-Path (Join-Path $ProjectRoot $_.File))) { "(re)moved" }
+
+        "| {0} | [{1}](../{2}) |{3}|" -f $_.Date, $title, $fileSitePath, $comment
+    } | Out-File -Encoding utf8 -Append $out
+
+    Get-Content $out    
+}
 
 function docker-run( [switch] $Interactive, [switch] $Detach, [switch] $Expose) {
     $params = @(
