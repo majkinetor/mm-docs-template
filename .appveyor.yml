@@ -24,7 +24,7 @@ artifacts:
 
 notifications:
 - provider: Email
-  to: $(mail_user)
+  to: miodrag.milic@gmail.com
   on_build_success: false
   on_build_failure: true
   on_build_status_changed: true
