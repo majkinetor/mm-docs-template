@@ -10,17 +10,17 @@ branches:
 
 image: Ubuntu
 
+environment:
+  MM_DOCS_VERSION: 0.2.1
+
 init:
-- pwsh -c '$PSVersionTable'
+- ps: $PSVersionTable
 
 install:
-- docker pull majkinetor/mm-docs:0.2.1
-- pwsh -c 'Install-Module InvokeBuild -Force'
+- ps: Install-Module InvokeBuild -Force
 
 build_script:
-- ps: |
-    $ErrorActionPreference = 'Continue'
-    Invoke-Build Build
+- ps: Invoke-Build Build
 
 artifacts:
 - path: docs/site
