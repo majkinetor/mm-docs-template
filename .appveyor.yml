@@ -15,8 +15,7 @@ init:
 
 install:
 - docker pull majkinetor/mm-docs:0.2.1
-- pwsh -c 'Register-PSRepository -Default'
-- pwsh -c 'Install-Module invoke-build -Force'
+- pwsh -c 'Install-Module InvokeBuild -Force'
 
 build_script:
 - ps: |
