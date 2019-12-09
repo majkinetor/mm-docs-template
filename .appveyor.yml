@@ -23,7 +23,7 @@ build_script:
 - ps: Invoke-Build Build
 
 artifacts:
-- path: docs/site
+- path: source/site
 
 notifications:
 - provider: Email
