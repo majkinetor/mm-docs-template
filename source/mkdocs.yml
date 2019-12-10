@@ -1,8 +1,11 @@
 ﻿site_name: MM-DOCS
-site_url: http://localhost:8000
-site_description: MM-DOCS Test Project
+site_url: https://majkinetor.github.io/mm-docs-template/
+site_description: MM-DOCS Template
 site_author: majkinetor
 copyright: © majkinetor 2019
+
+repo_url: https://github.com/majkinetor/mm-docs-template
+edit_uri: edit/master/source/docs
 
 dev_addr: 0.0.0.0:8000
 
