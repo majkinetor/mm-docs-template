@@ -12,6 +12,7 @@ image: Ubuntu
 
 environment:
   MM_DOCS_VERSION: 0.2.1
+  MM_DOCS_ENABLE_PDF_EXPORT: true
 
   # Github token to deploy gh-pages
   access_token:
@@ -38,7 +39,7 @@ on_success:
 - git checkout -q gh-pages
 - ls -lR
 - sudo rm *.*
-- mv source/site/* .
+- sudo mv source/site/* .
 - sudo rm -rf source
 - touch .nojekyll
 - git commit --all -m 'AV'

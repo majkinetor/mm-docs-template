@@ -15,9 +15,10 @@ The documentation is created using the [mm-docs](https://github.com/majkinetor/m
 - Beautiful responsive design using the [material](https://squidfunk.github.io/mkdocs-material) theme
 - Navigational bar, TOC, search and various rich presentation functionalities
 - Rich diagrams and interface mockups using PlantUML
-- Macros can be implemented using python
+- Macros can be written in python
 - PDF export for each page or full site
 - GitLab/GitHub repository connection for editing within a browser
+- Automated AppVeyor build and deploy to GitHub pages using Ubuntu image
 
 ## Prerequisites
 
@@ -55,4 +56,4 @@ docker run --rm -v $PWD:/docs --name docs-$aPort --detach -p $aPort:$aPort $imag
 ## Notes
 
 - In order to **use internal Gitlab Docker registry**, make sure daemon setting `insecure-registries` points to the `gitlab.mycompany.com:4567`. On Windows use tray icon and *Settings -> Daemon -> Advanced*.
-- Behind the **proxy**, if you pull [Docker Hub](https://hub.docker.com) images, you need to setup proxy: *Settings -> Daemon -> Proxies*.
+- Behind the **proxy**, if you pull [Docker Hub](https://hub.docker.com) images, you need to setup docker proxy: *Settings -> Daemon -> Proxies*.

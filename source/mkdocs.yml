@@ -73,8 +73,8 @@ plugins:
     - pdf-export:
         verbose: false
         media_type: print
-        enabled_if_env: ENABLE_PDF_EXPORT
-        combined: true
+        enabled_if_env: MM_DOCS_ENABLE_PDF_EXPORT
+        combined: false
     - macros
 nav:
 - Home: index.md

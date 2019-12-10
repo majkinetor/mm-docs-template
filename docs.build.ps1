@@ -99,8 +99,9 @@ function docker-run( [switch] $Interactive, [switch] $Detach, [switch] $Expose) 
     $params = @(
         'run'
         '--rm'
-        '-v', "${pwd}:/docs"
+        '-v',    "${pwd}:/docs"
         '--name', $ContainerName
+        '--env', 'MM_DOCS_ENABLE_PDF_EXPORT'
 
         if ($Interactive) { '--interactive --tty' }
         if ($Detach)      { '--detach' }
