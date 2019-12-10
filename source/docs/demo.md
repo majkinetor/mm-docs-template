@@ -165,8 +165,23 @@ General block handling:
 
 ## Plantuml
 
+Add `plantuml` in a block code header to set code section as PlantUml source. Use `format` to specify output type:
+
+<pre>
 ```plantuml format="svg"
-title Hijerarhija
+title Hierarchy
+(1) --> (1)
+(2) --> (1)
+(4) --> (1)
+(5) --> (1)
+(7) --> (7)
+(8) --> (8)
+(6) --> (6)
+```
+</pre>
+
+```plantuml format="svg"
+title Hierarchy
 (1) --> (1)
 (2) --> (1)
 (4) --> (1)
