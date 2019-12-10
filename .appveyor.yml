@@ -35,7 +35,7 @@ on_success:
 
 - git fetch --all
 - git checkout -q gh-pages
-- rm *.*; cp source\site\* .; rm -rf source
+- rm *.*; mv source/site/* .; rm -rf source
 - touch .nojekyll
 - git commit --all -m 'AV'
 - git push
