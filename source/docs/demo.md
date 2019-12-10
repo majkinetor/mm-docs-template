@@ -347,7 +347,7 @@ The following example uses css from the custom_css file, classes `color-yellow` 
 
 ## Macros
 
-Macros are defined as variables in config file or python functions in `main.py` file.
+[More details](https://github.com/fralau/mkdocs_macros_plugin#overview).
 
 {% set acme = 'Acme Company Ltd' %}
 
@@ -359,4 +359,11 @@ Macros are defined as variables in config file or python functions in `main.py` 
 | Python variable (defined in `main.py`) | `baz = {{ baz }}`                                       |
 | Dictionary variable from config        | `company.name = {{ company.name }}`                     |
 
-{!footer.md!}
+## Includes
+
+Include other markdown files via 2 mechanisms:
+
+- `{% include 'file.md' %}`  
+Path is relative to docs directory
+- `{!file.md!}`
+Path relative to the `inc` folder
