@@ -363,7 +363,5 @@ The following example uses css from the custom_css file, classes `color-yellow` 
 
 Include other markdown files via 2 mechanisms:
 
-- `{% include 'file.md' %}`  
-Path is relative to docs directory
-- `{!file.md!}`
-Path relative to the `inc` folder
+- [Via macros plugin](https://github.com/fralau/mkdocs_macros_plugin#using-includes)
+- [Via markdown_include plugin](https://github.com/cmacmackin/markdown-include)
