@@ -13,6 +13,11 @@ image: Ubuntu
 environment:
   MM_DOCS_VERSION: 0.2.1
 
+  # Github token to deploy gh-pages
+  access_token:
+    secure: 5/3TZtHT4M8984tJhsFyLST+e/JDpc8ia871UD4hv3dD2+Kb+xnaB4wMH1WloDD1
+
+
 init:
 - ps: $PSVersionTable
 
@@ -22,8 +27,21 @@ install:
 build_script:
 - ps: Invoke-Build Build
 
+on_success:
+- git config --global credential.helper store
+- ps: Add-Content "$HOME\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+- git config --global user.email "miodrag.milic@gmail.com"
+- git config --global user.name "Miodrag Milic"
+
+- git fetch --all
+- git checkout -q gh-pages
+- rm *.*; cp source\site\* .; rm -rf source
+- touch .nojekyll
+- git commit --all -m 'AV'
+- git push
+
 artifacts:
-- path: source/site
+- path: .
 
 notifications:
 - provider: Email
