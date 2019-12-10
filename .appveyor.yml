@@ -37,11 +37,12 @@ on_success:
 
 - git fetch --all
 - git checkout -q gh-pages
-- ls -lR
+
 - sudo rm *.*
-- sudo mv source/site/* .
+- sudo cp -rf source/site/* .
 - sudo rm -rf source
 - touch .nojekyll
+
 - git commit --all -m 'AV'
 - git push
 
