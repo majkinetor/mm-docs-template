@@ -122,15 +122,18 @@ General block handling:
 
 ## Emoji
 
-[More info](https://www.emojicopy.com/)
+[List of emoji codes](https://web.archive.org/save/https://www.webfx.com/tools/emoji-cheat-sheet/)
 
-- `:tada`: :tada:
+- `:tada:` :tada:
 - `:jack_o_lantern:` :jack_o_lantern: 
 - `:alien:` :alien: 
 - `:robot_face:` :robot_face: 
 - `:smile:` :smile: 
 - `:heart:` :heart: 
 - `:thumbsup:` :thumbsup:
+
+:purple_heart: :exclamation: :clock1: :tractor: :chicken: :imp:
+
 
 ## Lists
 
