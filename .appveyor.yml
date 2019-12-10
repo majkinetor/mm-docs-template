@@ -39,7 +39,7 @@ on_success:
 - git checkout -q gh-pages
 
 - sudo rm *.*
-- sudo rm .*
+- sudo rm .appveyor .gitignore
 - sudo cp -rf source/site/* .
 - sudo rm -rf source
 - touch .nojekyll

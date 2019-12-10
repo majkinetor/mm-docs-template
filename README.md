@@ -9,7 +9,7 @@ This project is used to produce all forms of documentation for the service using
 
 The documentation is created using the [mm-docs](https://github.com/majkinetor/mm-docs) documentation bundle.
 
-View how compiled static site looks like on [demo site](https://majkinetor.github.io/mm-docs-template) or grab generated [artifact](https://ci.appveyor.com/project/majkinetor/mm-docs-template/build/artifacts)
+View how compiled static site looks like on [demo site](https://majkinetor.github.io/mm-docs-template) or grab generated [artifact](https://ci.appveyor.com/project/majkinetor/mm-docs-template/build/artifacts). Check out [pdf export](https://majkinetor.github.io/mm-docs-template/demo/demo.pdf) of [single demo page](https://majkinetor.github.io/mm-docs-template/demo).
 
 ## Features
 
