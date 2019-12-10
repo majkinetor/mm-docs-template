@@ -1,6 +1,10 @@
 # MM-DOCS Template
 
-[![Build status](https://ci.appveyor.com/api/projects/status/1sybv5w5lgywnwc4?svg=true)](https://ci.appveyor.com/project/majkinetor/mm-docs-template)
+[![Build status](https://ci.appveyor.com/api/projects/status/1sybv5w5lgywnwc4?svg=true)](https://ci.appveyor.com/project/majkinetor/mm-docs-template) 
+[![](http://transparent-favicon.info/favicon.ico)](#)
+[![](http://transparent-favicon.info/favicon.ico)](#)
+[![](http://transparent-favicon.info/favicon.ico)](#)
+[VIEW DEMO](https://majkinetor.github.io/mm-docs-template)
 
 This project is used to produce all forms of documentation for the service using Markdown and other repository friendly markup languages.
 
