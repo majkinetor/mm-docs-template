@@ -38,7 +38,8 @@ on_success:
 - git fetch --all
 - git checkout -q gh-pages
 
-- sudo rm -f *
+- sudo rm *.*
+- sudo rm .*
 - sudo cp -rf source/site/* .
 - sudo rm -rf source
 - touch .nojekyll
