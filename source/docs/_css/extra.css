@@ -5,6 +5,11 @@ img {
     margin-right: auto;
 }
 
+img.emojione {
+    box-shadow: none;
+    display: inline;
+}
+
 span.zakon {
     float: right;
 }
