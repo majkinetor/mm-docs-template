@@ -20,6 +20,7 @@ environment:
 
 init:
 - ps: $PSVersionTable
+- whoami
 
 install:
 - ps: Install-Module InvokeBuild -Force
@@ -35,6 +36,7 @@ on_success:
 
 - git fetch --all
 - git checkout -q gh-pages
+- ls -lR
 - rm *.*; mv source/site/* .; rm -rf source
 - touch .nojekyll
 - git commit --all -m 'AV'
