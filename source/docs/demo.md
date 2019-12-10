@@ -168,36 +168,56 @@ General block handling:
 Add `plantuml` in a block code header to set code section as PlantUml source. Use `format` to specify output type:
 
 <pre>
-```plantuml format="svg"
-title Hierarchy
-(1) --> (1)
-(2) --> (1)
-(4) --> (1)
-(5) --> (1)
-(7) --> (7)
-(8) --> (8)
-(6) --> (6)
-```
+``&#x60;plantuml format="svg"
+title PlantUml Demo
+left to right direction
+skinparam packageStyle rectangle
+actor customer
+actor clerk
+rectangle checkout {
+  customer -- (checkout)
+  (checkout) .> (payment) : include
+  (help) .> (checkout) : extends
+  (checkout) -- clerk
+}
+``&#x60;
 </pre>
 
 ```plantuml format="svg"
-title Hierarchy
-(1) --> (1)
-(2) --> (1)
-(4) --> (1)
-(5) --> (1)
-(7) --> (7)
-(8) --> (8)
-(6) --> (6)
+title PlantUml Demo
+left to right direction
+skinparam packageStyle rectangle
+actor customer
+actor clerk
+rectangle checkout {
+  customer -- (checkout)
+  (checkout) .> (payment) : include
+  (help) .> (checkout) : extends
+  (checkout) -- clerk
+}
 ```
 
 ## MathJax
+
+The block code:
+
+<pre>
+``&#x60;
+$$
+\frac{n!}{k!(n-k)!} = \binom{n}{k}
+$$
+``&#x60;
+</pre>
 
 $$
 \frac{n!}{k!(n-k)!} = \binom{n}{k}
 $$
 
-Lorem ipsum dolor sit amet: $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$
+---
+
+`Inline math expressions: $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$`
+
+Inline math expressions: $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$
 
 ## Admonition
 
