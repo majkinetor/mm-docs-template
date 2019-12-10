@@ -9,6 +9,12 @@ For more details about included tools see:
 - [PlantUML](http://plantuml.com)
 - [MathJax](https://www.mathjax.org/)
 
+## Customization
+
+- [Color palettes](https://squidfunk.github.io/mkdocs-material/getting-started/#color-palette)
+- [Language](https://squidfunk.github.io/mkdocs-material/getting-started/#language)
+- [Extending theme](https://squidfunk.github.io/mkdocs-material/customization/#extending-the-theme)
+
 ## Text
 
 ### Basic effects
