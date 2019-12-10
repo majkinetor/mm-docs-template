@@ -47,7 +47,7 @@ on_success:
 - git push
 
 artifacts:
-- path: '*'
+- path: source/site
 
 notifications:
 - provider: Email
