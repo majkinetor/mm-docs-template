@@ -2,14 +2,14 @@
     Invoke-Build build script
 #>
 param (
-    # Version of mm-docs image to use, by default 'latest'
-    [string] $aVersion  = (property MM_DOCS_VERSION 'latest'),
+    # Version/tag of the mm-docs image to use
+    [string] $aVersion   = (property MM_DOCS_VERSION 'latest'),
 
-    # Registry and path to use to get mm-docs image, by default majkinetor from Docker Hub
-    [string] $aRegistry = (property MM_DOCS_REGISTRY_PATH 'majkinetor'),
+    # Registry and name to use to get mm-docs image
+    [string] $aImageName = (property MM_DOCS_IMAGE_NAME 'majkinetor/mm-docs'),
 
-    # Port to use when serving on localhost, by default 8000
-    [int]    $aPort     = (property MM_DOCS_PORT 8000),
+    # Port to use when serving on localhost
+    [int]    $aPort      = (property MM_DOCS_PORT 8000),
 
     # Do not pass proxy environment variables to the docker container
     [switch] $aNoProxy
@@ -17,8 +17,8 @@ param (
 
 Enter-Build { 
     Write-Host "If you are behind the proxy use http(s)_proxy environment variables"
-    $script:ImageName     = "$aRegistry/mm-docs"
-    $script:ImageFullName = if (!$aVersion) { $ImageName } else { "${ImageName}:$aVersion" }
+
+    $script:ImageFullName = if (!$aVersion) { $aImageName } else { "${aImageName}:$aVersion" }
     $script:ServeAddress  = "0.0.0.0:$aPort" 
     $script:ProjectName   = (Split-Path -Leaf $BuildFile).Replace('.build.ps1','')
     $script:ProjectRoot   = git rev-parse --show-toplevel
@@ -30,25 +30,8 @@ task . Build
 # Synopsis: Serve documentation site on localhost
 task Serve Stop, {
     $ContainerName = "$ContainerName-$aPort"
-    docker-run mkdocs serve --dev-addr $ServeAddress -Detach -Expose 
-
-    $url = "http://localhost:$aPort"
-
-    $retryLimit = 20
-    Write-Host "Waiting for development server to start (timeout: $retryLimit): $url "
-    1..$retryLimit | % { 
-        try { $status = Invoke-WebRequest $url -Method Head -UseBasicParsing | % StatusCode } catch {}
-        if ($status -eq 200) { 
-            Write-Host "Serving from container now!"; break
-        }
-        elseif ($status -is [int]) {
-            Write-Warning "Server responded with invalid status '$status'"; break
-        }
-        elseif ($_ -eq $retryLimit) { 
-            Write-Warning "Server is not responding, it either failed or needs more then 10 seconds to start"; break
-        }
-        sleep 1
-    }   
+    docker-run mkdocs serve --dev-addr $ServeAddress -Detach -Expose
+    Wait-For "http://localhost:$aPort"
 }
 
 # Synopsis: Build documentation into static site
@@ -92,7 +75,7 @@ task GitRevisionDates {
         "| {0} | [{1}](../{2}) |{3}|" -f $_.Date, $title, $fileSitePath, $comment
     } | Out-File -Encoding utf8 -Append $out
 
-    Get-Content $out    
+    Get-Item $out
 }
 
 function docker-run( [switch] $Interactive, [switch] $Detach, [switch] $Expose) {
@@ -137,4 +120,21 @@ function Get-GitRevisionDates($Path='.', $Ext, $Skip)
     }
 
     $res | sort Date -Desc
+}
+
+function Wait-For ([string]$url, [int]$Timeout=20) {
+    Write-Host "Waiting for server response: $url"
+    1..$Timeout | % { 
+        try { $status = Invoke-WebRequest $url -Method Head -UseBasicParsing | % StatusCode } catch {}
+        if ($status -eq 200) { 
+            Write-Host "Server responded OK !"; break
+        }
+        elseif ($status -is [int]) {
+            Write-Warning "Server responded with invalid status '$status'"; break
+        }
+        elseif ($_ -eq $Timeout) { 
+            Write-Warning "Server is NOT responding"; break
+        }
+        Start-Sleep 1
+    }
 }
