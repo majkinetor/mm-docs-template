@@ -28,7 +28,7 @@ Enter-Build {
 task . Build
 
 # Synopsis: Serve documentation site on localhost
-task Serve Stop, {
+task Run Stop, {
     $ContainerName = "$ContainerName-$aPort"
     docker-run mkdocs serve --dev-addr $ServeAddress -Detach -Expose
     Wait-For "http://localhost:$aPort"
