@@ -17,7 +17,7 @@ param (
 
 Enter-Build { 
     Write-Host "If you are behind the proxy use http(s)_proxy environment variables"
-    $script:ImageName     = "$aRegistry/mm-docs"
+    $script:ImageName     = "docs-tmp"
     $script:ImageFullName = if (!$aVersion) { $ImageName } else { "${ImageName}:$aVersion" }
     $script:ServeAddress  = "0.0.0.0:$aPort" 
     $script:ProjectName   = (Split-Path -Leaf $BuildFile).Replace('.build.ps1','')

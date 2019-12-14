@@ -1,5 +1,7 @@
 ﻿# Demonstration page
 
+Date: {{ git_revision_date }}
+
 [mm-docs](https://github.com/majkinetor/mm-docs) demonstration page.
 
 For more details about included tools see:
