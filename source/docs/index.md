@@ -6,8 +6,6 @@ The documentation is created using the mm-docs docker bundle:
 
 - https://github.com/majkinetor/mm-docs
 
-View how compiled static site looks like on demo site or grab generated artifact. Check out pdf export of single demo page.
-
 ## Features
 
 - Write documentation in extended Markdown, HTML, PlantUML and other markup languages
