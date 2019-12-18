@@ -6,8 +6,6 @@ The documentation is created using the mm-docs docker bundle:
 
 - https://github.com/majkinetor/mm-docs
 
-View how compiled static site looks like on demo site or grab generated artifact. Check out pdf export of single demo page.
-
 ## Features
 
 - Write documentation in extended Markdown, HTML, PlantUML and other markup languages
@@ -31,7 +29,7 @@ View how compiled static site looks like on demo site or grab generated artifact
 To edit documentation:
 
 - Clone [new project template](https://github.com/majkinetor/mm-docs-template)
-- Start development server - run in PowerShell `Invoke-Build Run`. The command is syntax sugar for running docker containers
+- Start development server - run in PowerShell `Invoke-Build Run`. The command is syntax sugar for running docker containers.
 - Add new documents somewhere in the `source\docs` hierarchy. To be visible in navigation, add to the path to the file in `source\mkdocs.yml` section `nav`, otherwise, the page is available via direct link.
 
 To build static site run `Invoke-Build Build`.
