@@ -34,7 +34,7 @@ Within PowerShell use `Invoke-Build` (ib):
 |        Command         |                                             Description                                             |
 | ---------------------- | --------------------------------------------------------------------------------------------------- |
 | `ib Build`             | Build static site                                                                                   |
-| `ib Serve -aPort 8888` | Serve static site on port 8888 (default is 8000)<br>This enables concurrent use on several projects |
+| `ib Run -aPort 8888`   | Serve static site on port 8888 (default is 8000)<br>This enables concurrent use on several projects |
 
 Otherwise, run appropriate docker commands:
 
