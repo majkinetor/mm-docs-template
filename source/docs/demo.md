@@ -1,7 +1,5 @@
 ﻿# Demonstration page
 
-Date: {{ git_revision_date }}
-
 [mm-docs](https://github.com/majkinetor/mm-docs) demonstration page.
 
 For more details about included tools see:
@@ -363,12 +361,15 @@ The following example uses css from the custom_css file, classes `color-yellow` 
 
 ## Includes
 
-Include other markdown files via 2 mechanisms:
+You may use the include directive from jinja2, directly in your markdown code e.g.:
 
-- [Via macros plugin](https://github.com/fralau/mkdocs_macros_plugin#using-includes)
-- [Via markdown_include plugin](https://github.com/cmacmackin/markdown-include)
+<pre>
+## Paragraph
+{&#x25;include 'snippet.md' %}
+{&#x25;include 'html/content1.html' %}
+</pre>
 
-Macros plugin is much better as it recursively handles variables in partials.
+The root directory for your included files is in `docs_dir`.
 
 ## Environment variables
 
@@ -379,3 +380,5 @@ site_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]
 repo_url: !!python/object/apply:os.getenv ["CI_PROJECT_URL"]
 repo_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]
 ```
+
+{% include '_inc/footer.md' %}

@@ -63,7 +63,7 @@ markdown_extensions:
     
     # Extra extensions
     - markdown_include.include:
-        base_path: inc  
+        base_path: inc
     - plantuml_markdown:
         cachedir: __pycache__
 
@@ -71,8 +71,8 @@ markdown_extensions:
 
 plugins:
     - search
-    # - exclude:
-    #     glob: README.md
+    - exclude:
+        glob: _*.md
     - pdf-export:
         verbose: false
         media_type: print

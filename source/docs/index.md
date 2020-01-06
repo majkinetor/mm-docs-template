@@ -34,4 +34,4 @@ To edit documentation:
 
 To build static site run `Invoke-Build Build`.
 
-{!footer.md!}
+{% include '_inc/footer.md' %}
