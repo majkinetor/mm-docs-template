@@ -367,3 +367,15 @@ Include other markdown files via 2 mechanisms:
 
 - [Via macros plugin](https://github.com/fralau/mkdocs_macros_plugin#using-includes)
 - [Via markdown_include plugin](https://github.com/cmacmackin/markdown-include)
+
+Macros plugin is much better as it recursively handles variables in partials.
+
+## Environment variables
+
+Environment variables can be used inside of configuration file `mkdocs.yaml`.
+
+```
+site_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]  
+repo_url: !!python/object/apply:os.getenv ["CI_PROJECT_URL"]
+repo_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]
+```
