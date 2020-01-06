@@ -8,6 +8,7 @@ For more details about included tools see:
 - [Mkdocs Material Extensions](https://squidfunk.github.io/mkdocs-material/extensions/admonition)
 - [PlantUML](http://plantuml.com)
 - [MathJax](https://www.mathjax.org/)
+- [Jinja](https://jinja.palletsprojects.com)
 
 ## Customization
 
@@ -358,6 +359,19 @@ The following example uses css from the custom_css file, classes `color-yellow` 
 | Macro (defined in `main.py`)           | `bar(1) = {{ bar(1) }}` - `barbaz(3) = {{ barbaz(3) }}` |
 | Python variable (defined in `main.py`) | `baz = {{ baz }}`                                       |
 | Dictionary variable from config        | `company.name = {{ company.name }}`                     |
+
+## Jinja templates
+
+You can do all the work you want with Jinja2, including defining pure macros, conditionals and for loops:
+
+<pre>
+{&#x25; macro input(name, value='', type='text', size=20) -%}
+  &lt;input type="{&#123; type }}" name="{&#123; name }}" value="{&#123; value}}" size="{&#123; size }}">
+{&#x25;- endmacro %}
+
+{&#x25; input('username') }}
+{&#x25; input('password', type='password') }}
+</pre>
 
 ## Includes
 
