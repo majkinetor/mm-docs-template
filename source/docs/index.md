@@ -23,7 +23,7 @@ The documentation is created using the mm-docs docker bundle:
 
 - Docker
 - PowerShell (optional, developer friendliness)
-  - [Invoke-Build](https://www.powershellgallery.com/packages/InvokeBuild) module
+    - [Invoke-Build](https://www.powershellgallery.com/packages/InvokeBuild) module
 
 ## Quick start
 
