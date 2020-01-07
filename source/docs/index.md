@@ -22,16 +22,18 @@ The documentation is created using the mm-docs docker bundle:
 ## Prerequisites
 
 - Docker
-- PowerShell (optional, but recommended)
+- PowerShell (optional, developer friendliness)
+  - [Invoke-Build](https://www.powershellgallery.com/packages/InvokeBuild) module
 
 ## Quick start
 
 To edit documentation:
 
-- Clone [new project template](https://github.com/majkinetor/mm-docs-template)
-- Start development server - run in PowerShell `Invoke-Build Run`. The command is syntax sugar for running docker containers.
-- Add new documents somewhere in the `source\docs` hierarchy. To be visible in navigation, add to the path to the file in `source\mkdocs.yml` section `nav`, otherwise, the page is available via direct link.
+- Clone/use [new project template](https://github.com/majkinetor/mm-docs-template)
+- Add new documents somewhere in the `source\docs` hierarchy.
+- Add document path to TOC (file: `source\mkdocs.yml`; yaml key: `nav`) to make page visible in the navigation section, otherwise, the page is available via direct link.
 
+Start development server - run in PowerShell `Invoke-Build Run`. The command is syntax sugar for running docker containers.
 To build static site run `Invoke-Build Build`.
 
 {% include '_inc/footer.md' %}

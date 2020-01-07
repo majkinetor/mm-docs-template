@@ -18,61 +18,75 @@ For more details about included tools see:
 
 ## Text
 
+**Unicode**: Мислим дакле постојим
+
 ### Basic effects
 
-|                Code                |       Output       |
-| ---------------------------------- | ------------------ |
-| `**Bold text**` or `__Bold text__` | **Bold text**      |
-| `*Italic text*` or `_Italic text_` | *Italic text*      |
-| `~~Strike Through~~`               | ~~Strike Through~~ |
-| `==Colored text==`                 | ==Colored text==   |
-| <code>\`Inline code\`</code>       | `Inline code`      |
+|       Output       |                Code                |
+| ------------------ | ---------------------------------- |
+| **Bold text**      | `**Bold text**` or `__Bold text__` |
+| *Italic text*      | `*Italic text*` or `_Italic text_` |
+| ~~Strike Through~~ | `~~Strike Through~~`               |
+| ==Colored text==   | `==Colored text==`                 |
+| `Inline code`      | <code>\`Inline code\`</code>       |
 
 ### Hotkeys
 
-|           Code           |         Output         |
-| ------------------------ | ---------------------- |
-| `++enter++`              | ++enter++              |
-| `++"PgDown"++`           | ++"PgDown"++           |
-| `++"Non Existent Key"++` | ++"Non Existent Key"++ |
-
-
-- Unicode: Мислим дакле постојим
+|         Output         |           Code           |
+| ---------------------- | ------------------------ |
+| ++enter++              | `++enter++`              |
+| ++"PgDown"++           | `++"PgDown"++`           |
+| ++"Non Existent Key"++ | `++"Non Existent Key"++` |
 
 ## Links, footnotes and comments
 
 ### Links
 
-- [I'm an inline-style link](https://www.google.com)
-- [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-- [I'm a reference-style link][arbitrary reference text]
-- [I'm a relative reference to a repository file](./index)
-- [You can use numbers for reference-style link definitions][1]
-- You can leave a link empty and use the [link text itself]
-
-**Magic links and emails:** turned to links as recognized
-
-- http://www.google.com
-- majkinetor@gmail.com
-- www.google.com
-
-### Footnotes
-
-- I am a text with a short footnote[^short]
-- I am a text with a long footnote[^long]
-
-### Comments
-
-The text contains 2 comments bellow this line which should not be visible.
-
-[comment]: # (Developed using Visual Studio Code with plantuml extension: cinst visualstudiocode; code --install-extension jebbs.plantuml)
-[comment]: # (PlantUML version may influence diagrams. This document is developped with 1.2017.15: cinst plantuml --version 1.2017.15)
+|                                    Output                                     |                                                    Code                                                     |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| [An inline-style link](https://www.google.com)                                | `[An inline-style link](https://www.google.com)`                                                            |
+| [An inline-style link with title](https://www.google.com "Google's Homepage") | `[An inline-style link with title](https://www.google.com "Google's Homepage")`                             |
+| [Reference-style link][arbitrary reference text]                              | `[Reference-style link][arbitrary reference text]`<br>`[arbitrary reference text]: https://www.mozilla.org` |
+| [Relative reference to a repository file](../about/overview)                  | `[Relative reference to a repository file](../about/overview)`                                              |
+| [Numbers for reference-style link definitions][1]                             | `[Numbers for reference-style link definitions][1]`<br>`[1]: http://slashdot.org`                           |
+| Use the [link text itself]                                                    | `Use the [link text itself]`<br>`[link text itself]: http://www.reddit.com`                                 |
 
 [arbitrary reference text]: https://www.mozilla.org
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
 
+**Magic links and emails:** turned to links as recognized
+
+|        Output         |          Code           |
+| --------------------- | ----------------------- |
+| http://www.google.com | `http://www.google.com` |
+| majkinetor@gmail.com  | `majkinetor@gmail.com`  |
+| www.google.com        | `www.google.com`        |
+
+
+### Footnotes
+
+```md
+A text with a short footnote[^short]
 [^short]: https://en.wikipedia.org/wiki/Note_(typography)
+```
+
+A text with a short footnote[^short]
+[^short]: https://en.wikipedia.org/wiki/Note_(typography)
+
+---
+
+```md
+A text with a long footnote[^long]
+[^long]:   
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    massa, nec semper lorem quam in massa.
+
+    ```
+    code
+```
+
+A text with a long footnote[^long]
 [^long]:   
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     massa, nec semper lorem quam in massa.
@@ -80,6 +94,19 @@ The text contains 2 comments bellow this line which should not be visible.
     ```
     code
     ```
+
+### Comments
+
+```
+The text contains 2 comments bellow this line which should not be visible.
+[comment]: # (Developed using Visual Studio Code with plantuml extension: cinst visualstudiocode; code --install-extension jebbs.plantuml)
+[comment]: # (PlantUML version may influence diagrams. This document is developped with 1.2017.15: cinst plantuml --version 1.2017.15)
+```
+
+The text contains 2 comments bellow this line which should not be visible.
+
+[comment]: # (Developed using Visual Studio Code with plantuml extension: cinst visualstudiocode; code --install-extension jebbs.plantuml)
+[comment]: # (PlantUML version may influence diagrams. This document is developped with 1.2017.15: cinst plantuml --version 1.2017.15)
 
 ## Citations
 
@@ -340,7 +367,7 @@ The following are defined in single file, `_inc\abbr.md` and included on each pa
 
 Adding custom HTML classes to span elements. 
 
-Syntax: `!!<class names>|<text to be wrapped>!!`.
+**Syntax**: `!!<class names>|<text to be wrapped>!!`.
 
 The following example uses css from the custom_css file, classes `color-yellow` and `backgrond-blue`:
 

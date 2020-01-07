@@ -26,6 +26,7 @@ View how compiled static site looks like on [demo site](https://majkinetor.githu
 - Docker installation.
   - For Windows Desktop use: `cinst docker-desktop`  
 - PowerShell (optional, developer friendliness)
+  - [Invoke-Build](https://www.powershellgallery.com/packages/InvokeBuild) module
 
 ## Usage
 
