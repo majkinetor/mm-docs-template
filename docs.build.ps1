@@ -1,4 +1,4 @@
-<# .SYNOPSIS 
+<# .SYNOPSIS
     Invoke-Build build script
 #>
 param (
