@@ -288,6 +288,8 @@ Inline math expressions: $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$
 
 ## Code Highlight
 
+[More info](https://squidfunk.github.io/mkdocs-material/extensions/codehilite)
+
 ```python
 import tensorflow as tf
 ```
