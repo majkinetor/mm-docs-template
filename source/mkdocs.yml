@@ -24,6 +24,7 @@ extra_javascript:
 extra:
     search:
         language: en    # https://squidfunk.github.io/mkdocs-material/getting-started/#language
+    url_prefix: !!python/object/apply:os.getenv ["MM_DOCS_URL_PREFIX"]
     version: 0.1
     company:
         name: Acme
