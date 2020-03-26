@@ -318,7 +318,7 @@ int main(void) {
 }
 ```
 
-```c++ tab="C++"
+```c++ tab="C++" hl_lines="3"
 #include <iostream>
 
 int main() {
