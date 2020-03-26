@@ -85,7 +85,9 @@ function docker-run( [switch] $Interactive, [switch] $Detach, [switch] $Expose) 
         '-v',    "${pwd}:/docs"
         '--name', $ContainerName
         '--env', 'MM_DOCS_ENABLE_PDF_EXPORT'
+        '--env', 'MM_DOCS_URL_PREFIX'
 
+        if ($IsLinux)     { '--user {0}:{1}' -f $(id -u), $(id -g)  }
         if ($Interactive) { '--interactive --tty' }
         if ($Detach)      { '--detach' }
         if ($Expose)      { '-p', "${aPort}:${aPort}" }
