@@ -36,4 +36,4 @@ To edit documentation:
 Start development server - run in PowerShell `Invoke-Build Run`. The command is syntax sugar for running docker containers.
 To build static site run `Invoke-Build Build`.
 
-{% include '_inc/footer.md' %}
+{% include 'footer.md' %}

@@ -424,4 +424,4 @@ repo_url: !!python/object/apply:os.getenv ["CI_PROJECT_URL"]
 repo_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]
 ```
 
-{% include '_inc/footer.md' %}
+{% include 'footer.md' %}

@@ -79,7 +79,8 @@ plugins:
         media_type: print
         enabled_if_env: MM_DOCS_ENABLE_PDF_EXPORT
         combined: true
-    - macros
+    - macros:
+        include_dir: inc
 nav:
 - Home: index.md
 - Demonstration: demo.md
