@@ -5,83 +5,71 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="ie=edge" http-equiv="x-ua-compatible"/>
 <meta content="MM-DOCS Template" name="description"/>
 <link href="https://majkinetor.github.io/mm-docs-template/demo/" rel="canonical"/>
 <meta content="majkinetor" name="author"/>
-<meta content="Copy to clipboard" name="lang:clipboard.copy"/>
-<meta content="Copied to clipboard" name="lang:clipboard.copied"/>
-<meta content="en" name="lang:search.language"/>
-<meta content="True" name="lang:search.pipeline.stopwords"/>
-<meta content="True" name="lang:search.pipeline.trimmer"/>
-<meta content="No matching documents" name="lang:search.result.none"/>
-<meta content="1 matching document" name="lang:search.result.one"/>
-<meta content="# matching documents" name="lang:search.result.other"/>
-<meta content="[\s\-]+" name="lang:search.tokenizer"/>
 <link href="../assets/images/favicon.png" rel="shortcut icon"/>
-<meta content="mkdocs-1.0.4, mkdocs-material-4.6.0" name="generator"/>
+<meta content="mkdocs-1.1, mkdocs-material-5.0.1" name="generator"/>
 <title>Demonstration - MM-DOCS</title>
-<link href="../assets/stylesheets/application.1b62728e.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/application-palette.a8b3c06d.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.c3000690.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.4444686e.min.css" rel="stylesheet"/>
 <meta content="" name="theme-color"/>
-<script src="../assets/javascripts/modernizr.268332fc.js"></script>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
-<style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
-<link href="../assets/fonts/material-icons.css" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
 <link href="../_css/extra.css" rel="stylesheet"/>
 <link href="../_css/pdf.css" rel="stylesheet"/>
 </head>
 <body data-md-color-accent="" data-md-color-primary="white" dir="ltr">
-<svg class="md-svg">
-<defs>
-<svg height="448" id="__github" viewbox="0 0 416 448" width="416" xmlns="http://www.w3.org/2000/svg"><path d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z" fill="currentColor"></path></svg>
-</defs>
-</svg>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-<a class="md-skip" href="#demonstration-page" tabindex="1">
-        Skip to content
-      </a>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#demonstration-page">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
 <header class="md-header" data-md-component="header">
-<nav class="md-header-nav md-grid">
-<div class="md-flex">
-<div class="md-flex__cell md-flex__cell--shrink">
-<a class="md-header-nav__button md-logo" href="https://majkinetor.github.io/mm-docs-template/" title="MM-DOCS">
-<i class="md-icon"></i>
+<nav aria-label="Header" class="md-header-nav md-grid">
+<a aria-label="MM-DOCS" class="md-header-nav__button md-logo" href="https://majkinetor.github.io/mm-docs-template/" title="MM-DOCS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z"></path></svg>
 </a>
+<label class="md-header-nav__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path></svg>
+</label>
+<div class="md-header-nav__title" data-md-component="header-title">
+<div class="md-header-nav__ellipsis">
+<span class="md-header-nav__topic md-ellipsis">
+            MM-DOCS
+          </span>
+<span class="md-header-nav__topic md-ellipsis">
+            
+              Demonstration
+            
+          </span>
 </div>
-<div class="md-flex__cell md-flex__cell--shrink">
-<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
 </div>
-<div class="md-flex__cell md-flex__cell--stretch">
-<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
-<span class="md-header-nav__topic">
-              MM-DOCS
-            </span>
-<span class="md-header-nav__topic">
-              
-                Demonstration
-              
-            </span>
-</div>
-</div>
-<div class="md-flex__cell md-flex__cell--shrink">
-<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+<label class="md-header-nav__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"></path></svg>
+</label>
 <div class="md-search" data-md-component="search" role="dialog">
 <label class="md-search__overlay" for="__search"></label>
 <div class="md-search__inner" role="search">
 <form class="md-search__form" name="search">
-<input autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
-<label class="md-icon md-search__icon" for="__search"></label>
-<button class="md-icon md-search__icon" data-md-component="reset" tabindex="-1" type="reset">
-        
-      </button>
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="Search" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" data-md-component="search-reset" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path></svg>
+</button>
 </form>
 <div class="md-search__output">
 <div class="md-search__scrollwrap" data-md-scrollfix="">
-<div class="md-search-result" data-md-component="result">
+<div class="md-search-result" data-md-component="search-result">
 <div class="md-search-result__meta">
             Type to start searching
           </div>
@@ -91,43 +79,35 @@
 </div>
 </div>
 </div>
-</div>
-<div class="md-flex__cell md-flex__cell--shrink">
 <div class="md-header-nav__source">
-<a class="md-source" data-md-source="github" href="https://github.com/majkinetor/mm-docs-template/" title="Go to repository">
-<div class="md-source__icon">
-<svg height="24" viewbox="0 0 24 24" width="24">
-<use height="24" width="24" xlink:href="#__github"></use>
-</svg>
+<a class="md-source" href="https://github.com/majkinetor/mm-docs-template/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
     GitHub
   </div>
 </a>
 </div>
-</div>
-</div>
 </nav>
 </header>
-<div class="md-container">
-<main class="md-main" role="main">
-<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
 <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
-<nav class="md-nav md-nav--primary" data-md-level="0">
-<label class="md-nav__title md-nav__title--site" for="__drawer">
-<a class="md-nav__button md-logo" href="https://majkinetor.github.io/mm-docs-template/" title="MM-DOCS">
-<i class="md-icon"></i>
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="MM-DOCS" class="md-nav__button md-logo" href="https://majkinetor.github.io/mm-docs-template/" title="MM-DOCS">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z"></path></svg>
 </a>
     MM-DOCS
   </label>
 <div class="md-nav__source">
-<a class="md-source" data-md-source="github" href="https://github.com/majkinetor/mm-docs-template/" title="Go to repository">
-<div class="md-source__icon">
-<svg height="24" viewbox="0 0 24 24" width="24">
-<use height="24" width="24" xlink:href="#__github"></use>
-</svg>
+<a class="md-source" href="https://github.com/majkinetor/mm-docs-template/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
 </div>
 <div class="md-source__repository">
     GitHub
@@ -141,15 +121,23 @@
     </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
-<input class="md-toggle md-nav__toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
         Demonstration
-      </label>
+        <span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z"></path></svg>
+</span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./" title="Demonstration">
       Demonstration
     </a>
-<nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path></svg>
+</span>
+      Table of contents
+    </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#customization">
@@ -160,7 +148,7 @@
 <a class="md-nav__link" href="#text">
     Text
   </a>
-<nav class="md-nav">
+<nav aria-label="Text" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#basic-effects">
@@ -179,7 +167,7 @@
 <a class="md-nav__link" href="#links-footnotes-and-comments">
     Links, footnotes and comments
   </a>
-<nav class="md-nav">
+<nav aria-label="Links, footnotes and comments" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#links">
@@ -223,7 +211,7 @@
 <a class="md-nav__link" href="#lists">
     Lists
   </a>
-<nav class="md-nav">
+<nav aria-label="Lists" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ordered-list">
@@ -314,8 +302,13 @@
 <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
-<nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path></svg>
+</span>
+      Table of contents
+    </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#customization">
@@ -326,7 +319,7 @@
 <a class="md-nav__link" href="#text">
     Text
   </a>
-<nav class="md-nav">
+<nav aria-label="Text" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#basic-effects">
@@ -345,7 +338,7 @@
 <a class="md-nav__link" href="#links-footnotes-and-comments">
     Links, footnotes and comments
   </a>
-<nav class="md-nav">
+<nav aria-label="Links, footnotes and comments" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#links">
@@ -389,7 +382,7 @@
 <a class="md-nav__link" href="#lists">
     Lists
   </a>
-<nav class="md-nav">
+<nav aria-label="Lists" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#ordered-list">
@@ -476,7 +469,9 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset"><a class="md-icon md-content__icon" download href="../pdf/combined.pdf" title="PDF Export"></a>
-<a class="md-icon md-content__icon" href="https://github.com/majkinetor/mm-docs-template/edit/master/source/docs/demo.md" title="Edit this page"></a>
+<a class="md-content__button md-icon" href="https://github.com/majkinetor/mm-docs-template/edit/master/source/docs/demo.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"></path></svg>
+</a>
 <h1 id="demonstration-page">Demonstration page<a class="headerlink" href="#demonstration-page" title="Permanent link">↵</a></h1>
 <p><a href="https://github.com/majkinetor/mm-docs">mm-docs</a> demonstration page.</p>
 <p>For more details about included tools see:</p>
@@ -506,22 +501,22 @@
 <tbody>
 <tr>
 <td><strong>Bold text</strong></td>
-<td><code class="codehilite"><span class="err">**Bold text**</span></code> or <code class="codehilite"><span class="err">__Bold text__</span></code></td>
+<td><code>**Bold text**</code> or <code>__Bold text__</code></td>
 </tr>
 <tr>
 <td><em>Italic text</em></td>
-<td><code class="codehilite"><span class="err">*Italic text*</span></code> or <code class="codehilite"><span class="err">_Italic text_</span></code></td>
+<td><code>*Italic text*</code> or <code>_Italic text_</code></td>
 </tr>
 <tr>
 <td><del>Strike Through</del></td>
-<td><code class="codehilite"><span class="err">~~Strike Through~~</span></code></td>
+<td><code>~~Strike Through~~</code></td>
 </tr>
 <tr>
 <td><mark>Colored text</mark></td>
-<td><code class="codehilite"><span class="err">==Colored text==</span></code></td>
+<td><code>==Colored text==</code></td>
 </tr>
 <tr>
-<td><code class="codehilite"><span class="err">Inline code</span></code></td>
+<td><code>Inline code</code></td>
 <td><code>`Inline code`</code></td>
 </tr>
 </tbody>
@@ -537,15 +532,15 @@
 <tbody>
 <tr>
 <td><span class="keys"><kbd class="key-enter">Enter</kbd></span></td>
-<td><code class="codehilite"><span class="err">++enter++</span></code></td>
+<td><code>++enter++</code></td>
 </tr>
 <tr>
 <td><span class="keys"><kbd>PgDown</kbd></span></td>
-<td><code class="codehilite"><span class="err">++"PgDown"++</span></code></td>
+<td><code>++"PgDown"++</code></td>
 </tr>
 <tr>
 <td><span class="keys"><kbd>Non Existent Key</kbd></span></td>
-<td><code class="codehilite"><span class="err">++"Non Existent Key"++</span></code></td>
+<td><code>++"Non Existent Key"++</code></td>
 </tr>
 </tbody>
 </table>
@@ -561,27 +556,27 @@
 <tbody>
 <tr>
 <td><a href="https://www.google.com">An inline-style link</a></td>
-<td><code class="codehilite"><span class="err">[An inline-style link](https://www.google.com)</span></code></td>
+<td><code>[An inline-style link](https://www.google.com)</code></td>
 </tr>
 <tr>
 <td><a href="https://www.google.com" title="Google's Homepage">An inline-style link with title</a></td>
-<td><code class="codehilite"><span class="err">[An inline-style link with title](https://www.google.com "Google's Homepage")</span></code></td>
+<td><code>[An inline-style link with title](https://www.google.com "Google's Homepage")</code></td>
 </tr>
 <tr>
 <td><a href="https://www.mozilla.org">Reference-style link</a></td>
-<td><code class="codehilite"><span class="err">[Reference-style link][arbitrary reference text]</span></code><br/><code class="codehilite"><span class="err">[arbitrary reference text]: https://www.mozilla.org</span></code></td>
+<td><code>[Reference-style link][arbitrary reference text]</code><br/><code>[arbitrary reference text]: https://www.mozilla.org</code></td>
 </tr>
 <tr>
 <td><a href="../about/overview">Relative reference to a repository file</a></td>
-<td><code class="codehilite"><span class="err">[Relative reference to a repository file](../about/overview)</span></code></td>
+<td><code>[Relative reference to a repository file](../about/overview)</code></td>
 </tr>
 <tr>
 <td><a href="http://slashdot.org">Numbers for reference-style link definitions</a></td>
-<td><code class="codehilite"><span class="err">[Numbers for reference-style link definitions][1]</span></code><br/><code class="codehilite"><span class="err">[1]: http://slashdot.org</span></code></td>
+<td><code>[Numbers for reference-style link definitions][1]</code><br/><code>[1]: http://slashdot.org</code></td>
 </tr>
 <tr>
 <td>Use the <a href="http://www.reddit.com">link text itself</a></td>
-<td><code class="codehilite"><span class="err">Use the [link text itself]</span></code><br/><code class="codehilite"><span class="err">[link text itself]: http://www.reddit.com</span></code></td>
+<td><code>Use the [link text itself]</code><br/><code>[link text itself]: http://www.reddit.com</code></td>
 </tr>
 </tbody>
 </table>
@@ -596,38 +591,38 @@
 <tbody>
 <tr>
 <td><a href="http://www.google.com">http://www.google.com</a></td>
-<td><code class="codehilite"><span class="c">http://www.google.com</span></code></td>
+<td><code>http://www.google.com</code></td>
 </tr>
 <tr>
 <td><a href="mailto:majkinetor@gmail.com">majkinetor@gmail.com</a></td>
-<td><code class="codehilite"><span class="err">majkinetor@gmail.com</span></code></td>
+<td><code>majkinetor@gmail.com</code></td>
 </tr>
 <tr>
 <td><a href="http://www.google.com">www.google.com</a></td>
-<td><code class="codehilite"><span class="err">www.google.com</span></code></td>
+<td><code>www.google.com</code></td>
 </tr>
 </tbody>
 </table>
 <h3 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">↵</a></h3>
-<div class="codehilite"><pre><span></span>A text with a short footnote[^short]
+<div class="highlight"><pre><span></span><code>A text with a short footnote[^short]
 [<span class="nl">^short</span>]: <span class="na">https://en.wikipedia.org/wiki/Note_(typography)</span>
-</pre></div>
+</code></pre></div>
 <p>A text with a short footnote<sup id="fnref:short"><a class="footnote-ref" href="#fn:short">1</a></sup></p>
 <hr/>
-<div class="codehilite"><pre><span></span>A text with a long footnote[^long]
+<div class="highlight"><pre><span></span><code>A text with a long footnote[^long]
 [<span class="nl">^long</span>]:   
     <span class="na">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod</span>
     massa, nec semper lorem quam in massa.
 
     ```
     code
-</pre></div>
+</code></pre></div>
 <p>A text with a long footnote<sup id="fnref:long"><a class="footnote-ref" href="#fn:long">2</a></sup></p>
 <h3 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">↵</a></h3>
-<div class="codehilite"><pre><span></span><span class="n">The</span><span class="w"> </span><span class="nc">text</span><span class="w"> </span><span class="k">contains</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">comments</span><span class="w"> </span><span class="n">bellow</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">visible</span><span class="p">.</span><span class="w"></span>
-<span class="o">[</span><span class="n">comment</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="p">(</span><span class="n">Developed</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">Visual</span><span class="w"> </span><span class="n">Studio</span><span class="w"> </span><span class="n">Code</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">plantuml</span><span class="w"> </span><span class="nl">extension</span><span class="p">:</span><span class="w"> </span><span class="n">cinst</span><span class="w"> </span><span class="n">visualstudiocode</span><span class="p">;</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="c1">--install-extension jebbs.plantuml)</span>
-<span class="o">[</span><span class="n">comment</span><span class="o">]</span><span class="err">:</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="p">(</span><span class="n">PlantUML</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="n">influence</span><span class="w"> </span><span class="n">diagrams</span><span class="p">.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">developped</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="mf">1.2017.15</span><span class="err">:</span><span class="w"> </span><span class="n">cinst</span><span class="w"> </span><span class="n">plantuml</span><span class="w"> </span><span class="c1">--version 1.2017.15)</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>The text contains 2 comments bellow this line which should not be visible.
+[comment]: # (Developed using Visual Studio Code with plantuml extension: cinst visualstudiocode; code --install-extension jebbs.plantuml)
+[comment]: # (PlantUML version may influence diagrams. This document is developped with 1.2017.15: cinst plantuml --version 1.2017.15)
+</code></pre></div>
 <p>The text contains 2 comments bellow this line which should not be visible.</p>
 <h2 id="citations">Citations<a class="headerlink" href="#citations" title="Permanent link">↵</a></h2>
 <blockquote>
@@ -635,8 +630,8 @@
 Inline:</p>
 <blockquote>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor  massa, nec semper lorem quam in massa.
-<div class="codehilite"><pre><span></span><span class="err">code in citations</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>code in citations
+</code></pre></div>
 Another citation line</p>
 </blockquote>
 </blockquote>
@@ -667,13 +662,13 @@ Another citation line</p>
 <h2 id="emoji">Emoji<a class="headerlink" href="#emoji" title="Permanent link">↵</a></h2>
 <p><a href="https://web.archive.org/save/https://www.webfx.com/tools/emoji-cheat-sheet/">List of emoji codes</a></p>
 <ul>
-<li><code class="codehilite"><span class="err">:tada:</span></code> <img alt="🎉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f389.png" title=":tada:"/></li>
-<li><code class="codehilite"><span class="err">:jack_o_lantern:</span></code> <img alt="🎃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f383.png" title=":jack_o_lantern:"/> </li>
-<li><code class="codehilite"><span class="err">:alien:</span></code> <img alt="👽" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f47d.png" title=":alien:"/> </li>
-<li><code class="codehilite"><span class="err">:robot_face:</span></code> <img alt="🤖" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f916.png" title=":robot_face:"/> </li>
-<li><code class="codehilite"><span class="err">:smile:</span></code> <img alt="😄" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png" title=":smile:"/> </li>
-<li><code class="codehilite"><span class="err">:heart:</span></code> <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2764.png" title=":heart:"/> </li>
-<li><code class="codehilite"><span class="err">:thumbsup:</span></code> <img alt="👍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d.png" title=":thumbsup:"/></li>
+<li><code>:tada:</code> <img alt="🎉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f389.png" title=":tada:"/></li>
+<li><code>:jack_o_lantern:</code> <img alt="🎃" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f383.png" title=":jack_o_lantern:"/> </li>
+<li><code>:alien:</code> <img alt="👽" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f47d.png" title=":alien:"/> </li>
+<li><code>:robot_face:</code> <img alt="🤖" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f916.png" title=":robot_face:"/> </li>
+<li><code>:smile:</code> <img alt="😄" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f604.png" title=":smile:"/> </li>
+<li><code>:heart:</code> <img alt="❤️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2764.png" title=":heart:"/> </li>
+<li><code>:thumbsup:</code> <img alt="👍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f44d.png" title=":thumbsup:"/></li>
 </ul>
 <p><img alt="💜" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f49c.png" title=":purple_heart:"/> <img alt="❗️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/2757.png" title=":exclamation:"/> <img alt="🕐" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f550.png" title=":clock1:"/> <img alt="🚜" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f69c.png" title=":tractor:"/> <img alt="🐔" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f414.png" title=":chicken:"/> <img alt="👿" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f47f.png" title=":imp:"/></p>
 <h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">↵</a></h2>
@@ -727,7 +722,7 @@ Another citation line</p>
 </tbody>
 </table>
 <h2 id="plantuml">Plantuml<a class="headerlink" href="#plantuml" title="Permanent link">↵</a></h2>
-<p>Add <code class="codehilite"><span class="err">plantuml</span></code> in a block code header to set code section as PlantUml source. Use <code class="codehilite"><span class="err">format</span></code> to specify output type:</p>
+<p>Add <code>plantuml</code> in a block code header to set code section as PlantUml source. Use <code>format</code> to specify output type:</p>
 <pre>
 ```plantuml format="svg"
 title PlantUml Demo
@@ -743,7 +738,7 @@ rectangle checkout {
 }
 ```
 </pre>
-<p><img alt="uml diagram" class="uml" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U2NyaXB0VHlwZT0iYXBwbGljYXRpb24vZWNtYXNjcmlwdCIgY29udGVudFN0eWxlVHlwZT0idGV4dC9jc3MiIGhlaWdodD0iMjc0cHgiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHN0eWxlPSJ3aWR0aDozMjBweDtoZWlnaHQ6Mjc0cHg7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMjAgMjc0IiB3aWR0aD0iMzIwcHgiIHpvb21BbmRQYW49Im1hZ25pZnkiPjxkZWZzPjxmaWx0ZXIgaGVpZ2h0PSIzMDAlIiBpZD0iZjEwOTlsdXV0bTdic2MiIHdpZHRoPSIzMDAlIiB4PSItMSIgeT0iLTEiPjxmZUdhdXNzaWFuQmx1ciByZXN1bHQ9ImJsdXJPdXQiIHN0ZERldmlhdGlvbj0iMi4wIi8+PGZlQ29sb3JNYXRyaXggaW49ImJsdXJPdXQiIHJlc3VsdD0iYmx1ck91dDIiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAuNCAwIi8+PGZlT2Zmc2V0IGR4PSI0LjAiIGR5PSI0LjAiIGluPSJibHVyT3V0MiIgcmVzdWx0PSJibHVyT3V0MyIvPjxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9ImJsdXJPdXQzIiBtb2RlPSJub3JtYWwiLz48L2ZpbHRlcj48L2RlZnM+PGc+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGxlbmd0aEFkanVzdD0ic3BhY2luZ0FuZEdseXBocyIgdGV4dExlbmd0aD0iMTMwIiB4PSI5OCIgeT0iMTYuNzA4Ij5QbGFudFVtbCBEZW1vPC90ZXh0PjwhLS1NRDU9WzExMTAwMmIyNDJhMjYwZWRiY2FhYmMzZTQ3MTA2NGQwXQpjbHVzdGVyIGNoZWNrb3V0LS0+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgZmlsdGVyPSJ1cmwoI2YxMDk5bHV1dG03YnNjKSIgaGVpZ2h0PSIyMjciIHN0eWxlPSJzdHJva2U6ICMwMDAwMDA7IHN0cm9rZS13aWR0aDogMS41OyIgd2lkdGg9IjEwNCIgeD0iMTIwIiB5PSIzNi45NTMxIi8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmdBbmRHbHlwaHMiIHRleHRMZW5ndGg9IjY0IiB4PSIxNDAiIHk9IjUxLjk0ODIiPmNoZWNrb3V0PC90ZXh0PjxlbGxpcHNlIGN4PSIxNzIuMDEyMiIgY3k9IjE1OS45NzY4IiBmaWxsPSIjRkVGRUNFIiBmaWx0ZXI9InVybCgjZjEwOTlsdXV0bTdic2MpIiByeD0iNDQuMDEyMiIgcnk9IjE0LjUyMzYiIHN0eWxlPSJzdHJva2U6ICNBODAwMzY7IHN0cm9rZS13aWR0aDogMS41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmdBbmRHbHlwaHMiIHRleHRMZW5ndGg9IjU4IiB4PSIxNDMuMDEyMiIgeT0iMTY0LjYyNTIiPmNoZWNrb3V0PC90ZXh0PjxlbGxpcHNlIGN4PSIxNzIuMDk4IiBjeT0iNzguOTc2OCIgZmlsbD0iI0ZFRkVDRSIgZmlsdGVyPSJ1cmwoI2YxMDk5bHV1dG03YnNjKSIgcng9IjQyLjU5OCIgcnk9IjE0LjUyMzYiIHN0eWxlPSJzdHJva2U6ICNBODAwMzY7IHN0cm9rZS13aWR0aDogMS41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmdBbmRHbHlwaHMiIHRleHRMZW5ndGg9IjU2IiB4PSIxNDQuMDk4IiB5PSI4My42MjUyIj5wYXltZW50PC90ZXh0PjxlbGxpcHNlIGN4PSIxNzEuNzk5IiBjeT0iMjQwLjk3NjgiIGZpbGw9IiNGRUZFQ0UiIGZpbHRlcj0idXJsKCNmMTA5OWx1dXRtN2JzYykiIHJ4PSIyMi43OTkiIHJ5PSIxNC41MjM2IiBzdHlsZT0ic3Ryb2tlOiAjQTgwMDM2OyBzdHJva2Utd2lkdGg6IDEuNTsiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nQW5kR2x5cGhzIiB0ZXh0TGVuZ3RoPSIyOCIgeD0iMTU3Ljc5OSIgeT0iMjQ1LjYyNTIiPmhlbHA8L3RleHQ+PCEtLU1ENT1bOTI4NDhjYmFmNjU5ODVhNjY5ODU1MTUzYzUzNjJjMzddCmVudGl0eSBjdXN0b21lci0tPjxlbGxpcHNlIGN4PSIzNi41IiBjeT0iMTI4Ljk1MzEiIGZpbGw9IiNGRUZFQ0UiIGZpbHRlcj0idXJsKCNmMTA5OWx1dXRtN2JzYykiIHJ4PSI4IiByeT0iOCIgc3R5bGU9InN0cm9rZTogI0E4MDAzNjsgc3Ryb2tlLXdpZHRoOiAxLjU7Ii8+PHBhdGggZD0iTTM2LjUsMTM2Ljk1MzEgTDM2LjUsMTYzLjk1MzEgTTIzLjUsMTQ0Ljk1MzEgTDQ5LjUsMTQ0Ljk1MzEgTTM2LjUsMTYzLjk1MzEgTDIzLjUsMTc4Ljk1MzEgTTM2LjUsMTYzLjk1MzEgTDQ5LjUsMTc4Ljk1MzEgIiBmaWxsPSJub25lIiBmaWx0ZXI9InVybCgjZjEwOTlsdXV0bTdic2MpIiBzdHlsZT0ic3Ryb2tlOiAjQTgwMDM2OyBzdHJva2Utd2lkdGg6IDEuNTsiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nQW5kR2x5cGhzIiB0ZXh0TGVuZ3RoPSI2MSIgeD0iNiIgeT0iMTk3LjQ0ODIiPmN1c3RvbWVyPC90ZXh0PjwhLS1NRDU9W2ViZWFiZjQ0OTgyOGY0ZTBiMzNiYmI0Nzk2MWU2NDRiXQplbnRpdHkgY2xlcmstLT48ZWxsaXBzZSBjeD0iMjkyLjUiIGN5PSIxMjguOTUzMSIgZmlsbD0iI0ZFRkVDRSIgZmlsdGVyPSJ1cmwoI2YxMDk5bHV1dG03YnNjKSIgcng9IjgiIHJ5PSI4IiBzdHlsZT0ic3Ryb2tlOiAjQTgwMDM2OyBzdHJva2Utd2lkdGg6IDEuNTsiLz48cGF0aCBkPSJNMjkyLjUsMTM2Ljk1MzEgTDI5Mi41LDE2My45NTMxIE0yNzkuNSwxNDQuOTUzMSBMMzA1LjUsMTQ0Ljk1MzEgTTI5Mi41LDE2My45NTMxIEwyNzkuNSwxNzguOTUzMSBNMjkyLjUsMTYzLjk1MzEgTDMwNS41LDE3OC45NTMxICIgZmlsbD0ibm9uZSIgZmlsdGVyPSJ1cmwoI2YxMDk5bHV1dG03YnNjKSIgc3R5bGU9InN0cm9rZTogI0E4MDAzNjsgc3Ryb2tlLXdpZHRoOiAxLjU7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZ0FuZEdseXBocyIgdGV4dExlbmd0aD0iMzEiIHg9IjI3NyIgeT0iMTk3LjQ0ODIiPmNsZXJrPC90ZXh0PjwhLS1NRDU9Wzg1MjM4MWE3YmI5NzZiODYwODAxMzdmYjZkNzE4ZWE5XQpsaW5rIGN1c3RvbWVyIHRvIGNoZWNrb3V0LS0+PHBhdGggZD0iTTY3LjI0NywxNTkuOTUzMSBDODUuMTI3OSwxNTkuOTUzMSAxMDcuOTY5MywxNTkuOTUzMSAxMjcuNzU2OCwxNTkuOTUzMSAiIGZpbGw9Im5vbmUiIGlkPSJjdXN0b21lci1jaGVja291dCIgc3R5bGU9InN0cm9rZTogI0E4MDAzNjsgc3Ryb2tlLXdpZHRoOiAxLjA7Ii8+PCEtLU1ENT1bM2FkNWM2ZDVjNjA4YmZkNmI4N2RjOWMwN2M0MGExNWZdCmxpbmsgY2hlY2tvdXQgdG8gcGF5bWVudC0tPjxwYXRoIGQ9Ik0xNzIsMTQ1LjA5NjUgQzE3MiwxMzIuMDggMTcyLDExMy4wNiAxNzIsOTguNzUzNCAiIGZpbGw9Im5vbmUiIGlkPSJjaGVja291dC0mZ3Q7cGF5bWVudCIgc3R5bGU9InN0cm9rZTogI0E4MDAzNjsgc3Ryb2tlLXdpZHRoOiAxLjA7IHN0cm9rZS1kYXNoYXJyYXk6IDcuMCw3LjA7Ii8+PHBvbHlnb24gZmlsbD0iI0E4MDAzNiIgcG9pbnRzPSIxNzIsOTMuNzE1NiwxNjgsMTAyLjcxNTYsMTcyLDk4LjcxNTYsMTc2LDEwMi43MTU2LDE3Miw5My43MTU2IiBzdHlsZT0ic3Ryb2tlOiAjQTgwMDM2OyBzdHJva2Utd2lkdGg6IDEuMDsiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nQW5kR2x5cGhzIiB0ZXh0TGVuZ3RoPSI0MyIgeD0iMTM5IiB5PSIxMjQuMDIiPmluY2x1ZGU8L3RleHQ+PCEtLU1ENT1bNzM5ZTc5MjgxNDljOGZlMjdjMmI1ODUwNTYwMzUxYzddCmxpbmsgaGVscCB0byBjaGVja291dC0tPjxwYXRoIGQ9Ik0xNzIsMjI2LjA5NjUgQzE3MiwyMTMuMDggMTcyLDE5NC4wNiAxNzIsMTc5Ljc1MzQgIiBmaWxsPSJub25lIiBpZD0iaGVscC0mZ3Q7Y2hlY2tvdXQiIHN0eWxlPSJzdHJva2U6ICNBODAwMzY7IHN0cm9rZS13aWR0aDogMS4wOyBzdHJva2UtZGFzaGFycmF5OiA3LjAsNy4wOyIvPjxwb2x5Z29uIGZpbGw9IiNBODAwMzYiIHBvaW50cz0iMTcyLDE3NC43MTU2LDE2OCwxODMuNzE1NiwxNzIsMTc5LjcxNTYsMTc2LDE4My43MTU2LDE3MiwxNzQuNzE1NiIgc3R5bGU9InN0cm9rZTogI0E4MDAzNjsgc3Ryb2tlLXdpZHRoOiAxLjA7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGxlbmd0aEFkanVzdD0ic3BhY2luZ0FuZEdseXBocyIgdGV4dExlbmd0aD0iNDciIHg9IjEzNyIgeT0iMjA1LjAyIj5leHRlbmRzPC90ZXh0PjwhLS1NRDU9W2I0YzRlZThmMmQ5NGMxNTlkMmI5ZTA0YmQzNzJjYmUwXQpsaW5rIGNoZWNrb3V0IHRvIGNsZXJrLS0+PHBhdGggZD0iTTIxNi4xODU1LDE1OS45NTMxIEMyMzcuNDExLDE1OS45NTMxIDI2MS41MDYsMTU5Ljk1MzEgMjc2Ljg0MzMsMTU5Ljk1MzEgIiBmaWxsPSJub25lIiBpZD0iY2hlY2tvdXQtY2xlcmsiIHN0eWxlPSJzdHJva2U6ICNBODAwMzY7IHN0cm9rZS13aWR0aDogMS4wOyIvPjwhLS1NRDU9WzEwOWVjNzdlMmFlMGQ4NmU0YzA5ZmFjZWEzNGE1MDBhXQpAc3RhcnR1bWwNCnRpdGxlIFBsYW50VW1sIERlbW8NCmxlZnQgdG8gcmlnaHQgZGlyZWN0aW9uDQpza2lucGFyYW0gcGFja2FnZVN0eWxlIHJlY3RhbmdsZQ0KYWN0b3IgY3VzdG9tZXINCmFjdG9yIGNsZXJrDQpyZWN0YW5nbGUgY2hlY2tvdXQgew0KICBjdXN0b21lciAtIC0gKGNoZWNrb3V0KQ0KICAoY2hlY2tvdXQpIC4+IChwYXltZW50KSA6IGluY2x1ZGUNCiAgKGhlbHApIC4+IChjaGVja291dCkgOiBleHRlbmRzDQogIChjaGVja291dCkgLSAtIGNsZXJrDQp9DQoNCkBlbmR1bWwNCgpQbGFudFVNTCB2ZXJzaW9uIDEuMjAyMC4wMChTYXQgSmFuIDExIDEyOjMwOjUzIEdNVCAyMDIwKQooR1BMIHNvdXJjZSBkaXN0cmlidXRpb24pCkphdmEgUnVudGltZTogSmF2YShUTSkgU0UgUnVudGltZSBFbnZpcm9ubWVudApKVk06IEphdmEgSG90U3BvdChUTSkgNjQtQml0IFNlcnZlciBWTQpKYXZhIFZlcnNpb246IDEuOC4wXzIwMi1iMDgKT3BlcmF0aW5nIFN5c3RlbTogTGludXgKRGVmYXVsdCBFbmNvZGluZzogZW5fVVMuVVRGLTgKTGFuZ3VhZ2U6IGVuCkNvdW50cnk6IG51bGwKLS0+PC9nPjwvc3ZnPg==" title=""/></p>
+<p><img alt="uml diagram" class="uml" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U2NyaXB0VHlwZT0iYXBwbGljYXRpb24vZWNtYXNjcmlwdCIgY29udGVudFN0eWxlVHlwZT0idGV4dC9jc3MiIGhlaWdodD0iMjc0cHgiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHN0eWxlPSJ3aWR0aDozMjBweDtoZWlnaHQ6Mjc0cHg7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMjAgMjc0IiB3aWR0aD0iMzIwcHgiIHpvb21BbmRQYW49Im1hZ25pZnkiPjxkZWZzPjxmaWx0ZXIgaGVpZ2h0PSIzMDAlIiBpZD0iZjEwOTlsdXV0bTdic2MiIHdpZHRoPSIzMDAlIiB4PSItMSIgeT0iLTEiPjxmZUdhdXNzaWFuQmx1ciByZXN1bHQ9ImJsdXJPdXQiIHN0ZERldmlhdGlvbj0iMi4wIi8+PGZlQ29sb3JNYXRyaXggaW49ImJsdXJPdXQiIHJlc3VsdD0iYmx1ck91dDIiIHR5cGU9Im1hdHJpeCIgdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAuNCAwIi8+PGZlT2Zmc2V0IGR4PSI0LjAiIGR5PSI0LjAiIGluPSJibHVyT3V0MiIgcmVzdWx0PSJibHVyT3V0MyIvPjxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9ImJsdXJPdXQzIiBtb2RlPSJub3JtYWwiLz48L2ZpbHRlcj48L2RlZnM+PGc+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGxlbmd0aEFkanVzdD0ic3BhY2luZ0FuZEdseXBocyIgdGV4dExlbmd0aD0iMTMwIiB4PSI5OCIgeT0iMTYuNzA4Ij5QbGFudFVtbCBEZW1vPC90ZXh0PjwhLS1NRDU9WzExMTAwMmIyNDJhMjYwZWRiY2FhYmMzZTQ3MTA2NGQwXQpjbHVzdGVyIGNoZWNrb3V0LS0+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgZmlsdGVyPSJ1cmwoI2YxMDk5bHV1dG03YnNjKSIgaGVpZ2h0PSIyMjciIHN0eWxlPSJzdHJva2U6ICMwMDAwMDA7IHN0cm9rZS13aWR0aDogMS41OyIgd2lkdGg9IjEwNCIgeD0iMTIwIiB5PSIzNi45NTMxIi8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSJib2xkIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmdBbmRHbHlwaHMiIHRleHRMZW5ndGg9IjY0IiB4PSIxNDAiIHk9IjUxLjk0ODIiPmNoZWNrb3V0PC90ZXh0PjxlbGxpcHNlIGN4PSIxNzIuMDEyMiIgY3k9IjE1OS45NzY4IiBmaWxsPSIjRkVGRUNFIiBmaWx0ZXI9InVybCgjZjEwOTlsdXV0bTdic2MpIiByeD0iNDQuMDEyMiIgcnk9IjE0LjUyMzYiIHN0eWxlPSJzdHJva2U6ICNBODAwMzY7IHN0cm9rZS13aWR0aDogMS41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmdBbmRHbHlwaHMiIHRleHRMZW5ndGg9IjU4IiB4PSIxNDMuMDEyMiIgeT0iMTY0LjYyNTIiPmNoZWNrb3V0PC90ZXh0PjxlbGxpcHNlIGN4PSIxNzIuMDk4IiBjeT0iNzguOTc2OCIgZmlsbD0iI0ZFRkVDRSIgZmlsdGVyPSJ1cmwoI2YxMDk5bHV1dG03YnNjKSIgcng9IjQyLjU5OCIgcnk9IjE0LjUyMzYiIHN0eWxlPSJzdHJva2U6ICNBODAwMzY7IHN0cm9rZS13aWR0aDogMS41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBsZW5ndGhBZGp1c3Q9InNwYWNpbmdBbmRHbHlwaHMiIHRleHRMZW5ndGg9IjU2IiB4PSIxNDQuMDk4IiB5PSI4My42MjUyIj5wYXltZW50PC90ZXh0PjxlbGxpcHNlIGN4PSIxNzEuNzk5IiBjeT0iMjQwLjk3NjgiIGZpbGw9IiNGRUZFQ0UiIGZpbHRlcj0idXJsKCNmMTA5OWx1dXRtN2JzYykiIHJ4PSIyMi43OTkiIHJ5PSIxNC41MjM2IiBzdHlsZT0ic3Ryb2tlOiAjQTgwMDM2OyBzdHJva2Utd2lkdGg6IDEuNTsiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nQW5kR2x5cGhzIiB0ZXh0TGVuZ3RoPSIyOCIgeD0iMTU3Ljc5OSIgeT0iMjQ1LjYyNTIiPmhlbHA8L3RleHQ+PCEtLU1ENT1bOTI4NDhjYmFmNjU5ODVhNjY5ODU1MTUzYzUzNjJjMzddCmVudGl0eSBjdXN0b21lci0tPjxlbGxpcHNlIGN4PSIzNi41IiBjeT0iMTI4Ljk1MzEiIGZpbGw9IiNGRUZFQ0UiIGZpbHRlcj0idXJsKCNmMTA5OWx1dXRtN2JzYykiIHJ4PSI4IiByeT0iOCIgc3R5bGU9InN0cm9rZTogI0E4MDAzNjsgc3Ryb2tlLXdpZHRoOiAxLjU7Ii8+PHBhdGggZD0iTTM2LjUsMTM2Ljk1MzEgTDM2LjUsMTYzLjk1MzEgTTIzLjUsMTQ0Ljk1MzEgTDQ5LjUsMTQ0Ljk1MzEgTTM2LjUsMTYzLjk1MzEgTDIzLjUsMTc4Ljk1MzEgTTM2LjUsMTYzLjk1MzEgTDQ5LjUsMTc4Ljk1MzEgIiBmaWxsPSJub25lIiBmaWx0ZXI9InVybCgjZjEwOTlsdXV0bTdic2MpIiBzdHlsZT0ic3Ryb2tlOiAjQTgwMDM2OyBzdHJva2Utd2lkdGg6IDEuNTsiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nQW5kR2x5cGhzIiB0ZXh0TGVuZ3RoPSI2MSIgeD0iNiIgeT0iMTk3LjQ0ODIiPmN1c3RvbWVyPC90ZXh0PjwhLS1NRDU9W2ViZWFiZjQ0OTgyOGY0ZTBiMzNiYmI0Nzk2MWU2NDRiXQplbnRpdHkgY2xlcmstLT48ZWxsaXBzZSBjeD0iMjkyLjUiIGN5PSIxMjguOTUzMSIgZmlsbD0iI0ZFRkVDRSIgZmlsdGVyPSJ1cmwoI2YxMDk5bHV1dG03YnNjKSIgcng9IjgiIHJ5PSI4IiBzdHlsZT0ic3Ryb2tlOiAjQTgwMDM2OyBzdHJva2Utd2lkdGg6IDEuNTsiLz48cGF0aCBkPSJNMjkyLjUsMTM2Ljk1MzEgTDI5Mi41LDE2My45NTMxIE0yNzkuNSwxNDQuOTUzMSBMMzA1LjUsMTQ0Ljk1MzEgTTI5Mi41LDE2My45NTMxIEwyNzkuNSwxNzguOTUzMSBNMjkyLjUsMTYzLjk1MzEgTDMwNS41LDE3OC45NTMxICIgZmlsbD0ibm9uZSIgZmlsdGVyPSJ1cmwoI2YxMDk5bHV1dG03YnNjKSIgc3R5bGU9InN0cm9rZTogI0E4MDAzNjsgc3Ryb2tlLXdpZHRoOiAxLjU7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGxlbmd0aEFkanVzdD0ic3BhY2luZ0FuZEdseXBocyIgdGV4dExlbmd0aD0iMzEiIHg9IjI3NyIgeT0iMTk3LjQ0ODIiPmNsZXJrPC90ZXh0PjwhLS1NRDU9Wzg1MjM4MWE3YmI5NzZiODYwODAxMzdmYjZkNzE4ZWE5XQpsaW5rIGN1c3RvbWVyIHRvIGNoZWNrb3V0LS0+PHBhdGggZD0iTTY3LjI0NywxNTkuOTUzMSBDODUuMTI3OSwxNTkuOTUzMSAxMDcuOTY5MywxNTkuOTUzMSAxMjcuNzU2OCwxNTkuOTUzMSAiIGZpbGw9Im5vbmUiIGlkPSJjdXN0b21lci1jaGVja291dCIgc3R5bGU9InN0cm9rZTogI0E4MDAzNjsgc3Ryb2tlLXdpZHRoOiAxLjA7Ii8+PCEtLU1ENT1bM2FkNWM2ZDVjNjA4YmZkNmI4N2RjOWMwN2M0MGExNWZdCmxpbmsgY2hlY2tvdXQgdG8gcGF5bWVudC0tPjxwYXRoIGQ9Ik0xNzIsMTQ1LjA5NjUgQzE3MiwxMzIuMDggMTcyLDExMy4wNiAxNzIsOTguNzUzNCAiIGZpbGw9Im5vbmUiIGlkPSJjaGVja291dC0mZ3Q7cGF5bWVudCIgc3R5bGU9InN0cm9rZTogI0E4MDAzNjsgc3Ryb2tlLXdpZHRoOiAxLjA7IHN0cm9rZS1kYXNoYXJyYXk6IDcuMCw3LjA7Ii8+PHBvbHlnb24gZmlsbD0iI0E4MDAzNiIgcG9pbnRzPSIxNzIsOTMuNzE1NiwxNjgsMTAyLjcxNTYsMTcyLDk4LjcxNTYsMTc2LDEwMi43MTU2LDE3Miw5My43MTU2IiBzdHlsZT0ic3Ryb2tlOiAjQTgwMDM2OyBzdHJva2Utd2lkdGg6IDEuMDsiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMyIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nQW5kR2x5cGhzIiB0ZXh0TGVuZ3RoPSI0MyIgeD0iMTM5IiB5PSIxMjQuMDIiPmluY2x1ZGU8L3RleHQ+PCEtLU1ENT1bNzM5ZTc5MjgxNDljOGZlMjdjMmI1ODUwNTYwMzUxYzddCmxpbmsgaGVscCB0byBjaGVja291dC0tPjxwYXRoIGQ9Ik0xNzIsMjI2LjA5NjUgQzE3MiwyMTMuMDggMTcyLDE5NC4wNiAxNzIsMTc5Ljc1MzQgIiBmaWxsPSJub25lIiBpZD0iaGVscC0mZ3Q7Y2hlY2tvdXQiIHN0eWxlPSJzdHJva2U6ICNBODAwMzY7IHN0cm9rZS13aWR0aDogMS4wOyBzdHJva2UtZGFzaGFycmF5OiA3LjAsNy4wOyIvPjxwb2x5Z29uIGZpbGw9IiNBODAwMzYiIHBvaW50cz0iMTcyLDE3NC43MTU2LDE2OCwxODMuNzE1NiwxNzIsMTc5LjcxNTYsMTc2LDE4My43MTU2LDE3MiwxNzQuNzE1NiIgc3R5bGU9InN0cm9rZTogI0E4MDAzNjsgc3Ryb2tlLXdpZHRoOiAxLjA7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGxlbmd0aEFkanVzdD0ic3BhY2luZ0FuZEdseXBocyIgdGV4dExlbmd0aD0iNDciIHg9IjEzNyIgeT0iMjA1LjAyIj5leHRlbmRzPC90ZXh0PjwhLS1NRDU9W2I0YzRlZThmMmQ5NGMxNTlkMmI5ZTA0YmQzNzJjYmUwXQpsaW5rIGNoZWNrb3V0IHRvIGNsZXJrLS0+PHBhdGggZD0iTTIxNi4xODU1LDE1OS45NTMxIEMyMzcuNDExLDE1OS45NTMxIDI2MS41MDYsMTU5Ljk1MzEgMjc2Ljg0MzMsMTU5Ljk1MzEgIiBmaWxsPSJub25lIiBpZD0iY2hlY2tvdXQtY2xlcmsiIHN0eWxlPSJzdHJva2U6ICNBODAwMzY7IHN0cm9rZS13aWR0aDogMS4wOyIvPjwhLS1NRDU9WzYyODg5M2Y2MDE4OGRmZTY3NzcyNjgxNzRjMTcxNTgwXQpAc3RhcnR1bWwNCnRpdGxlIFBsYW50VW1sIERlbW8NCmxlZnQgdG8gcmlnaHQgZGlyZWN0aW9uDQpza2lucGFyYW0gcGFja2FnZVN0eWxlIHJlY3RhbmdsZQ0KYWN0b3IgY3VzdG9tZXINCmFjdG9yIGNsZXJrDQpyZWN0YW5nbGUgY2hlY2tvdXQgew0KICBjdXN0b21lciAtIC0gKGNoZWNrb3V0KQ0KICAoY2hlY2tvdXQpIC4+IChwYXltZW50KSA6IGluY2x1ZGUNCiAgKGhlbHApIC4+IChjaGVja291dCkgOiBleHRlbmRzDQogIChjaGVja291dCkgLSAtIGNsZXJrDQp9DQoNCkBlbmR1bWwNCgpQbGFudFVNTCB2ZXJzaW9uIDEuMjAyMC4wNihTdW4gQXByIDA1IDEyOjM4OjMyIEdNVCAyMDIwKQooR1BMIHNvdXJjZSBkaXN0cmlidXRpb24pCkphdmEgUnVudGltZTogSmF2YShUTSkgU0UgUnVudGltZSBFbnZpcm9ubWVudApKVk06IEphdmEgSG90U3BvdChUTSkgNjQtQml0IFNlcnZlciBWTQpKYXZhIFZlcnNpb246IDEuOC4wXzIwMi1iMDgKT3BlcmF0aW5nIFN5c3RlbTogTGludXgKRGVmYXVsdCBFbmNvZGluZzogZW5fVVMuVVRGLTgKTGFuZ3VhZ2U6IGVuCkNvdW50cnk6IG51bGwKLS0+PC9nPjwvc3ZnPg==" title=""/></p>
 <h2 id="mathjax">MathJax<a class="headerlink" href="#mathjax" title="Permanent link">↵</a></h2>
 <p>The block code:</p>
 <pre>
@@ -762,7 +757,7 @@ $$
 </script>
 </div>
 <hr/>
-<p><code class="codehilite"><span class="err">Inline math expressions: $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$</span></code></p>
+<p><code>Inline math expressions: $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$</code></p>
 <p>Inline math expressions: <span><span class="MathJax_Preview">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</span><script type="math/tex">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</script></span></p>
 <h2 id="admonition">Admonition<a class="headerlink" href="#admonition" title="Permanent link">↵</a></h2>
 <p><a href="https://squidfunk.github.io/mkdocs-material/extensions/admonition/">More info</a></p>
@@ -785,77 +780,65 @@ massa, nec semper lorem quam in massa.        </p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
 nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
 massa, nec semper lorem quam in massa.</p>
-<div class="codehilite"><pre><span></span><span class="err">some code</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code>some code
+</code></pre></div>
 <blockquote>
 <p>Some citation</p>
 </blockquote>
 </div>
 <h2 id="code-highlight">Code Highlight<a class="headerlink" href="#code-highlight" title="Permanent link">↵</a></h2>
 <p><a href="https://squidfunk.github.io/mkdocs-material/extensions/codehilite">More info</a></p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+</code></pre></div>
 <p>With tabs:</p>
-<div class="superfences-tabs">
-<input checked="checked" id="__tab_1_0" name="__tabs_1" type="radio">
-<label for="__tab_1_0">Bash</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="ch">#!/bin/bash</span>
+<div class="tabbed-set" data-tabs="1:6">
+<input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><label for="__tabbed_1_1">Bash</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="nb">echo</span> <span class="s2">"Hello world!"</span>
-</pre></div></div>
-<input id="__tab_1_1" name="__tabs_1" type="radio">
-<label for="__tab_1_1">PowerShell</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="s2">"Hello world!"</span>
-</pre></div></div>
-<input id="__tab_1_2" name="__tabs_1" type="radio">
-<label for="__tab_1_2">UML</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="err">Bob -&gt; Alice : Hello world!</span>
-</pre></div></div>
-<input id="__tab_1_3" name="__tabs_1" type="radio">
-<label for="__tab_1_3">C</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+</code></pre></div></div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio"><label for="__tabbed_1_2">PowerShell</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="s2">"Hello world!"</span>
+</code></pre></div></div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio"><label for="__tabbed_1_3">UML</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code>Bob -&gt; Alice : Hello world!
+</code></pre></div></div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio"><label for="__tabbed_1_4">C</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">printf</span><span class="p">(</span><span class="s">"Hello world!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div></div>
-<input id="__tab_1_4" name="__tabs_1" type="radio"/>
-<label for="__tab_1_4">C++</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+</code></pre></div></div>
+<input id="__tabbed_1_5" name="__tabbed_1" type="radio"/><label for="__tabbed_1_5">C++</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 
 <span class="hll"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 </span>  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello world!"</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</pre></div></div>
-<input id="__tab_1_5" name="__tabs_1" type="radio"/>
-<label for="__tab_1_5">C#</label>
-<div class="superfences-content"><div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+</code></pre></div></div>
+<input id="__tabbed_1_6" name="__tabbed_1" type="radio"/><label for="__tabbed_1_6">C#</label><div class="tabbed-content"><div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
 
 <span class="k">class</span> <span class="nc">Program</span> <span class="p">{</span>
   <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</pre></div></div>
+</code></pre></div></div>
 </input></input></input></input></div>
 <h2 id="abbreviations">Abbreviations<a class="headerlink" href="#abbreviations" title="Permanent link">↵</a></h2>
-<p>The following are defined in single file, <code class="codehilite"><span class="err">_inc\abbr.md</span></code> and included on each page.</p>
+<p>The following are defined in single file, <code>_inc\abbr.md</code> and included on each page.</p>
 <ul>
 <li><abbr title="Information Technology">IT</abbr>, <abbr title="Extensible Markup Language">XML</abbr>, <abbr title="JavaScript Object Notation">JSON</abbr></li>
 </ul>
 <h2 id="smart-symbols">Smart symbols<a class="headerlink" href="#smart-symbols" title="Permanent link">↵</a></h2>
 <ul>
-<li><code class="codehilite"><span class="err">(tm)</span></code> ™</li>
-<li><code class="codehilite"><span class="err">(c)</span></code> ©</li>
-<li><code class="codehilite"><span class="err">c/o</span></code> ℅</li>
-<li><code class="codehilite"><span class="err">+/-</span></code> ±</li>
-<li><code class="codehilite"><span class="err">--&gt;</span></code> →</li>
-<li><code class="codehilite"><span class="err">&lt;--</span></code> ←</li>
-<li><code class="codehilite"><span class="err">&lt;--&gt;</span></code> ↔</li>
-<li><code class="codehilite"><span class="err">=/=</span></code> ≠</li>
-<li><code class="codehilite"><span class="err">1/4</span></code> ¼</li>
-<li><code class="codehilite"><span class="err">1st</span></code> 1<sup>st</sup></li>
+<li><code>(tm)</code> ™</li>
+<li><code>(c)</code> ©</li>
+<li><code>c/o</code> ℅</li>
+<li><code>+/-</code> ±</li>
+<li><code>--&gt;</code> →</li>
+<li><code>&lt;--</code> ←</li>
+<li><code>&lt;--&gt;</code> ↔</li>
+<li><code>=/=</code> ≠</li>
+<li><code>1/4</code> ¼</li>
+<li><code>1st</code> 1<sup>st</sup></li>
 </ul>
 <h2 id="task-list">Task list<a class="headerlink" href="#task-list" title="Permanent link">↵</a></h2>
 <ul class="task-list">
@@ -870,10 +853,10 @@ massa, nec semper lorem quam in massa.</p>
 </ul>
 <h2 id="custom-span-class">Custom span class<a class="headerlink" href="#custom-span-class" title="Permanent link">↵</a></h2>
 <p>Adding custom HTML classes to span elements. </p>
-<p><strong>Syntax</strong>: <code class="codehilite"><span class="err">!!&lt;class names&gt;|&lt;text to be wrapped&gt;!!</span></code>.</p>
-<p>The following example uses css from the custom_css file, classes <code class="codehilite"><span class="err">color-yellow</span></code> and <code class="codehilite"><span class="err">backgrond-blue</span></code>:</p>
+<p><strong>Syntax</strong>: <code>!!&lt;class names&gt;|&lt;text to be wrapped&gt;!!</code>.</p>
+<p>The following example uses css from the custom_css file, classes <code>color-yellow</code> and <code>backgrond-blue</code>:</p>
 <ul>
-<li><code class="codehilite"><span class="err">I love !!color-yellow background-blue|cookies!!</span></code> - I love <span class="color-yellow background-blue">cookies</span></li>
+<li><code>I love !!color-yellow background-blue|cookies!!</code> - I love <span class="color-yellow background-blue">cookies</span></li>
 </ul>
 <h2 id="macros">Macros<a class="headerlink" href="#macros" title="Permanent link">↵</a></h2>
 <p><a href="https://github.com/fralau/mkdocs_macros_plugin#overview">More details</a>.</p>
@@ -887,23 +870,23 @@ massa, nec semper lorem quam in massa.</p>
 <tbody>
 <tr>
 <td>Variable from config</td>
-<td><code class="codehilite"><span class="err">extra.version = 0.1</span></code></td>
+<td><code>extra.version = 0.1</code></td>
 </tr>
 <tr>
 <td>Variable from this page</td>
-<td><code class="codehilite"><span class="err">acme = Acme Company Ltd</span></code></td>
+<td><code>acme = Acme Company Ltd</code></td>
 </tr>
 <tr>
-<td>Macro (defined in <code class="codehilite"><span class="err">main.py</span></code>)</td>
-<td><code class="codehilite"><span class="err">bar(1) = 9.3</span></code> - <code class="codehilite"><span class="err">barbaz(3) = 9</span></code></td>
+<td>Macro (defined in <code>main.py</code>)</td>
+<td><code>bar(1) = 9.3</code> - <code>barbaz(3) = 9</code></td>
 </tr>
 <tr>
-<td>Python variable (defined in <code class="codehilite"><span class="err">main.py</span></code>)</td>
-<td><code class="codehilite"><span class="err">baz = John Doe</span></code></td>
+<td>Python variable (defined in <code>main.py</code>)</td>
+<td><code>baz = John Doe</code></td>
 </tr>
 <tr>
 <td>Dictionary variable from config</td>
-<td><code class="codehilite"><span class="err">company.name = Acme</span></code></td>
+<td><code>company.name = Acme</code></td>
 </tr>
 </tbody>
 </table>
@@ -924,17 +907,17 @@ massa, nec semper lorem quam in massa.</p>
 {%include 'snippet.md' %}
 {%include 'html/content1.html' %}
 </pre>
-<p>The root directory for your included files is in <code class="codehilite"><span class="err">docs_dir</span></code>.</p>
+<p>The root directory for your included files is in <code>docs_dir</code>.</p>
 <h2 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">↵</a></h2>
-<p>Environment variables can be used inside of configuration file <code class="codehilite"><span class="err">mkdocs.yaml</span></code>.</p>
-<div class="codehilite"><pre><span></span><span class="c">site_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]  </span>
-<span class="c">repo_url: !!python/object/apply:os.getenv ["CI_PROJECT_URL"]</span>
-<span class="c">repo_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]</span>
-</pre></div>
+<p>Environment variables can be used inside of configuration file <code>mkdocs.yaml</code>.</p>
+<div class="highlight"><pre><span></span><code>site_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]  
+repo_url: !!python/object/apply:os.getenv ["CI_PROJECT_URL"]
+repo_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]
+</code></pre></div>
 <hr/>
-<p><em>This is a footer page, edit in <code class="codehilite"><span class="err">_inc/footer.md</span></code></em></p>
+<p><em>This is a footer page, edit in <a href="https://github.com/majkinetor/mm-docs-template/blob/master/source/inc/footer.md">footer.md</a></em></p>
 <!-- IT keywoards -->
-<p><span class="updated"><img alt="🕘" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f558.png" title=":clock9:"/> <strong>Build time:</strong> <span>2020-03-26 19:05:38</span></span></p>
+<p><span class="updated"><img alt="🕘" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f558.png" title=":clock9:"/> <strong>Build time:</strong> <span>2020-04-09 00:47:21</span></span></p>
 <div class="footnote">
 <hr/>
 <ol>
@@ -944,8 +927,8 @@ massa, nec semper lorem quam in massa.</p>
 <li id="fn:long">
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
 massa, nec semper lorem quam in massa.</p>
-<p><div class="codehilite"><pre><span></span><span class="err">code</span>
-</pre></div> <a class="footnote-backref" href="#fnref:long" title="Jump back to footnote 2 in the text">↩</a></p>
+<p><div class="highlight"><pre><span></span><code>code
+</code></pre></div> <a class="footnote-backref" href="#fnref:long" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 </ol>
 </div>
@@ -955,18 +938,18 @@ massa, nec semper lorem quam in massa.</p>
 </main>
 <footer class="md-footer">
 <div class="md-footer-nav">
-<nav class="md-footer-nav__inner md-grid">
-<a class="md-flex md-footer-nav__link md-footer-nav__link--prev" href=".." rel="prev" title="Home">
-<div class="md-flex__cell md-flex__cell--shrink">
-<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href=".." rel="prev" title="Home">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path></svg>
 </div>
-<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-<span class="md-flex__ellipsis">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
                 Home
-              </span>
+              </div>
 </div>
 </a>
 </nav>
@@ -978,18 +961,26 @@ massa, nec semper lorem quam in massa.</p>
             © majkinetor 2019
           </div>
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
 </div>
 </div>
 </div>
 </footer>
 </div>
-<script src="../assets/javascripts/application.808e90bb.js"></script>
-<script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+<script src="../assets/javascripts/vendor.f45d2d8d.min.js"></script>
+<script src="../assets/javascripts/bundle.74d0b805.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+<script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
