@@ -256,6 +256,12 @@ $$
 
 Inline math expressions: $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$
 
+
+**NOTE**:
+
+- This doesn't render corretly in PDF output, see [this](https://github.com/zhaoterryy/mkdocs-pdf-export-plugin/issues/18) issue for explanation.
+
+
 ## Admonition
 
 [More info](https://squidfunk.github.io/mkdocs-material/extensions/admonition/)
