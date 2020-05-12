@@ -420,6 +420,8 @@ You may use the include directive from jinja2, directly in your markdown code e.
 
 The root directory for your included files is in `docs_dir`.
 
+You can also include [parts of the file](https://mkdocs-macros-plugin.readthedocs.io/en/latest/tips/#i-would-like-to-include-a-text-file-from-line-a-to-line-b).
+
 ## Environment variables
 
 Environment variables can be used inside of configuration file `mkdocs.yaml`.
