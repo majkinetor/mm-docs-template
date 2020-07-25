@@ -54,8 +54,3 @@ docker run --rm -v $PWD:/docs --name docs-$aPort --detach -p $aPort:$aPort $imag
 
 - Add new markdown somewhere in the `source\docs` hierarchy
 - To be visible in navigation, add to `source\mkdocs.yml` `nav` section, otherwise, the page is available via direct link
-
-## Notes
-
-- In order to **use internal Gitlab Docker registry**, make sure daemon setting `insecure-registries` points to the `gitlab.mycompany.com:4567`. On Windows use tray icon and *Settings -> Daemon -> Advanced*.
-- Behind the **proxy**, if you pull [Docker Hub](https://hub.docker.com) images, you need to setup docker proxy: *Settings -> Daemon -> Proxies*.
