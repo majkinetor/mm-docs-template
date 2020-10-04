@@ -302,7 +302,7 @@ import tensorflow as tf
 
 With tabs:
 
-=== Bash
+=== "Bash"
 
 ```bash
 #!/bin/bash
@@ -310,7 +310,7 @@ With tabs:
 echo "Hello world!"
 ```
 
-===  PowerShell
+===  "PowerShell"
 
 ```powershell
 "Hello world!"
@@ -320,7 +320,7 @@ echo "Hello world!"
 Bob -> Alice : Hello world!
 ```
 
-=== C
+=== "C"
 
 ```c
 #include <stdio.h>
@@ -330,7 +330,7 @@ int main(void) {
 }
 ```
 
-=== C++
+=== "C++"
 
 ```c++ hl_lines="3"
 #include <iostream>
@@ -341,7 +341,9 @@ int main() {
 }
 ```
 
-```c# tab="C#"
+=== "C#"
+
+```c#
 using System;
 
 class Program {
