@@ -316,7 +316,9 @@ echo "Hello world!"
 "Hello world!"
 ```
 
-```plantuml tab="UML"
+=== "PlantUML"
+
+```plantuml
 Bob -> Alice : Hello world!
 ```
 
