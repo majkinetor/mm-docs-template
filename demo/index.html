@@ -932,137 +932,135 @@ massa, nec semper lorem quam in massa.</p>
 </code></pre></div>
 
 <p>With tabs:</p>
-<p>```bash tab="Bash"</p>
-<h1 id="binbash">!/bin/bash<a class="headerlink" href="#binbash" title="Permanent link">↵</a></h1>
-<p>echo "Hello world!"
-<div class="highlight"><pre><span></span><code>```powershell tab=&quot;PowerShell&quot;
-&quot;Hello world!&quot;
-</code></pre></div></p>
+<p>=== Bash</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;Hello world!&quot;</span>
+</code></pre></div>
+
+<p>===  PowerShell</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;Hello world!&quot;</span>
+</code></pre></div>
+
 <p>```plantuml tab="UML"
 Bob -&gt; Alice : Hello world!
-<div class="highlight"><pre><span></span><code>```c tab=&quot;C&quot;
+<div class="highlight"><pre><span></span><code>=== C
+
+```c
 #include &lt;stdio.h&gt;
 
 int main(void) {
   printf(&quot;Hello world!\n&quot;);
 }
 </code></pre></div></p>
-<p>```c++ tab="C++" hl_lines="3"</p>
-<h1 id="include">include <iostream><a class="headerlink" href="#include" title="Permanent link">↵</a></h1>
-<p>int main() {
-  std::cout &lt;&lt; "Hello world!" &lt;&lt; std::endl;
-  return 0;
-}
-<div class="highlight"><pre><span></span><code>```c# tab=&quot;C#&quot;
-using System;
+<p>=== C++</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 
-class Program {
-  static void Main(string[] args) {
-    Console.WriteLine(&quot;Hello world!&quot;);
-  }
-}
-</code></pre></div></p>
-<h2 id="abbreviations">Abbreviations<a class="headerlink" href="#abbreviations" title="Permanent link">↵</a></h2>
-<p>The following are defined in single file, <code>_inc\abbr.md</code> and included on each page.</p>
-<ul>
-<li><abbr title="Information Technology">IT</abbr>, <abbr title="Extensible Markup Language">XML</abbr>, <abbr title="JavaScript Object Notation">JSON</abbr></li>
-</ul>
-<h2 id="smart-symbols">Smart symbols<a class="headerlink" href="#smart-symbols" title="Permanent link">↵</a></h2>
-<ul>
-<li><code>(tm)</code> &trade;</li>
-<li><code>(c)</code> &copy;</li>
-<li><code>c/o</code> &#8453;</li>
-<li><code>+/-</code> &plusmn;</li>
-<li><code>--&gt;</code> &rarr;</li>
-<li><code>&lt;--</code> &larr;</li>
-<li><code>&lt;--&gt;</code> &harr;</li>
-<li><code>=/=</code> &ne;</li>
-<li><code>1/4</code> &frac14;</li>
-<li><code>1st</code> 1<sup>st</sup></li>
-</ul>
-<h2 id="task-list">Task list<a class="headerlink" href="#task-list" title="Permanent link">↵</a></h2>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Vestibulum convallis sit amet nisi a tincidunt<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> In hac habitasse platea dictumst</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Praesent sed risus massa</li>
-</ul>
-</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Nulla vel eros venenatis, imperdiet enim id, faucibus nisi</li>
-</ul>
-<h2 id="custom-span-class">Custom span class<a class="headerlink" href="#custom-span-class" title="Permanent link">↵</a></h2>
-<p>Adding custom HTML classes to span elements. </p>
-<p><strong>Syntax</strong>: <code>!!&lt;class names&gt;|&lt;text to be wrapped&gt;!!</code>.</p>
-<p>The following example uses css from the custom_css file, classes <code>color-yellow</code> and <code>backgrond-blue</code>:</p>
-<ul>
-<li><code>I love !!color-yellow background-blue|cookies!!</code> - I love <span class="color-yellow background-blue">cookies</span></li>
-</ul>
-<h2 id="macros">Macros<a class="headerlink" href="#macros" title="Permanent link">↵</a></h2>
-<p><a href="https://github.com/fralau/mkdocs_macros_plugin#overview">More details</a>.</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Variable from config</td>
-<td><code>extra.version = 0.1</code></td>
-</tr>
-<tr>
-<td>Variable from this page</td>
-<td><code>acme = Acme Company Ltd</code></td>
-</tr>
-<tr>
-<td>Macro (defined in <code>main.py</code>)</td>
-<td><code>bar(1) = 9.3</code> - <code>barbaz(3) = 9</code></td>
-</tr>
-<tr>
-<td>Python variable (defined in <code>main.py</code>)</td>
-<td><code>baz = John Doe</code></td>
-</tr>
-<tr>
-<td>Dictionary variable from config</td>
-<td><code>company.name = Acme</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="jinja-templates">Jinja templates<a class="headerlink" href="#jinja-templates" title="Permanent link">↵</a></h2>
-<p>You can do all the work you want with Jinja2, including defining pure macros, conditionals and for loops:</p>
-<pre>
-{&#x25; macro input(name, value='', type='text', size=20) -%}
-  &lt;input type="{&#123; type }}" name="{&#123; name }}" value="{&#123; value}}" size="{&#123; size }}">
-{&#x25;- endmacro %}
-
-{&#x25; input('username') }}
-{&#x25; input('password', type='password') }}
-</pre>
-
-<h2 id="includes">Includes<a class="headerlink" href="#includes" title="Permanent link">↵</a></h2>
-<p>You may use the include directive from jinja2, directly in your markdown code e.g.:</p>
-<pre>
-## Paragraph
-{&#x25;include 'snippet.md' %}
-{&#x25;include 'html/content1.html' %}
-</pre>
-
-<p>The root directory for your included files is in <code>docs_dir</code>.</p>
-<p>You can also include <a href="https://mkdocs-macros-plugin.readthedocs.io/en/latest/tips/#i-would-like-to-include-a-text-file-from-line-a-to-line-b">parts of the file</a>.</p>
-<h2 id="environment-variables">Environment variables<a class="headerlink" href="#environment-variables" title="Permanent link">↵</a></h2>
-<p>Environment variables can be used inside of configuration file <code>mkdocs.yaml</code>.</p>
-<div class="highlight"><pre><span></span><code>site_name: !!python/object/apply:os.getenv [&quot;CI_PROJECT_PATH&quot;]  
-repo_url: !!python/object/apply:os.getenv [&quot;CI_PROJECT_URL&quot;]
-repo_name: !!python/object/apply:os.getenv [&quot;CI_PROJECT_PATH&quot;]
+<span class="hll"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span>  <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Hello world!&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 
+<p>```c# tab="C#"
+using System;</p>
+<p>class Program {
+  static void Main(string[] args) {
+    Console.WriteLine("Hello world!");
+  }
+}
+<div class="highlight"><pre><span></span><code>## Abbreviations
+
+The following are defined in single file, `_inc\abbr.md` and included on each page.
+
+- IT, XML, JSON
+
+## Smart symbols
+
+- `(tm)` (tm)
+- `(c)` (c)
+- `c/o` c/o
+- `+/-` +/-
+- `--&gt;` --&gt;
+- `&lt;--` &lt;--
+- `&lt;--&gt;` &lt;--&gt;
+- `=/=` =/=
+- `1/4` 1/4
+- `1st` 1st
+
+## Task list
+
+* [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
+* [x] Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est
+* [ ] Vestibulum convallis sit amet nisi a tincidunt
+    * [x] In hac habitasse platea dictumst
+    * [ ] Praesent sed risus massa
+* [ ] Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
+
+## Custom span class
+
+Adding custom HTML classes to span elements. 
+
+**Syntax**: `!!&lt;class names&gt;|&lt;text to be wrapped&gt;!!`.
+
+The following example uses css from the custom_css file, classes `color-yellow` and `backgrond-blue`:
+
+- `I love !!color-yellow background-blue|cookies!!` - I love !!color-yellow background-blue|cookies!!
+
+## Macros
+
+[More details](https://github.com/fralau/mkdocs_macros_plugin#overview).
+
+
+
+|                                        |                                                         |
+| -------------------------------------- | ------------------------------------------------------- |
+| Variable from config                   | `extra.version = 0.1`                           |
+| Variable from this page                | `acme = Acme Company Ltd`                                       |
+| Macro (defined in `main.py`)           | `bar(1) = 9.3` - `barbaz(3) = 9` |
+| Python variable (defined in `main.py`) | `baz = John Doe`                                       |
+| Dictionary variable from config        | `company.name = Acme`                     |
+
+## Jinja templates
+
+You can do all the work you want with Jinja2, including defining pure macros, conditionals and for loops:
+
+&lt;pre&gt;
+{&amp;#x25; macro input(name, value=&#39;&#39;, type=&#39;text&#39;, size=20) -%}
+  &amp;lt;input type=&quot;{&amp;#123; type }}&quot; name=&quot;{&amp;#123; name }}&quot; value=&quot;{&amp;#123; value}}&quot; size=&quot;{&amp;#123; size }}&quot;&gt;
+{&amp;#x25;- endmacro %}
+
+{&amp;#x25; input(&#39;username&#39;) }}
+{&amp;#x25; input(&#39;password&#39;, type=&#39;password&#39;) }}
+&lt;/pre&gt;
+
+## Includes
+
+You may use the include directive from jinja2, directly in your markdown code e.g.:
+
+&lt;pre&gt;
+## Paragraph
+{&amp;#x25;include &#39;snippet.md&#39; %}
+{&amp;#x25;include &#39;html/content1.html&#39; %}
+&lt;/pre&gt;
+
+The root directory for your included files is in `docs_dir`.
+
+You can also include [parts of the file](https://mkdocs-macros-plugin.readthedocs.io/en/latest/tips/#i-would-like-to-include-a-text-file-from-line-a-to-line-b).
+
+## Environment variables
+
+Environment variables can be used inside of configuration file `mkdocs.yaml`.
+</code></pre></div>
+site_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]<br />
+repo_url: !!python/object/apply:os.getenv ["CI_PROJECT_URL"]
+repo_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]
+```</p>
 <hr />
 <p><em>This is a footer page, edit in <a href="https://github.com/majkinetor/mm-docs-template/blob/master/source/inc/footer.md">footer.md</a></em></p>
 <!-- IT keywoards -->
 
-<p><span class='updated'><img alt="🕘" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f558.png" title=":clock9:" /> <strong>Build time:</strong> <span>2020-10-04 20:59:11</span></span></p>
+<p><span class='updated'><img alt="🕘" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f558.png" title=":clock9:" /> <strong>Build time:</strong> <span>2020-10-04 21:09:01</span></span></p>
 <div class="footnote">
 <hr />
 <ol>
