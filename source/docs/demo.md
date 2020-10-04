@@ -78,7 +78,7 @@ A text with a short footnote[^short]
 
 ```md
 A text with a long footnote[^long]
-[^long]:   
+[^long]:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     massa, nec semper lorem quam in massa.
 
@@ -87,7 +87,7 @@ A text with a long footnote[^long]
 ```
 
 A text with a long footnote[^long]
-[^long]:   
+[^long]:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     massa, nec semper lorem quam in massa.
 
@@ -159,11 +159,11 @@ General block handling:
 [List of emoji codes](https://web.archive.org/save/https://www.webfx.com/tools/emoji-cheat-sheet/)
 
 - `:tada:` :tada:
-- `:jack_o_lantern:` :jack_o_lantern: 
-- `:alien:` :alien: 
-- `:robot_face:` :robot_face: 
-- `:smile:` :smile: 
-- `:heart:` :heart: 
+- `:jack_o_lantern:` :jack_o_lantern:
+- `:alien:` :alien:
+- `:robot_face:` :robot_face:
+- `:smile:` :smile:
+- `:heart:` :heart:
 - `:thumbsup:` :thumbsup:
 
 :purple_heart: :exclamation: :clock1: :tractor: :chicken: :imp:
@@ -274,12 +274,12 @@ Inline math expressions: $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$
 ??? question "Collapsed closed"
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.    
+    massa, nec semper lorem quam in massa.
 
 ???+ question "Collapsed open"
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.        
+    massa, nec semper lorem quam in massa.
 
 !!! danger "Extreme danger"
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
@@ -304,56 +304,56 @@ With tabs:
 
 === "Bash"
 
-```bash
-#!/bin/bash
+    ```bash
+    #!/bin/bash
 
-echo "Hello world!"
-```
+    echo "Hello world!"
+    ```
 
 ===  "PowerShell"
 
-```powershell
-"Hello world!"
-```
+    ```powershell
+    "Hello world!"
+    ```
 
 === "PlantUML"
 
-```plantuml
-Bob -> Alice : Hello world!
-```
+    ```plantuml
+    Bob -> Alice : Hello world!
+    ```
 
 === "C"
 
-```c
-#include <stdio.h>
+    ```c
+    #include <stdio.h>
 
-int main(void) {
-  printf("Hello world!\n");
-}
-```
+    int main(void) {
+      printf("Hello world!\n");
+    }
+    ```
 
 === "C++"
 
-```c++ hl_lines="3"
-#include <iostream>
+    ```c++ hl_lines="3"
+    #include <iostream>
 
-int main() {
-  std::cout << "Hello world!" << std::endl;
-  return 0;
-}
-```
+    int main() {
+      std::cout << "Hello world!" << std::endl;
+      return 0;
+    }
+    ```
 
 === "C#"
 
-```c#
-using System;
+    ```c#
+    using System;
 
-class Program {
-  static void Main(string[] args) {
-    Console.WriteLine("Hello world!");
-  }
-}
-```
+    class Program {
+      static void Main(string[] args) {
+        Console.WriteLine("Hello world!");
+      }
+    }
+    ```
 
 ## Abbreviations
 
@@ -385,7 +385,7 @@ The following are defined in single file, `_inc\abbr.md` and included on each pa
 
 ## Custom span class
 
-Adding custom HTML classes to span elements. 
+Adding custom HTML classes to span elements.
 
 **Syntax**: `!!<class names>|<text to be wrapped>!!`.
 
@@ -439,7 +439,7 @@ You can also include [parts of the file](https://mkdocs-macros-plugin.readthedoc
 Environment variables can be used inside of configuration file `mkdocs.yaml`.
 
 ```
-site_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]  
+site_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]
 repo_url: !!python/object/apply:os.getenv ["CI_PROJECT_URL"]
 repo_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]
 ```
