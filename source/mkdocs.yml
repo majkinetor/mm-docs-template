@@ -9,21 +9,22 @@ edit_uri: edit/master/source/docs
 
 dev_addr: 0.0.0.0:8000
 
-theme: 
+theme:
     name: material
     palette:
         primary: White
+    features:
+        - navigation.expand
+        - navigation.instant
 
 extra_css:
     - _css/extra.css
     - _css/pdf.css
 
 extra_javascript:
-  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'    
-   
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+
 extra:
-    search:
-        language: en    # https://squidfunk.github.io/mkdocs-material/getting-started/#language
     url_prefix: !!python/object/apply:os.getenv ["MM_DOCS_URL_PREFIX"]
     version: 0.1
     company:
@@ -43,7 +44,7 @@ markdown_extensions:
     - def_list
     - attr_list
     - tables
-    
+
     # PyMdown Extensions extensions: https://facelessuser.github.io/pymdown-extensions/
     - pymdownx.betterem:
         smart_enable: all
@@ -51,7 +52,7 @@ markdown_extensions:
     - pymdownx.critic
     - pymdownx.inlinehilite
     - pymdownx.magiclink
-    - pymdownx.mark    
+    - pymdownx.mark
     - pymdownx.superfences
     - pymdownx.smartsymbols
     - pymdownx.tabbed
@@ -62,7 +63,7 @@ markdown_extensions:
     - pymdownx.details
     - pymdownx.emoji
     - pymdownx.arithmatex
-    
+
     # Extra extensions
     - markdown_include.include:
         base_path: inc
@@ -72,7 +73,8 @@ markdown_extensions:
     - mdx_custom_span_class
 
 plugins:
-    - search
+    - search:
+        language: en    # https://squidfunk.github.io/mkdocs-material/getting-started/#language
     - exclude:
         glob: _*.md
     - pdf-export:
