@@ -1,7 +1,13 @@
-<div class="docinfo" style="font-family: monospace; line-height: .5em;">
-<table>
-<tr><td><b>Document Information</b></td></tr>
-<tr><td>Source path</td><td>{{ page.file.src_path }}</td></tr>
-<tr><td>Last Change Date:</td><td> {{ changedate() }}</td></tr>
-</tr></table>
+<div class="docinfo" style="margin-top:5em; font-size: smaller; border-top: 1px solid gray">
+
+<span style="float:left">
+    📆 **Modification Date**:<br>
+    <span style="padding-left:1.5em">{{ changedate() }}</span>
+</span>
+
+<span style="float:right">
+    <span style="padding-right: 1em">*Build Date*:</span> {{ time }}<br>
+    <span style="padding-right: 2.5em">*Source*:</span> <span style="font-family: monospace;  font-size: larger">{{ page.file.src_path }}</span>
+</span>
+
 </div>
