@@ -105,22 +105,22 @@ function Get-GitRevisionDates($Path='.', $Ext, $Skip)
     [array] $log = git --no-pager log --format=format:%ai --name-only $Path
 
     $date_re = "^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d .\d{4}$"
-    [array] $dates = $log | Select-String $date_re | select LineNumber, Line
+    [array] $dates = $log | Select-String $date_re | Select-Object LineNumber, Line
 
     $files = $log -notmatch "^$date_re$" | ? {
         if (!$_.EndsWith($Ext)) { return }
         foreach ($s in $Skip) { if ($_ -like $s) { return } }
         $_
-    } | sort -unique
+    } | Sort-Object -unique
 
     $res = @()
     foreach ($file in $files) {
         $iFile = $log.IndexOf($file) + 1
-        $fDate = $dates | ? LineNumber -lt $iFile | select -Last 1
+        $fDate = $dates | ? LineNumber -lt $iFile | Select-Object -Last 1
         $res += [PSCustomObject]@{ File = $file; Date = $fDate.Line }
     }
 
-    $res | sort Date -Desc
+    $res | Sort-Object Date -Desc
 }
 
 function Wait-For ([string]$url, [int]$Timeout=20) {
