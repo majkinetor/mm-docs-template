@@ -1,6 +1,6 @@
 from time import gmtime, strftime
 import os
-import re
+import json
 
 def define_env(env):
     """
@@ -9,9 +9,8 @@ def define_env(env):
     - variables: the dictionary that contains the variables
     - macro: a decorator function, to declare a macro.
     """
-    revision = open('/docs/source/docs/revision.csv', "r")
-    env.variables['revisions'] = revision.read()
-    revision.close()
+    with open('/docs/source/docs/revision.json') as json_file:
+        env.variables['revisions'] = json.load(json_file)
 
     env.variables['baz'] = "John Doe"
     env.variables['time'] = strftime("%Y-%m-%d %H:%M:%S", gmtime())
@@ -26,11 +25,10 @@ def define_env(env):
         return x * x
 
     @env.macro
-    def changedate(page):
-        m = re.match('%s","(.+?)"' % (page.file.src_path), env.variables['revisions'])
-        if m:
-            return m.group(1)
-        return "none"
+    def changedate():
+        path = env.variables['page'].file.src_path
+        rev  = env.variables['revisions'][path]
+        return rev['Date']
 
     env.macro(f, 'barbaz')
 

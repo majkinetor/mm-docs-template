@@ -28,7 +28,7 @@ Enter-Build {
 task . Build
 
 # Synopsis: Serve documentation site on localhost
-task Run Stop, {
+task Run Stop, GitRevisionDates, {
     $ContainerName = "$ContainerName-$aPort"
     docker-run mkdocs serve --dev-addr $ServeAddress -Detach -Expose
     Wait-For "http://localhost:$aPort"
@@ -62,18 +62,14 @@ task GitRevisionDates {
 
 **Build Date**: $((get-date -format s).Replace('T',' '))
 
+[View revision.json](../revision.json)
+
 |Date|Path|Comment|
-|---|---|---|
-" | Out-File -Encoding utf8 $out
+|---|---|---|" | Out-File -Encoding utf8 $out
 
     $revisions = Get-GitRevisionDates -Path 'source/docs' -Ext '.md' -Skip '*.templates/*', '*/revision.md'
-    $revisions | ConvertTo-Csv | Out-File $dir/revision.csv
-    $revisions | % {
-        $fileSitePath = $_.File.Replace("source/docs/", "")
-        $comment = if (!(Test-Path (Join-Path $ProjectRoot $_.File))) { "not found" }
-        "| {0} | {1} | {2} |" -f $_.Date, $fileSitePath, $comment
-    } | Out-File -Encoding utf8 -Append $out
-
+    $revisions | ConvertTo-Json | Out-File $dir/revision.json
+    $revisions.GetEnumerator() | % { "|{0}|{1}|{2}|" -f $_.Value.Date, $_.Key, $_.Value.comment } | Out-File -Encoding utf8 -Append $out
     Get-Item $out
 }
 
@@ -113,11 +109,13 @@ function Get-GitRevisionDates($Path='.', $Ext, $Skip)
         $_
     } | Sort-Object -unique
 
-    $res = @()
+    $res = @{}
     foreach ($file in $files) {
+        $comment = if (Test-Path (Join-Path $ProjectRoot $file )) { "" } else { "not found" }
         $iFile = $log.IndexOf($file) + 1
         $fDate = $dates | ? LineNumber -lt $iFile | Select-Object -Last 1
-        $res += [PSCustomObject]@{ File = $file; Date = $fDate.Line }
+        $file = $file.Replace('source/docs/', '')
+        $res.$file = @{ Date = $fDate.Line; Comment = $comment }
     }
 
     $res | Sort-Object Date -Desc
