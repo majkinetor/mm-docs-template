@@ -1,6 +1,6 @@
 # MM-DOCS Template
 
-[![Build status](https://ci.appveyor.com/api/projects/status/1sybv5w5lgywnwc4?svg=true)](https://ci.appveyor.com/project/majkinetor/mm-docs-template) 
+[![Build status](https://ci.appveyor.com/api/projects/status/1sybv5w5lgywnwc4?svg=true)](https://ci.appveyor.com/project/majkinetor/mm-docs-template)
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [VIEW DEMO](https://majkinetor.github.io/mm-docs-template)
@@ -16,15 +16,16 @@ View how compiled static site looks like on [demo site](https://majkinetor.githu
 - Beautiful responsive design using the [material](https://squidfunk.github.io/mkdocs-material) theme
 - Navigational bar, TOC, search and various rich presentation functionalities
 - Rich diagrams and interface mockups using PlantUML
-- Macros can be written in python
+- Macros in Python language
 - PDF export for each page or full site
+- Metainformation for every page - last modification date, source file, authors, etc.
 - GitLab/GitHub repository connection for editing within a browser
 - Automated AppVeyor build and deploy to GitHub pages using Ubuntu image
 
 ## Prerequisites
 
 - Docker installation.
-  - For Windows Desktop use: `cinst docker-desktop`  
+  - For Windows Desktop use: `cinst docker-desktop`
 - PowerShell (optional, developer friendliness)
   - [Invoke-Build](https://www.powershellgallery.com/packages/InvokeBuild) module
 
