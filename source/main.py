@@ -1,4 +1,6 @@
 from time import gmtime, strftime
+import os
+import re
 
 def define_env(env):
     """
@@ -7,9 +9,13 @@ def define_env(env):
     - variables: the dictionary that contains the variables
     - macro: a decorator function, to declare a macro.
     """
-    
+    revision = open('/docs/source/docs/revision.csv', "r")
+    env.variables['revisions'] = revision.read()
+    revision.close()
+
     env.variables['baz'] = "John Doe"
     env.variables['time'] = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+
 
     @env.macro
     def bar(x):
@@ -18,6 +24,13 @@ def define_env(env):
     # If you wish, you can  declare a macro with a different name:
     def f(x):
         return x * x
+
+    @env.macro
+    def changedate(page):
+        m = re.match('%s","(.+?)"' % (page.file.src_path), env.variables['revisions'])
+        if m:
+            return m.group(1)
+        return "none"
 
     env.macro(f, 'barbaz')
 

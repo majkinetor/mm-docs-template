@@ -87,3 +87,5 @@ plugins:
 nav:
 - Home: index.md
 - Demonstration: demo.md
+- Variables: vars.md
+- Revision: revision.md

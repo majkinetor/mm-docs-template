@@ -15,11 +15,11 @@ param (
     [switch] $aNoProxy
 )
 
-Enter-Build { 
+Enter-Build {
     Write-Host "If you are behind the proxy use http(s)_proxy environment variables"
 
     $script:ImageFullName = if (!$aVersion) { $aImageName } else { "${aImageName}:$aVersion" }
-    $script:ServeAddress  = "0.0.0.0:$aPort" 
+    $script:ServeAddress  = "0.0.0.0:$aPort"
     $script:ProjectName   = (Split-Path -Leaf $BuildFile).Replace('.build.ps1','')
     $script:ProjectRoot   = git rev-parse --show-toplevel
     $script:ContainerName = $ProjectName
@@ -35,9 +35,9 @@ task Run Stop, {
 }
 
 # Synopsis: Build documentation into static site
-task Build { 
+task Build GitRevisionDates, {
     $ContainerName = "$ContainerName-build"
-    docker-run mkdocs build 
+    docker-run mkdocs build
 }
 
 # Synopsis: Stop docker documentation container that serves documentation
@@ -59,20 +59,19 @@ task GitRevisionDates {
     $out = "$dir/revision.md"
 
 "# Revisions
-    
+
 **Build Date**: $((get-date -format s).Replace('T',' '))
 
 |Date|Path|Comment|
-|---|---|---|" | Out-File -Encoding utf8 $out
+|---|---|---|
+" | Out-File -Encoding utf8 $out
 
-    Get-GitRevisionDates -Path 'source/docs' -Ext '.md' -Skip '*.templates/*', '*/revision.md' | % {        
-        $fileSitePath = $_.File.Replace("$ProjectName/$dir/", "").Replace('.md','').Replace('index','')
-        $title = $fileSitePath.Replace('/', ' --> ')
-        if ($_.File.EndsWith('index.md')) {$title += 'index'}
-        
-        $comment = if (!(Test-Path (Join-Path $ProjectRoot $_.File))) { "(re)moved" }
-
-        "| {0} | [{1}](../{2}) |{3}|" -f $_.Date, $title, $fileSitePath, $comment
+    $revisions = Get-GitRevisionDates -Path 'source/docs' -Ext '.md' -Skip '*.templates/*', '*/revision.md'
+    $revisions | ConvertTo-Csv | Out-File $dir/revision.csv
+    $revisions | % {
+        $fileSitePath = $_.File.Replace("source/docs/", "")
+        $comment = if (!(Test-Path (Join-Path $ProjectRoot $_.File))) { "not found" }
+        "| {0} | {1} | {2} |" -f $_.Date, $fileSitePath, $comment
     } | Out-File -Encoding utf8 -Append $out
 
     Get-Item $out
@@ -104,7 +103,7 @@ function docker-run( [switch] $Interactive, [switch] $Detach, [switch] $Expose) 
 function Get-GitRevisionDates($Path='.', $Ext, $Skip)
 {
     [array] $log = git --no-pager log --format=format:%ai --name-only $Path
-    
+
     $date_re = "^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d .\d{4}$"
     [array] $dates = $log | Select-String $date_re | select LineNumber, Line
 
@@ -126,15 +125,15 @@ function Get-GitRevisionDates($Path='.', $Ext, $Skip)
 
 function Wait-For ([string]$url, [int]$Timeout=20) {
     Write-Host "Waiting for server response: $url"
-    1..$Timeout | % { 
+    1..$Timeout | % {
         try { $status = Invoke-WebRequest $url -Method Head -UseBasicParsing | % StatusCode } catch {}
-        if ($status -eq 200) { 
+        if ($status -eq 200) {
             Write-Host "Server responded OK !"; break
         }
         elseif ($status -is [int]) {
             Write-Warning "Server responded with invalid status '$status'"; break
         }
-        elseif ($_ -eq $Timeout) { 
+        elseif ($_ -eq $Timeout) {
             Write-Warning "Server is NOT responding"; break
         }
         Start-Sleep 1
