@@ -23,6 +23,9 @@ Enter-Build {
     $script:ProjectName   = (Split-Path -Leaf $BuildFile).Replace('.build.ps1','')
     $script:ProjectRoot   = git rev-parse --show-toplevel
     $script:ContainerName = $ProjectName
+
+    $script:DocsDir = 'source/docs/'
+    $script:RevisionPathToRemove  = "$DocsDir"
 }
 
 task . Build
@@ -55,8 +58,7 @@ task Clean { remove source\site, source\__pycache__ }
 
 # Synopsis: Get the last revision date for all files in the documentation
 task GitRevisionDates {
-    $dir = 'source/docs'
-    $out = "$dir/revision.md"
+    $mdRevisionPath = "$DocsDir/revision.md"
 
 "# Revisions
 
@@ -65,12 +67,12 @@ task GitRevisionDates {
 [View revision.json](../revision.json)
 
 |Date|Path|Comment|
-|---|---|---|" | Out-File -Encoding utf8 $out
+|---|---|---|" | Out-File -Encoding utf8 $mdRevisionPath
 
-    $revisions = Get-GitRevisionDates -Path 'source/docs' -Ext '.md' -Skip '*.templates/*', '*/revision.md'
-    $revisions | ConvertTo-Json | Out-File $dir/revision.json
-    $revisions.GetEnumerator() | % { "|{0}|{1}|{2}|" -f $_.Value.Date, $_.Key, $_.Value.comment } | Out-File -Encoding utf8 -Append $out
-    Get-Item $out
+    $revisions = Get-GitRevisionDates -Path $DocsDir -Ext '.md' -Skip '*.templates/*', '*/revision.md'
+    $revisions | ConvertTo-Json | Out-File $DocsDir/revision.json
+    $revisions.GetEnumerator() | % { "|{0}|{1}|{2}|" -f $_.Value.Date, $_.Key, $_.Value.comment } | Out-File -Encoding utf8 -Append $mdRevisionPath
+    Get-Item $mdRevisionPath
 }
 
 function docker-run( [switch] $Interactive, [switch] $Detach, [switch] $Expose) {
@@ -114,7 +116,7 @@ function Get-GitRevisionDates($Path='.', $Ext, $Skip)
         $comment = if (Test-Path (Join-Path $ProjectRoot $file )) { "" } else { "not found" }
         $iFile = $log.IndexOf($file) + 1
         $fDate = $dates | ? LineNumber -lt $iFile | Select-Object -Last 1
-        $file = $file.Replace('source/docs/', '')
+        $file = $file.Replace($RevisionPathToRemove, '')
         $res.$file = @{ Date = $fDate.Line; Comment = $comment }
     }
 
