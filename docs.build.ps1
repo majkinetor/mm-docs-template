@@ -97,6 +97,9 @@ function docker-run( [switch] $Interactive, [switch] $Detach, [switch] $Expose) 
     Write-Host $cmd -ForegroundColor yellow
     exec { Invoke-Expression $cmd }
 }
+
+# NOTE: This doesn't work correctly with shallow clones:
+# https://stackoverflow.com/questions/60868897/git-log-dates-incorrect-in-a-github-action
 function Get-GitRevisionDates($Path='.', $Ext)
 {
     [array] $gitlog = git --no-pager log --format=format:%ai --name-only $Path
