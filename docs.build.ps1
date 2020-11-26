@@ -66,12 +66,12 @@ task GitRevisionDates {
 
 [View revision.json](../revision.json)
 
-|Date|Path|Comment|
-|---|---|---|" | Out-File -Encoding utf8 $mdRevisionPath
+|Date|Path|
+|---|---|" | Out-File -Encoding utf8 $mdRevisionPath
 
-    $revisions = Get-GitRevisionDates -Path $DocsDir -Ext '.md' -Skip '*.templates/*', '*/revision.md'
+    $revisions = Get-GitRevisionDates -Path $DocsDir -Ext '.md'
     $revisions | ConvertTo-Json | Out-File $DocsDir/revision.json
-    $revisions.GetEnumerator() | % { "|{0}|{1}|{2}|" -f $_.Value.Date, $_.Key, $_.Value.comment } | Out-File -Encoding utf8 -Append $mdRevisionPath
+    $revisions.GetEnumerator() | % { "|{0}|{1}" -f $_.Value.Date, $_.Key } | Out-File -Encoding utf8 -Append $mdRevisionPath
     Get-Item $mdRevisionPath
 }
 
@@ -97,30 +97,21 @@ function docker-run( [switch] $Interactive, [switch] $Detach, [switch] $Expose) 
     Write-Host $cmd -ForegroundColor yellow
     exec { Invoke-Expression $cmd }
 }
-
-function Get-GitRevisionDates($Path='.', $Ext, $Skip)
+function Get-GitRevisionDates($Path='.', $Ext)
 {
-    [array] $log = git --no-pager log --format=format:%ai --name-only $Path
-
-    $date_re = "^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d .\d{4}$"
-    [array] $dates = $log | Select-String $date_re | Select-Object LineNumber, Line
-
-    $files = $log -notmatch "^$date_re$" | ? {
-        if (!$_.EndsWith($Ext)) { return }
-        foreach ($s in $Skip) { if ($_ -like $s) { return } }
-        $_
-    } | Sort-Object -unique
+    [array] $gitlog = git --no-pager log --format=format:%ai --name-only $Path
 
     $res = @{}
-    foreach ($file in $files) {
-        $comment = if (Test-Path (Join-Path $ProjectRoot $file )) { "" } else { "not found" }
-        $iFile = $log.IndexOf($file) + 1
-        $fDate = $dates | ? LineNumber -lt $iFile | Select-Object -Last 1
-        $file = $file.Replace($RevisionPathToRemove, '')
-        $res.$file = @{ Date = $fDate.Line; Comment = $comment }
+    $date = Get-Date
+    foreach ($line in $gitlog) {
+        if ([DateTime]::TryParse($line, [ref]$date)) { $lastdate = $date; continue }
+        if (!$line.StartsWith($RevisionPathToRemove)) { continue }
+        if (!$line.Trim().EndsWith($Ext)) { continue }
+        $line = $line.Replace($RevisionPathToRemove, '')
+        if ($line.StartsWith('files')) { continue }
+        $res.$line = @{ Date = $lastdate.ToString('yyyy-MM-dd HH:mm:ss') }
     }
-
-    $res | Sort-Object Date -Desc
+    $res
 }
 
 function Wait-For ([string]$url, [int]$Timeout=20) {
