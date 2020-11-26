@@ -1,4 +1,4 @@
-from time import gmtime, strftime
+import time
 import os
 import json
 
@@ -13,7 +13,7 @@ def define_env(env):
         env.variables['revisions'] = json.load(json_file)
 
     env.variables['baz'] = "John Doe"
-    env.variables['time'] = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+    env.variables['time'] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
 
     @env.macro
