@@ -112,6 +112,7 @@ function Get-GitRevisionDates($Path='.', $Ext)
         if (!$line.Trim().EndsWith($Ext)) { continue }
         $line = $line.Replace($RevisionPathToRemove, '')
         if ($line.StartsWith('files')) { continue }
+        if ($res.$line) { continue }
         $res.$line = @{ Date = $lastdate.ToString('yyyy-MM-dd HH:mm:ss') }
     }
     $res

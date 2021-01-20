@@ -27,8 +27,9 @@ def define_env(env):
     @env.macro
     def changedate():
         path = env.variables['page'].file.src_path
-        rev  = env.variables['revisions'][path]
-        return rev['Date']
+        revs = env.variables['revisions']
+        if path in revs:
+            return revs[path]['Date']
 
     env.macro(f, 'barbaz')
 
