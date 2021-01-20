@@ -81,7 +81,7 @@ plugins:
         verbose: false
         media_type: print
         enabled_if_env: MM_DOCS_ENABLE_PDF_EXPORT
-        combined: true
+        combined: false
     - macros:
         include_dir: inc
 nav:
