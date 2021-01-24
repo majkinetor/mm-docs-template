@@ -13,12 +13,14 @@ View how compiled static site looks like on [demo site](https://majkinetor.githu
 
 ## Features
 
+- Documentation in Markdown, HTML, PlantUML, MatJax
+- Navigational bar, TOC, color themes, search and various rich presentation functionalities
 - Beautiful responsive design using the [material](https://squidfunk.github.io/mkdocs-material) theme
-- Navigational bar, TOC, search and various rich presentation functionalities
-- Rich diagrams and interface mockups using PlantUML
-- Macros in Python language
-- PDF export for each page or full site
-- Metainformation for every page - last modification date, source file, authors, etc.
+- Custom includables that can be imported in any page: footer, header, abbreviations etc.
+- Variables, Python macros and jinja templates
+- PDF export for individual pages or full site
+- Bad link checker for internal and external links
+- Metainformation for every page - last git modification date, source file, authors, etc.
 - GitLab/GitHub repository connection for editing within a browser
 - Automated AppVeyor build and deploy to GitHub pages using Ubuntu image
 
