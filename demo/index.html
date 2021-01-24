@@ -418,13 +418,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#custom-span-class" class="md-nav__link">
-    Custom span class
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#macros" class="md-nav__link">
     Macros
   </a>
@@ -686,13 +679,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#custom-span-class" class="md-nav__link">
-    Custom span class
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#macros" class="md-nav__link">
     Macros
   </a>
@@ -904,9 +890,18 @@ Another citation line</p>
 </blockquote>
 </blockquote>
 <h2 id="html">HTML<a class="headerlink" href="#html" title="Permanent link">↵</a></h2>
-<p>HTML is allowed without restrictions:</p>
+<p>HTML is allowed without restrictions. Custom styles are added in <code>docs\_css\extra.css</code> file.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&#39;background-color: #fdd; padding:1em; text-align: center &#39;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">font</span> <span class="na">size</span><span class="o">=</span><span class="s">&quot;20&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;yellow bred pl1 pr1&quot;</span><span class="p">&gt;</span>cookies<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">font</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+
 <div style='background-color: #fdd; padding:1em; text-align: center '>
-    <font size="20">Some big text</font>
+    <font size="20">
+        <span class="yellow bred pl1 pr1">cookies</span>
+    </font>
 </div>
 
 <h2 id="critic-and-comments">Critic and comments<a class="headerlink" href="#critic-and-comments" title="Permanent link">↵</a></h2>
@@ -1143,13 +1138,6 @@ massa, nec semper lorem quam in massa.</p>
 </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Nulla vel eros venenatis, imperdiet enim id, faucibus nisi</li>
 </ul>
-<h2 id="custom-span-class">Custom span class<a class="headerlink" href="#custom-span-class" title="Permanent link">↵</a></h2>
-<p>Adding custom HTML classes to span elements.</p>
-<p><strong>Syntax</strong>: <code>!!&lt;class names&gt;|&lt;text to be wrapped&gt;!!</code>.</p>
-<p>The following example uses css from the custom_css file, classes <code>color-yellow</code> and <code>backgrond-blue</code>:</p>
-<ul>
-<li><code>I love !!color-yellow background-blue|cookies!!</code> - I love <span class="color-yellow background-blue">cookies</span></li>
-</ul>
 <h2 id="macros">Macros<a class="headerlink" href="#macros" title="Permanent link">↵</a></h2>
 <p><a href="https://github.com/fralau/mkdocs_macros_plugin#overview">More details</a>.</p>
 <table>
@@ -1210,19 +1198,16 @@ repo_url: !!python/object/apply:os.getenv [&quot;CI_PROJECT_URL&quot;]
 repo_name: !!python/object/apply:os.getenv [&quot;CI_PROJECT_PATH&quot;]
 </code></pre></div>
 
-<div class="docinfo" style="margin-top:5em; padding-top: 1em; padding-bottom: 2em; font-size: smaller; border-top: 1px solid gray">
-    <span style="float:left">
-        📆 <b>Modification Date</b>:<br>
-        <span style="padding-left:1.5em">2020-10-04 21:18:23</span>
-    </span>
-    <span style="float:right">
-        <span style="padding-right: 1em"><i>Build Date</i>:</span> 2021-01-20 14:12:25<br>
-        <span style="padding-right: 2.5em"><i>Source</i>:</span> <span style="font-family: monospace;  font-size: larger">demo.md</span>
-    </span>
-</div>
-
 <!-- IT keywoards -->
 
+<p><div class="docinfo" style="position:relative; margin-top:3em; padding-top: 1em; font-size: smaller; border-top: 2px solid #cccccc">
+    <spans>
+        ✏️ <b>Last Change</b>: 2021-01-24 14:53
+    </span>
+    <span style="position:absolute; right:0">
+        📖 <b>Publication Date</b>: 2021-01-24 14:54
+    </span>
+</div></p>
 <div class="footnote">
 <hr />
 <ol>

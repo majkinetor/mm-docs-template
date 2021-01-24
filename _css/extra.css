@@ -16,22 +16,58 @@ img.emojione {
     color: gray;
 }
 
-.background-blue {
+.pl1 {
+    padding-left: 1em;
+}
+
+.pr1 {
+    padding-right: 1em;
+}
+
+.pl2 {
+    padding-left: 2em;
+}
+
+.pr2 {
+    padding-right: 2em;
+}
+
+.pl3 {
+    padding-left: 3em;
+}
+
+.pr3 {
+    padding-right: 3em;
+}
+
+.bblue {
     background-color: blue;
 }
 
-.color-red {
+.bred {
+    background-color: red;
+}
+
+.byello {
+    background-color: yellow;
+}
+
+.byello {
+    background-color: green;
+}
+
+.red {
     color: red;
 }
 
-.color-yellow {
+.yellow {
     color: yellow;
 }
 
-.color-blue {
+.blue {
     color: blue;
 }
 
-.color-green {
+.green {
     color: green;
 }
