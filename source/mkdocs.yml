@@ -72,8 +72,6 @@ markdown_extensions:
     - plantuml_markdown:
         cachedir: __pycache__
 
-    - mdx_custom_span_class
-
 plugins:
     - search:
         language: en    # https://squidfunk.github.io/mkdocs-material/getting-started/#language
