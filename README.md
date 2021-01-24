@@ -23,6 +23,8 @@ View how compiled static site looks like on [demo site](https://majkinetor.githu
 - Metainformation for every page - last git modification date, source file, authors, etc.
 - GitLab/GitHub repository connection for editing within a browser
 - Automated AppVeyor build and deploy to GitHub pages using Ubuntu image
+- Live reload during editing
+- Cross platform for hosting and development
 
 ## Prerequisites
 
