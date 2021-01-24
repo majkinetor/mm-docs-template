@@ -12,8 +12,10 @@ def define_env(env):
     with open('/docs/source/docs/revision.json') as json_file:
         env.variables['revisions'] = json.load(json_file)
 
+    define_env.dateFormat = env.variables['date format'] if 'date format' in env.variables else "%Y-%m-%d %H:%M"
+
     env.variables['baz'] = "John Doe"
-    env.variables['time'] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    env.variables['time'] = time.strftime(define_env.dateFormat, time.localtime())
 
 
     @env.macro
@@ -28,8 +30,11 @@ def define_env(env):
     def changedate():
         path = env.variables['page'].file.src_path
         revs = env.variables['revisions']
-        if path in revs:
-            return revs[path]['Date']
+        if not path in revs:
+            return ''
+        f = time.strptime(revs[path]['Date'], '%Y-%m-%d %H:%M:%S')
+        s = time.strftime(define_env.dateFormat, f)
+        return s
 
     env.macro(f, 'barbaz')
 

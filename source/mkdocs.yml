@@ -27,6 +27,7 @@ extra_javascript:
 extra:
     url_prefix: !!python/object/apply:os.getenv ["MM_DOCS_URL_PREFIX"]
     version: 0.1
+    # date format: '%d.%m.%Y %H:%M'
     company:
         name: Acme
 

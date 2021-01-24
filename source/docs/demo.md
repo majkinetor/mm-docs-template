@@ -120,11 +120,22 @@ The text contains 2 comments bellow this line which should not be visible.
 
 ## HTML
 
-HTML is allowed without restrictions:
+HTML is allowed without restrictions. Custom styles are added in `docs\_css\extra.css` file.
+
+```html
+<div style='background-color: #fdd; padding:1em; text-align: center '>
+    <font size="20">
+        <span class="yellow bred pl1 pr1">cookies</span>
+    </font>
+</div>
+```
 
 <div style='background-color: #fdd; padding:1em; text-align: center '>
-    <font size="20">Some big text</font>
+    <font size="20">
+        <span class="yellow bred pl1 pr1">cookies</span>
+    </font>
 </div>
+
 
 ## Critic and comments
 
@@ -382,16 +393,6 @@ The following are defined in single file, `_inc\abbr.md` and included on each pa
     * [x] In hac habitasse platea dictumst
     * [ ] Praesent sed risus massa
 * [ ] Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
-
-## Custom span class
-
-Adding custom HTML classes to span elements.
-
-**Syntax**: `!!<class names>|<text to be wrapped>!!`.
-
-The following example uses css from the custom_css file, classes `color-yellow` and `backgrond-blue`:
-
-- `I love !!color-yellow background-blue|cookies!!` - I love !!color-yellow background-blue|cookies!!
 
 ## Macros
 
