@@ -10,6 +10,7 @@ edit_uri: edit/master/source/docs
 dev_addr: 0.0.0.0:8000
 
 theme:
+    custom_dir: overrides
     name: material
     palette:
         primary: White
