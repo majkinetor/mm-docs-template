@@ -45,12 +45,21 @@ task Build GitRevisionDates, {
 
 # Synopsis: Stop docker documentation container that serves documentation
 task Stop {
-    $docs = docker ps --format '{{json .}}' | ConvertFrom-Json | ? Names -eq "${ContainerName}-$aPort"
+    $docs = docker ps --format '{{json .}}' | ConvertFrom-Json | ? Names -like "${ContainerName}-*"
     if ($docs) {
         Write-Host "Stopping running container:" $docs.Names
         docker stop $docs.Names
     } else { Write-Host "No documentation container found serving content" }
 }
+
+# Synopsis: Check internal and external links
+task CheckLinks  {
+    $ContainerName = "$ContainerName-links"
+    docker-run mkdocs serve --dev-addr $ServeAddress -Detach -Expose
+    Wait-For "http://localhost:$aPort"
+    $ContainerName = "$ContainerName-blc"
+    docker-run /bin/bash -c "set -o pipefail; blc -eorf --filter-level 0 --exclude .xlsx --exclude .docx --exclude .pdf --exclude .json http://localhost:$aPort/"
+}, Stop
 
 # Synopsis: Clean generated documentation files (not docker images)
 task Clean { remove source\site, source\__pycache__ }
@@ -120,7 +129,7 @@ function Get-GitRevisionDates($Path='.', $Ext)
 
 function Wait-For ([string]$url, [int]$Timeout=20) {
     Write-Host "Waiting for server response: $url"
-    1..$Timeout | % {
+    for ($i=0; $i -lt $Timeout; $i++) {
         try { $status = Invoke-WebRequest $url -Method Head -UseBasicParsing | % StatusCode } catch {}
         if ($status -eq 200) {
             Write-Host "Server responded OK !"; break
