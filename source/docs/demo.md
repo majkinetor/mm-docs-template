@@ -165,9 +165,12 @@ General block handling:
 ++}
 
 
-## Emoji
+## Emoji and icons
 
-[List of emoji codes](https://web.archive.org/save/https://www.webfx.com/tools/emoji-cheat-sheet/)
+Use more than 7.000 icons and thousands of emojis in your project documentation with zero effort. Custom icons can be added and used in `mkdocs.yml`, documents and templates.
+
+- [More info](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#icons-emojis)
+- [List of emoji codes](https://web.archive.org/save/https://www.webfx.com/tools/emoji-cheat-sheet/)
 
 - `:tada:` :tada:
 - `:jack_o_lantern:` :jack_o_lantern:
@@ -178,6 +181,10 @@ General block handling:
 - `:thumbsup:` :thumbsup:
 
 :purple_heart: :exclamation: :clock1: :tractor: :chicken: :imp:
+
+- :material-account-circle: – `.icons/material/account-circle.svg`
+- :fontawesome-regular-laugh-wink: – `.icons/fontawesome/regular/laugh-wink.svg`
+- :octicons-octoface-24: – `.icons/octicons/octoface-24.svg`
 
 
 ## Lists
