@@ -33,10 +33,10 @@ For more details about included tools see:
 ## Local files
 
 ```
-![omg-lolcat]( {{'{{' }}url_prefix{{'}}'}}/files/omg-lolcat.jpg)
+![omg-lolcat](files/omg-lolcat.jpg)
 ```
 
-![omg-lolcat]({{url_prefix}}/files/omg-lolcat.jpg)
+![omg-lolcat](files/omg-lolcat.jpg)
 
 ### Hotkeys
 
