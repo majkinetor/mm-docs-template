@@ -30,6 +30,14 @@ For more details about included tools see:
 | ==Colored text==   | `==Colored text==`                 |
 | `Inline code`      | <code>\`Inline code\`</code>       |
 
+## Local files
+
+```
+![omg-lolcat]({{url_prefix}}/files/omg-lolcat.jpg)
+```
+
+![omg-lolcat]({{url_prefix}}/files/omg-lolcat.jpg)
+
 ### Hotkeys
 
 |         Output         |           Code           |
@@ -217,10 +225,6 @@ Use more than 7.000 icons and thousands of emojis in your project documentation 
 | ------ | -------------------- |
 | row1.1 | row1.2               |
 | row2.1 | row2.2-1<br>row2.2-2 |
-
-## Pictures
-
-![omg-lolcat]({{url_prefix}}/files/omg-lolcat.jpg)
 
 ## Plantuml
 
