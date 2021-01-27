@@ -20,9 +20,11 @@ Enter-Build {
 
     $script:ImageFullName = if (!$aVersion) { $aImageName } else { "${aImageName}:$aVersion" }
     $script:ServeAddress  = "0.0.0.0:$aPort"
+    $script:ServeAddress  = "0.0.0.0:$aPort"
     $script:ProjectName   = (Split-Path -Leaf $BuildFile).Replace('.build.ps1','')
     $script:ProjectRoot   = git rev-parse --show-toplevel
     $script:ContainerName = $ProjectName
+    $script:Url = "http://localhost:$aPort"
 
     $script:DocsDir = 'source/docs/'
     $script:RevisionPathToRemove  = "$DocsDir"
@@ -32,6 +34,7 @@ task . Build
 
 # Synopsis: Serve documentation site on localhost
 task Run Stop, GitRevisionDates, {
+    $Env:MM_DOCS_URL_PREFIX = $script:Url
     $ContainerName = "$ContainerName-$aPort"
     docker-run mkdocs serve --dev-addr $ServeAddress -Detach -Expose
     Wait-For "http://localhost:$aPort"
