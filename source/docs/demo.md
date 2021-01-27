@@ -218,6 +218,10 @@ Use more than 7.000 icons and thousands of emojis in your project documentation 
 | row1.1 | row1.2               |
 | row2.1 | row2.2-1<br>row2.2-2 |
 
+## Pictures
+
+![omg-lolcat]({{url_prefix}}/files/omg-lolcat.jpg)
+
 ## Plantuml
 
 Add `plantuml` in a block code header to set code section as PlantUml source. Use `format` to specify output type:

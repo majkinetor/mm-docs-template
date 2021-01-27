@@ -27,7 +27,7 @@ install:
 - ps: Install-Module InvokeBuild -Force
 
 build_script:
-- ps: Invoke-Build Build
+- ps: $Env:MM_DOCS_URL_PREFIX = '/mm-docs-template'; Invoke-Build Build
 
 on_success:
 - git config --global credential.helper store
