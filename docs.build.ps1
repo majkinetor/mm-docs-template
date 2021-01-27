@@ -52,15 +52,13 @@ task Stop {
     } else { Write-Host "No documentation container found serving content" }
 }
 
-# Synopsis: Check internal links
-task CheckLinks Stop, {
-    $Env:MM_DOCS_URL_PREFIX = $script:url
-    $ContainerName = "$ContainerName-links"
-    docker-run mkdocs serve --dev-addr $ServeAddress -Detach -Expose
-    Wait-For "http://localhost:$aPort"
-    exec {
-        docker exec -t $ContainerName /bin/bash -c "set -o pipefail; blc -erf --filter-level 0 http://localhost:$aPort"
-    }
+# Synopsis: Check internal and external links (requires Run)
+task CheckLinks {
+    Write-Host "Checking links"
+    $ContainerName = "$ContainerName-$aPort"
+    $cmd = 'docker exec -t {0} /bin/bash -c "set -o pipefail; blc -erf --filter-level 0 http://localhost:{1}"' -f $ContainerName, $aPort
+    Write-Host $cmd -ForegroundColor yellow
+    exec { Invoke-Expression $cmd }
 }
 
 # Synopsis: Clean generated documentation files (not docker images)
