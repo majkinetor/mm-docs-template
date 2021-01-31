@@ -66,7 +66,7 @@ task CheckLinks {
 
 # Synopsis: Export PDF of entire site (requires Run)
 task ExportPdf {
-    cd pdf
+    cd source/pdf
     exec {
         npm i --save puppeteer
         node print.js $Url/print_page "$ProjectName.pdf" "$ProjectName"

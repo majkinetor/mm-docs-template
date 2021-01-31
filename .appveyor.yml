@@ -12,7 +12,7 @@ image: Ubuntu
 
 environment:
   MM_DOCS_VERSION: 0.5.0
-  MM_DOCS_ENABLE_PDF_EXPORT: 1
+  MM_DOCS_ENABLE_PDF_EXPORT: 0
 
   # Github token to deploy gh-pages
   access_token:
