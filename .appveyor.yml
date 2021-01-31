@@ -53,6 +53,7 @@ on_success:
 
 artifacts:
 - path: source/site
+- path: source/pdf/*.pdf
 
 notifications:
 - provider: Email
