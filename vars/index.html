@@ -9,13 +9,14 @@
         <meta name="description" content="MM-DOCS Template">
       
       
-        <link rel="canonical" href="https://majkinetor.github.io/mm-docs-template/vars/">
-      
       
         <meta name="author" content="majkinetor">
       
+      
+        <link rel="canonical" href="https://majkinetor.github.io/mm-docs-template/vars/">
+      
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.1">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6">
     
     
       
@@ -23,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.cb6bc1d0.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
         
           
           
@@ -38,12 +39,16 @@
     
       
         
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../css/print-site.css">
     
       <link rel="stylesheet" href="../_css/extra.css">
     
@@ -64,6 +69,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
       
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -79,7 +85,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://majkinetor.github.io/mm-docs-template/" title="MM-DOCS" class="md-header-nav__button md-logo" aria-label="MM-DOCS">
       
@@ -91,18 +99,20 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
     <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             MM-DOCS
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
             
               Variables
             
           </span>
         </div>
-      
+      </div>
     </div>
     
       <label class="md-header-nav__button md-icon" for="__search">
@@ -113,7 +123,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -161,10 +171,16 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://majkinetor.github.io/mm-docs-template/" title="MM-DOCS" class="md-nav__button md-logo" aria-label="MM-DOCS">
       
@@ -194,24 +210,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href=".." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../demo/" title="Demonstration" class="md-nav__link">
-      Demonstration
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
@@ -219,23 +226,64 @@
       
 
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo/" class="md-nav__link">
+        Demonstration
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Variables
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="Variables" class="md-nav__link md-nav__link--active">
-      Variables
-    </a>
     
       
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      
+      <label class="md-nav__link" for="nav-3">
+        Extra
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Extra" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Extra
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Variables
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Variables
+      </a>
+      
+        
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -283,20 +331,42 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../revision/" class="md-nav__link">
+        Revision
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../revision/" title="Revision" class="md-nav__link">
-      Revision
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../print_page/" class="md-nav__link">
+        Print Site
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -306,7 +376,8 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -365,6 +436,7 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="vars.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
               
+  
                 
                   <a href="https://github.com/majkinetor/mm-docs-template/edit/master/source/docs/vars.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
@@ -375,7 +447,7 @@
                 
                 <h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">↵</a></h2>
 <h3 id="context">Context<a class="headerlink" href="#context" title="Permanent link">↵</a></h3>
-<p>[(0, 'Page', "Page(title='Home', url='/mm-docs-template/')"), (1, 'Page', "Page(title='Demonstration', url='/mm-docs-template/demo/')"), (2, 'Page', "Page(title='Variables', url='/mm-docs-template/vars/')"), (3, 'Page', "Page(title='Revision', url='/mm-docs-template/revision/')")]</p>
+<p>[(0, 'Page', "Page(title='Home', url='/mm-docs-template/')"), (1, 'Page', "Page(title='Demonstration', url='/mm-docs-template/demo/')"), (2, 'Section', "title = 'Extra', children = [Page(title='Variables', url='/mm-docs-template/vars/'), Page(title='Revision', url='/mm-docs-template/revision/')], <b>parent</b> [<i>NoneType</i>], _Section__active = False, is_section = True, is_page = False, is_link = False"), (3, 'Page', "Page(title='Print Site', url='/mm-docs-template/print_page/')")]</p>
 <h3 id="page">Page<a class="headerlink" href="#page" title="Permanent link">↵</a></h3>
 <table class="pretty" style="background-color: #F0FFFF; border:1px solid #DCDCDC; padding: 5px">
 
@@ -410,9 +482,9 @@
 
             <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>parent</b></td>
 
-            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>NoneType</i></td>
+            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>Section</i></td>
 
-            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">None</td>
+            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">title = 'Extra', children = [Page(title='Variables', url='/mm-docs-template/vars/'), Page(title='Revision', url='/mm-docs-template/revision/')], <b>parent</b> [<i>NoneType</i>], _Section__active = False, is_section = True, is_page = False, is_link = False</td>
 
         </tr>
 
@@ -492,7 +564,7 @@
 
             <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>str</i></td>
 
-            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'2021-01-27'</td>
+            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">'2021-01-31'</td>
 
         </tr>
 
@@ -604,7 +676,7 @@
 
             <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>list</i></td>
 
-            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">[{'Home': 'index.md'}, {'Demonstration': 'demo.md'}, {'Variables': 'vars.md'}, {'Revision': 'revision.md'}]</td>
+            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">[{'Home': 'index.md'}, {'Demonstration': 'demo.md'}, {'Extra': [{'Variables': 'vars.md'}, {'Revision': 'revision.md'}]}]</td>
 
         </tr>
 
@@ -654,7 +726,7 @@
 
             <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>Theme</i></td>
 
-            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">Theme(name='material', dirs=['/docs/source/overrides', '/usr/lib/python3.6/site-packages/material', '/usr/lib/python3.6/site-packages/mkdocs/templates'], static_templates=['sitemap.xml', '404.html'], language='en', direction=None, features=['navigation.expand', 'navigation.instant'], palette={'primary': 'White'}, font={'text': 'Roboto', 'code': 'Roboto Mono'}, icon=None, favicon='assets/images/favicon.png', include_search_page=False, search_index_only=True)</td>
+            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">Theme(name='material', dirs=['/docs/source/overrides', '/usr/lib/python3.6/site-packages/material', '/usr/lib/python3.6/site-packages/mkdocs/templates'], static_templates=['404.html', 'sitemap.xml'], language='en', direction=None, features=['navigation.expand', 'navigation.instant'], palette={'primary': 'White'}, font={'text': 'Roboto', 'code': 'Roboto Mono'}, icon=None, favicon='assets/images/favicon.png', include_search_page=False, search_index_only=True)</td>
 
         </tr>
 
@@ -754,7 +826,7 @@
 
             <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>list</i></td>
 
-            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">['_css/extra.css', '_css/pdf.css']</td>
+            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">['css/print-site-material.css', 'css/print-site.css', '_css/extra.css', '_css/pdf.css']</td>
 
         </tr>
 
@@ -764,7 +836,7 @@
 
             <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>list</i></td>
 
-            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">['https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML']</td>
+            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px">['js/print-site-instant-loading.js', 'js/print-site.js', 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML']</td>
 
         </tr>
 
@@ -844,7 +916,7 @@
 
             <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><i>PluginCollection</i></td>
 
-            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>search</b> [<i>SearchPlugin</i>], <b>exclude</b> [<i>Exclude</i>], <b>pdf-export</b> [<i>PdfExportPlugin</i>], <b>macros</b> [<i>MacrosPlugin</i>]</td>
+            <td style="vertical-align:top; border:1px solid #DCDCDC; padding: 5px"><b>search</b> [<i>SearchPlugin</i>], <b>exclude</b> [<i>Exclude</i>], <b>pdf-export</b> [<i>PdfExportPlugin</i>], <b>macros</b> [<i>MacrosPlugin</i>], <b>print-site</b> [<i>PrintSitePlugin</i>]</td>
 
         </tr>
 
@@ -852,19 +924,19 @@
 
 <p>Frontmatter var - foo: bar</p>
 <!-- IT keywoards -->
-
-<p><div class="docinfo" style="position:relative; margin-top:3em; padding-top: 1em; font-size: smaller; border-top: 2px solid #cccccc">
+<div class="docinfo print-site-plugin-ignore" style="position:relative; margin-top:3em; padding-bottom: 3em; padding-top: 1em; font-size: smaller; border-top: 2px solid #cccccc">
     <spans>
         ✏️ <b>Last Change</b>: 2020-11-24 10:23
     </span>
     <span style="position:absolute; right:0">
-        📖 <b>Publication Date</b>: 2021-01-27 20:35
+        📖 <b>Publication Date</b>: 2021-01-31 08:58
     </span>
-</div></p>
+</div>
                 
                   
                 
               
+
               
                 
 
@@ -881,7 +953,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../demo/" title="Demonstration" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../demo/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -896,7 +968,7 @@
           </a>
         
         
-          <a href="../revision/" title="Revision" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../revision/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -933,18 +1005,22 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
-      <script src="../assets/javascripts/bundle.aa3f9871.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.53cc9318.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9c9f54f.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: ['navigation.expand', 'navigation.instant'],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../assets/javascripts/worker/search.9c0e82ba.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
+      
+        <script src="../js/print-site-instant-loading.js"></script>
+      
+        <script src="../js/print-site.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
