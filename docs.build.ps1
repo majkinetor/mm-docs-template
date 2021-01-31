@@ -64,13 +64,13 @@ task CheckLinks {
     exec { Invoke-Expression $cmd }
 }
 
+# Synopsis: Export PDF of entire site (requires Run)
 task ExportPdf {
     cd pdf
     exec {
         npm i --save puppeteer
         node print.js $Url/print_page "$ProjectName.pdf" "$ProjectName"
     }
-
 
     # $chrome = 'chrome'
     # if (!(Get-Command $chrome -ea 0)) {

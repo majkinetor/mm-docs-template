@@ -28,6 +28,7 @@ install:
 
 build_script:
 - ps: $Env:MM_DOCS_URL_PREFIX = '/mm-docs-template'; Invoke-Build Build
+- ps: Invoke-Build Run, ExportPdf, Stop
 
 test_script:
 - ps: Invoke-Build Run, CheckLinks, Stop
