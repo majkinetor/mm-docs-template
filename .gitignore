@@ -1,4 +1,7 @@
 /source/site
 /source/__pycache__
 source/docs/revision.*
-source/pdf/*
+source/pdf/*.pdf
+/source/node_modules/
+source/package-lock.json
+source/package.json

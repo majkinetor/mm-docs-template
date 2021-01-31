@@ -38,7 +38,7 @@ task Run Stop, GitRevisionDates, {
     $ContainerName = "$ContainerName-$aPort"
     docker-run mkdocs serve --dev-addr $ServeAddress -Detach -Expose
     Wait-For "http://localhost:$aPort"
-}
+}, PingTest
 
 # Synopsis: Build documentation into static site
 task Build GitRevisionDates, {
@@ -64,11 +64,16 @@ task CheckLinks {
     exec { Invoke-Expression $cmd }
 }
 
+# Synopsis: Do basic availability test
+task PingTest {
+    Wait-Action { Invoke-WebRequest $args[0] } -ArgumentList $Url -Timeout 60 -Message "Testing service response: $url"
+}
+
 # Synopsis: Export PDF of entire site (requires Run)
 task ExportPdf {
     cd source/pdf
     exec {
-        npm i --save puppeteer
+        npm install --save puppeteer@5.5.0
         node print.js $Url/print_page "$ProjectName.pdf" "$ProjectName"
     }
 
@@ -149,19 +154,29 @@ function Get-GitRevisionDates($Path='.', $Ext)
     $res
 }
 
-function Wait-For ([string]$url, [int]$Timeout=20) {
-    Write-Host "Waiting for server response: $url"
-    for ($i=0; $i -lt $Timeout; $i++) {
-        try { $status = Invoke-WebRequest $url -Method Head -UseBasicParsing | % StatusCode } catch {}
-        if ($status -eq 200) {
-            Write-Host "Server responded OK !"; break
+function Wait-Action ([ScriptBlock]$Action, [int]$Timeout=20, [string] $Message, $ArgumentList) {
+    Write-Host "Waiting for action to succeed up to $Timeout seconds"
+    Write-Host "|== $Message"
+
+    $start = Get-Date
+    while ($true) {
+        $elapsed = ((Get-Date) - $start).TotalSeconds
+        if ($elapsed -ge $Timeout) {break}
+
+        $j = Start-Job $Action -ArgumentList $ArgumentList
+        $maxWait = [int]($Timeout-$elapsed)
+        if ($maxWait -lt 1) { $maxWait = 1 }
+        Wait-Job $j -Timeout $maxWait | Out-Null
+
+        if ($j.State -eq 'Running') { $err = 'still running'; break }
+        if ($j0 = $j.ChildJobs[0]) {
+            if ($err = $j0.Error) { continue }
+            if ($err = $J0.JobStateInfo.Reason) {continue}
         }
-        elseif ($status -is [int]) {
-            Write-Warning "Server responded with invalid status '$status'"; break
-        }
-        elseif ($_ -eq $Timeout) {
-            Write-Warning "Server is NOT responding"; break
-        }
-        Start-Sleep 1
+        try { Receive-Job $j -ErrorAction STOP | Out-Null; } catch { $err = "$_"; continue }
+
+        Write-Host "Action succeded"; return
     }
+
+    throw "Action timedout. Last error: $err"
 }
