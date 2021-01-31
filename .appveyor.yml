@@ -29,6 +29,9 @@ install:
 build_script:
 - ps: $Env:MM_DOCS_URL_PREFIX = '/mm-docs-template'; Invoke-Build Build
 
+test_script:
+- ps: Invoke-Build Run, CheckLinks, Stop
+
 on_success:
 - git config --global credential.helper store
 - ps: Add-Content "$HOME\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
