@@ -12,7 +12,7 @@ image: Ubuntu
 
 environment:
   MM_DOCS_VERSION: 0.5.0
-  MM_DOCS_ENABLE_PDF_EXPORT: 0
+  MM_DOCS_ENABLE_PDF_EXPORT: 1
 
   # Github token to deploy gh-pages
   access_token:
@@ -28,7 +28,7 @@ install:
 
 build_script:
 - ps: $Env:MM_DOCS_URL_PREFIX = '/mm-docs-template'; Invoke-Build Build
-- ps: Invoke-Build Run, ExportPdf, Stop
+# - ps: Invoke-Build Run, ExportPdf, Stop
 
 test_script:
 - ps: Invoke-Build Run, CheckLinks, Stop
