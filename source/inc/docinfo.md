@@ -1,4 +1,4 @@
-<div class="docinfo" style="position:relative; margin-top:3em; padding-top: 1em; font-size: smaller; border-top: 2px solid #cccccc">
+<div class="docinfo print-site-plugin-ignore" style="position:relative; margin-top:3em; padding-bottom: 3em; padding-top: 1em; font-size: smaller; border-top: 2px solid #cccccc">
     <spans>
         ✏️ <b>Last Change</b>: {{ changedate() }}
     </span>

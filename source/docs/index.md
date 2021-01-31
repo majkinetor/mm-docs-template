@@ -14,6 +14,7 @@ The documentation is created using the mm-docs docker bundle:
 - Rich diagrams and interface mockups using PlantUML
 - Macros can be written in python
 - PDF export for each page or full site
+- Single page with entire documentation
 - Live reload during editing
 - GitLab/GitHub repository connection for editing within a browser
 - Automated AppVeyor build and deploy to GitHub pages using Ubuntu image

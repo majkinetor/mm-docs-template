@@ -64,6 +64,25 @@ task CheckLinks {
     exec { Invoke-Expression $cmd }
 }
 
+task ExportPdf {
+    cd pdf
+    exec {
+        npm i --save puppeteer
+        node print.js $Url/print_page "$ProjectName.pdf" "$ProjectName"
+    }
+
+
+    # $chrome = 'chrome'
+    # if (!(Get-Command $chrome -ea 0)) {
+    #     Write-Host "Chrome not on the PATH, using default"
+    #     $chrome = "& '${env:ProgramFiles(x86)}\Google\Chrome\Application\chrome.exe'"
+    # }
+    # $pdfPath = Join-Path $PSScriptRoot "$ProjectName.pdf"
+    # $cmd = "$chrome --headless --disable-gpu  --print-to-pdf='$pdfPath' '$Url/print_page'"
+    # Write-Host $cmd -ForegroundColor yellow
+    # Invoke-Expression $cmd
+}
+
 # Synopsis: Clean generated documentation files (not docker images)
 task Clean { remove source\site, source\__pycache__ }
 
