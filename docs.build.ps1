@@ -37,7 +37,6 @@ task Run Stop, GitRevisionDates, {
     $Env:MM_DOCS_URL_PREFIX = $script:Url
     $ContainerName = "$ContainerName-$aPort"
     docker-run mkdocs serve --dev-addr $ServeAddress -Detach -Expose
-    Wait-For "http://localhost:$aPort"
 }, PingTest
 
 # Synopsis: Build documentation into static site

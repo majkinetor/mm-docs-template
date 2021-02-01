@@ -16,7 +16,6 @@ theme:
         primary: White
     features:
         - navigation.expand
-        - navigation.instant
 
 extra_css:
     - _css/extra.css
