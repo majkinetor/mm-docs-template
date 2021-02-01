@@ -58,7 +58,7 @@ task Stop {
 task CheckLinks {
     Write-Host "Checking links"
     $ContainerName = "$ContainerName-$aPort"
-    $cmd = 'docker exec -t {0} /bin/bash -c "set -o pipefail; blc -erf --filter-level 0 http://localhost:{1}"' -f $ContainerName, $aPort
+    $cmd = 'docker exec -t {0} /bin/sh -c "set -o pipefail; blc -erf --filter-level 0 http://localhost:{1}"' -f $ContainerName, $aPort
     Write-Host $cmd -ForegroundColor yellow
     exec { Invoke-Expression $cmd }
 }
@@ -70,21 +70,11 @@ task PingTest {
 
 # Synopsis: Export PDF of entire site (requires Run)
 task ExportPdf {
-    cd source/pdf
-    exec {
-        npm install --save puppeteer@5.5.0
-        node print.js $Url/print_page "$ProjectName.pdf" "$ProjectName"
-    }
-
-    # $chrome = 'chrome'
-    # if (!(Get-Command $chrome -ea 0)) {
-    #     Write-Host "Chrome not on the PATH, using default"
-    #     $chrome = "& '${env:ProgramFiles(x86)}\Google\Chrome\Application\chrome.exe'"
-    # }
-    # $pdfPath = Join-Path $PSScriptRoot "$ProjectName.pdf"
-    # $cmd = "$chrome --headless --disable-gpu  --print-to-pdf='$pdfPath' '$Url/print_page'"
-    # Write-Host $cmd -ForegroundColor yellow
-    # Invoke-Expression $cmd
+    Write-Host "Exporting PDF"
+    $ContainerName = "$ContainerName-$aPort"
+    $cmd = 'docker exec -t {0} /bin/sh -c "set -o pipefail; npm link puppeteer; node pdf/print.js {1}/print_page/ {2} {3}"' -f $ContainerName, $Url, "$ProjectName.pdf", "$ProjectName"
+    Write-Host $cmd -ForegroundColor yellow
+    exec { Invoke-Expression $cmd }
 }
 
 # Synopsis: Clean generated documentation files (not docker images)
