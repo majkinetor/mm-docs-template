@@ -85,7 +85,7 @@ plugins:
     - macros:
         include_dir: inc
     - print-site:
-        add_to_navigation: true
+        add_to_navigation: false
         print_page_title: 'Print Site'
         add_table_of_contents: true
         add_full_urls: true
@@ -100,3 +100,4 @@ nav:
 - Extra:
     - Variables: vars.md
     - Revision: revision.md
+- Download: download.md

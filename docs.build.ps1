@@ -68,13 +68,20 @@ task PingTest {
     Wait-Action { Invoke-WebRequest $args[0] } -ArgumentList $Url -Timeout 60 -Message "Testing service response: $url"
 }
 
-# Synopsis: Export PDF of entire site (requires Run)
+# Synopsis: Export PDF of entire site (requires Run and print_page plugin)
 task ExportPdf {
-    Write-Host "Exporting PDF"
+    Write-Host "Exporting PDF using"
     $ContainerName = "$ContainerName-$aPort"
-    $cmd = 'docker exec -t {0} /bin/sh -c "set -o pipefail;  npm --no-update-notifier link puppeteer; node pdf/print.js {1}/print_page/ {2} {3}"' -f $ContainerName, $Url, "pdf/$ProjectName.pdf", "$ProjectName"
+    $pdfPath = "pdf/$ProjectName.pdf"
+    Remove-Item $pdfPath -ea 0
+    $cmd = 'docker exec -t {0} /bin/sh -c "set -o pipefail;  npm --no-update-notifier link puppeteer; node pdf/print.js {1}/print_page/ {2} {3}"' -f $ContainerName, $Url, $pdfPath, $ProjectName
     Write-Host $cmd -ForegroundColor yellow
     exec { Invoke-Expression $cmd }
+
+    $pdfPath = "source/$pdfPath"
+    if (!(Test-Path $pdfPath)) { throw 'PDF was not generated' }
+    Write-Host "Copying PDF to site root"
+    Copy-Item $pdfPath source/site/
 }
 
 # Synopsis: Clean generated documentation files (not docker images)
