@@ -58,7 +58,7 @@ task Stop {
 task CheckLinks {
     Write-Host "Checking links"
     $ContainerName = "$ContainerName-$aPort"
-    $cmd = 'docker exec -t {0} /bin/sh -c "set -o pipefail; blc -erf --filter-level 0 http://localhost:{1}"' -f $ContainerName, $aPort
+    $cmd = 'docker exec -t {0} /bin/sh -c "set -o pipefail; blc -erf ---exclude /{2}.pdf --filter-level 0 http://localhost:{1}"' -f $ContainerName, $aPort, $ProjectName
     Write-Host $cmd -ForegroundColor yellow
     exec { Invoke-Expression $cmd }
 }
