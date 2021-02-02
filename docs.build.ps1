@@ -72,7 +72,7 @@ task PingTest {
 task ExportPdf {
     Write-Host "Exporting PDF"
     $ContainerName = "$ContainerName-$aPort"
-    $cmd = 'docker exec -t {0} /bin/sh -c "set -o pipefail; npm link puppeteer; node pdf/print.js {1}/print_page/ {2} {3}"' -f $ContainerName, $Url, "pdf/$ProjectName.pdf", "$ProjectName"
+    $cmd = 'docker exec -t {0} /bin/sh -c "set -o pipefail;  npm --no-update-notifier link puppeteer; node pdf/print.js {1}/print_page/ {2} {3}"' -f $ContainerName, $Url, "pdf/$ProjectName.pdf", "$ProjectName"
     Write-Host $cmd -ForegroundColor yellow
     exec { Invoke-Expression $cmd }
 }
