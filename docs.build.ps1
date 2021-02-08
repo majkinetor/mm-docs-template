@@ -12,7 +12,11 @@ param (
     [int]    $aPort      = (property MM_DOCS_PORT 8000),
 
     # Do not pass proxy environment variables to the docker container
-    [switch] $aNoProxy
+    [switch] $aNoProxy,
+
+    # Top level section to publish judged by the folder name
+    [ValidateSet("", "full", "user", 'tech', 'funspec', 'admin')]
+    [string] $aSection = ""
 )
 
 Enter-Build {
@@ -28,6 +32,12 @@ Enter-Build {
 
     $script:DocsDir = 'source/docs/'
     $script:RevisionPathToRemove  = "$DocsDir"
+
+    if (!$aSection) { $aSection = "full" }
+    if ($aSection -ne 'full') {
+        Write-Host "Using section '$aSection'"
+        $script:ConfigParam = "--config-file " + (Set-MkdocsNavSection -Section $aSection)
+    }
 }
 
 task . Build
@@ -36,13 +46,13 @@ task . Build
 task Run Stop, GitRevisionDates, {
     $Env:MM_DOCS_URL_PREFIX = $script:Url
     $ContainerName = "$ContainerName-$aPort"
-    docker-run mkdocs serve --dev-addr $ServeAddress -Detach -Expose
+    docker-run mkdocs serve --dev-addr $ServeAddress -Detach -Expose $ConfigParam
 }, PingTest
 
 # Synopsis: Build documentation into static site
 task Build GitRevisionDates, {
     $ContainerName = "$ContainerName-build"
-    docker-run mkdocs build
+    docker-run mkdocs build $ConfigParam
 }
 
 # Synopsis: Stop docker documentation container that serves documentation
@@ -175,4 +185,44 @@ function Wait-Action ([ScriptBlock]$Action, [int]$Timeout=20, [string] $Message,
     }
 
     throw "Action timedout. Last error: $err"
+}
+
+# Create mkdocs-<section>.yml file and return its file name
+# SectionName is first level nav section and it is specified by folder name
+# For function to work, the first item in the section MUST point to to the file (e.g. it can't be submenu)
+function Set-MkdocsNavSection ([string] $ConfigPath = "$PSScriptRoot/source/mkdocs.yml", [string]$SectionName)
+{
+    $conf = Get-Content $ConfigPath
+    $navStart = $secStart = $null; $navEnd = $conf.Length; $sections = @()
+    $section = for($i=0; $i -lt $conf.Length; $i++) {
+        if ( $conf[$i] -eq "nav:" ) { $navStart = $i; continue }
+        if (!$navStart) {continue } else { $line = $conf[$i] }
+        if ( $line -notmatch '^(\s+|-)') { $navEnd = $i; break }
+
+        if (!$secEnd) { $secEnd = $secStart -and ($line -like '-*') }
+
+        if ($line -match " $SectionName/" ) {
+            if (!$secStart) { $secStart = $i; $trimLeftIdx = $line.IndexOf('-') }
+            $line.Substring($trimLeftIdx)
+        } else {
+            if ($secStart -and !$secEnd) { $line.Substring($trimLeftIdx) } else {
+                if ($line -match "(?<=: )(.+?)(?=/.+)") {
+                    if ($Matches[0].Trim() -notin $sections) { $sections += $Matches[0] }
+                }
+            }
+        }
+    }
+    if (!$secStart) { throw "Unable to find section '$SectionName'" }
+    $res = $conf[0..$navStart], $section, $conf[$navEnd..$conf.Length]
+
+    # Add other sections to excludes or they will got build anyway
+    $excludeRegEx = 'regex: [({0})/.+]' -f ($sections -join '|')
+    $res = $res.Replace('regex: []', $excludeRegEx )
+
+    $outDir   = Split-Path $ConfigPath
+    $fileName = (Split-Path -Leaf $ConfigPath) -replace '\.yml', "-$SectionName.yml"
+    $outPath = Join-Path $outDir $fileName
+    if (Test-Path $outPath) { Remove-Item $outPath }
+    Set-Content $outPath $res
+    $fileName
 }

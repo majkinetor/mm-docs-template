@@ -18,6 +18,7 @@ View how compiled static site looks like on [demo site](https://majkinetor.githu
 - Beautiful responsive design using the [material](https://squidfunk.github.io/mkdocs-material) theme
 - Custom includables that can be imported in any page: footer, header, abbreviations etc.
 - Variables, Python macros and jinja templates
+- Keep multiple separate documentations in the same project and build only specific one
 - PDF export for individual pages or full site
 - Bad link checker for internal and external links
 - Metainformation for every page - last git modification date, source file, authors, etc.
