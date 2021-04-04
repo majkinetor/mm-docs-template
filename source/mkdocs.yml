@@ -17,6 +17,7 @@ theme:
     features:
         - navigation.expand
         - navigation.instant
+        - navigation.top
 
 extra_css:
     - _css/extra.css
@@ -87,6 +88,10 @@ plugins:
     - macros:
         include_dir: inc
     - print-site:
+        toc_title: Content
+        toc_depth: 2
+        add_print_site_banner: true
+        print_site_banner_template: pdf/banner.tpl
         add_to_navigation: false
         print_page_title: 'Print Site'
         add_table_of_contents: true
