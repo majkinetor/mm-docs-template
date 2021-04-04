@@ -80,7 +80,7 @@ task PingTest {
 
 # Synopsis: Export PDF of entire site (requires Run and print_page plugin)
 task ExportPdf {
-    Write-Host "Exporting PDF using"
+    Write-Host "Exporting PDF"
     $ContainerName = "$ContainerName-$aPort"
     $pdfPath = "pdf/$ProjectName.pdf"
     Remove-Item $pdfPath -ea 0
