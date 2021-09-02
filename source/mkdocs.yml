@@ -1,5 +1,4 @@
 ﻿site_name: MM-DOCS
-site_url: https://majkinetor.github.io/mm-docs-template/
 site_description: MM-DOCS Template
 site_author: majkinetor
 copyright: © majkinetor 2019
@@ -34,7 +33,7 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 
 extra:
-    url_prefix: !!python/object/apply:os.getenv ["MM_DOCS_URL_PREFIX"]
+    url_prefix: !ENV MM_DOCS_URL_PREFIX
     version: 0.1
     # date format: '%d.%m.%Y %H:%M'
     company:
