@@ -1,8 +1,8 @@
 <div class="docinfo print-site-plugin-ignore" style="position:relative; margin-top:3em; padding-bottom: 3em; padding-top: 1em; font-size: smaller; border-top: 2px solid #cccccc">
-    <spans>
+    <div style="float: left">
         ✏️ <b>Last Change</b>: {{ changedate() }}
-    </span>
-    <span style="position:absolute; right:0">
+    </div>
+    <div style="float: right">
         📖 <b>Publication Date</b>: {{ time }}
-    </span>
+    </div>
 </div>
