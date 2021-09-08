@@ -1,5 +1,7 @@
 # MM-DOCS Template
 
+test
+
 [![Build status](https://ci.appveyor.com/api/projects/status/1sybv5w5lgywnwc4?svg=true)](https://ci.appveyor.com/project/majkinetor/mm-docs-template)
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [![](http://transparent-favicon.info/favicon.ico)](#)
