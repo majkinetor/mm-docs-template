@@ -18,7 +18,7 @@ environment:
 
   # Github token to deploy gh-pages
   access_token:
-    secure: 8oiQ158Hlo3etRAscEJFsvbX8tHJXJ8Ad9yNy1IP8zbDIXzUizBpNN0MAa61iBSI
+    secure: si5AmWPbZmlGN9TTNtyubleooJoPFzVgoAUyrG2c+dJym8aaKhvipL/qZMvnK1rs
 
 
 init:
