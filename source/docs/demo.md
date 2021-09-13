@@ -454,12 +454,10 @@ You can also include [parts of the file](https://mkdocs-macros-plugin.readthedoc
 
 ## Environment variables
 
-Environment variables can be used inside of configuration file `mkdocs.yaml`.
+Environment variables can be used inside of configuration file `mkdocs.yaml`. [More...](https://www.mkdocs.org/user-guide/configuration/#environment-variables)
 
 ```
-site_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]
-repo_url: !!python/object/apply:os.getenv ["CI_PROJECT_URL"]
-repo_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]
+site_name: !ENV CI_PROJECT_PATH
 ```
 
 {% include 'footer.md' %}
