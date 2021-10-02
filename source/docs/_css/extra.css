@@ -71,3 +71,16 @@ img.emojione {
 .green {
     color: green;
 }
+
+OL {
+    counter-reset: item
+}
+
+LI {
+    display: block
+}
+
+LI:before {
+    content: counters(item, ".") " ";
+    counter-increment: item
+}
