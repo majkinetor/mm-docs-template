@@ -72,15 +72,15 @@ img.emojione {
     color: green;
 }
 
-OL {
+article OL {
     counter-reset: item
 }
 
-LI {
+article LI {
     display: block
 }
 
-LI:before {
+article LI:before {
     content: counters(item, ".") " ";
     counter-increment: item
 }
