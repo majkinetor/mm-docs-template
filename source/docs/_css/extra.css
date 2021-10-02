@@ -72,6 +72,8 @@ img.emojione {
     color: green;
 }
 
+
+/*
 article OL {
     counter-reset: item
 }
@@ -83,4 +85,4 @@ article LI {
 article LI:before {
     content: counters(item, ".") " ";
     counter-increment: item
-}
+} */
