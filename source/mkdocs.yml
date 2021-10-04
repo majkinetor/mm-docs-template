@@ -24,6 +24,7 @@ theme:
         - navigation.expand
         - navigation.instant
         - navigation.top
+        - navigation.indexes
 
 extra_css:
     - _css/extra.css
@@ -53,6 +54,7 @@ markdown_extensions:
     - def_list
     - attr_list
     - tables
+    - md_in_html
 
     # PyMdown Extensions extensions: https://facelessuser.github.io/pymdown-extensions/
     - pymdownx.betterem:
