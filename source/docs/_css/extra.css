@@ -86,3 +86,10 @@ article LI:before {
     content: counters(item, ".") " ";
     counter-increment: item
 } */
+
+
+/* https://github.com/timvink/mkdocs-print-site-plugin/issues/58 */
+#print-site-page .nav-section-title {
+    page-break-before: avoid !important;
+    page-break-after: avoid !important;
+}
