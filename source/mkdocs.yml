@@ -45,16 +45,16 @@ markdown_extensions:
     # PyMdown extensions: https://python-markdown.github.io/extensions
     - toc:
         permalink: ↵
-    - admonition
-    - footnotes
-    - codehilite
-    - meta
     - abbr
-    - sane_lists
-    - def_list
+    - admonition
     - attr_list
-    - tables
+    - codehilite
+    - def_list
+    - footnotes
     - md_in_html
+    - meta
+    - sane_lists
+    - tables
 
     # PyMdown Extensions extensions: https://facelessuser.github.io/pymdown-extensions/
     - pymdownx.betterem:
@@ -108,6 +108,7 @@ plugins:
         enumerate_figures: true
         add_cover_page: true
         cover_page_template: pdf/cover_page.tpl
+        enabled: true
         exclude:
 nav:
 - Home: index.md
