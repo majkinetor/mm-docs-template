@@ -3,17 +3,17 @@ title: Variables
 foo: bar
 ---
 
-## {{ page.title }}
+# {{ page.title }}
 
-### Context
+## Context
 
 {{ context(navigation) }}
 
-### Page
+## Page
 
 {{ context(page) | pretty }}
 
-### Config
+## Config
 
 {{ context(config) | pretty }}
 

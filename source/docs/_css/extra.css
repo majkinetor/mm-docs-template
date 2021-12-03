@@ -89,7 +89,10 @@ article LI:before {
 
 
 /* https://github.com/timvink/mkdocs-print-site-plugin/issues/58 */
+
 #print-site-page .nav-section-title {
     page-break-before: avoid !important;
     page-break-after: avoid !important;
+    vertical-align: baseline !important;
+    padding-top: 1em !important;
 }
