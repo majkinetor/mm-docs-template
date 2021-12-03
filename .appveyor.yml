@@ -11,7 +11,7 @@ branches:
 image: Ubuntu
 
 environment:
-  MM_DOCS_VERSION: 0.7.3
+  MM_DOCS_VERSION: 0.7.4
 
   # Deprecated
   # MM_DOCS_ENABLE_PDF_EXPORT: 1
