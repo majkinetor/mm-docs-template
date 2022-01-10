@@ -1,3 +1,7 @@
+---
+hide: [toc]
+---
+
 # Download
 
 You can consume this documentation off-line via:
