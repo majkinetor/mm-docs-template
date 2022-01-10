@@ -190,9 +190,8 @@ Use more than 7.000 icons and thousands of emojis in your project documentation 
 
 :purple_heart: :exclamation: :clock1: :tractor: :chicken: :imp:
 
-- :material-account-circle: – `.icons/material/account-circle.svg`
-- :fontawesome-regular-laugh-wink: – `.icons/fontawesome/regular/laugh-wink.svg`
-- :octicons-octoface-24: – `.icons/octicons/octoface-24.svg`
+- :material-account-circle:  – `:material-account-circle:` --> `.icons/material/account-circle.svg`
+- :fontawesome-regular-laugh-wink: – `:fontawesome-regular-laugh-wink:` --> `.icons/fontawesome/regular/laugh-wink.svg`
 
 [:octicons-file-code-24: Source](#1)
 
