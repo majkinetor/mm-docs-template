@@ -321,7 +321,7 @@ Inline math expressions: $p(x|y) = \frac{p(y|x)p(x)}{p(y)}$
 
 ## Code Highlight
 
-[More info](https://squidfunk.github.io/mkdocs-material/extensions/codehilite)
+[More info](https://squidfunk.github.io/mkdocs-material/reference/code-blocks)
 
 ```python
 import tensorflow as tf
@@ -340,7 +340,7 @@ With tabs:
 ===  "PowerShell"
 
     ```powershell
-    "Hello world!"
+    Write-Host "Hello world!"
     ```
 
 === "PlantUML"
