@@ -1,4 +1,7 @@
-﻿# Demonstration page
+﻿---
+tags: [demo, mm-docs system, test]
+---
+# Demonstration page
 
 [mm-docs](https://github.com/majkinetor/mm-docs) demonstration page.
 

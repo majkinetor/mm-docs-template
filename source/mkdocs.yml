@@ -39,6 +39,8 @@ extra:
     # date format: '%d.%m.%Y %H:%M'
     company:
         name: Acme
+    social:
+    - icon: dummy value to show social override
 
 # https://github.com/Python-Markdown/markdown/wiki/Third-Party-Extensions
 markdown_extensions:
@@ -87,6 +89,8 @@ markdown_extensions:
 plugins:
     - search:
         language: en    # https://squidfunk.github.io/mkdocs-material/getting-started/#language
+    - tags:
+        tags_file: tags.md
     - exclude:
         glob: _*.md
     - pdf-export:
