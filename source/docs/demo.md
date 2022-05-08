@@ -33,13 +33,49 @@ For more details about included tools see:
 | ==Colored text==   | `==Colored text==`                 |
 | `Inline code`      | <code>\`Inline code\`</code>       |
 
-## Local files
 
+Subscript and supscript:
+
+```md
+- H~2~0
+- A^T^A
 ```
+
+- H~2~0
+- A^T^A
+
+## Buttons
+
+```md title="Adding button"
+[Subscribe to our newsletter](#){ .md-button }
+```
+
+[Subscribe to our newsletter :fontawesome-solid-paper-plane:](#){ .md-button }
+
+
+## Local files and images
+
+```md
 ![omg-lolcat](files/omg-lolcat.jpg)
 ```
 
 ![omg-lolcat](files/omg-lolcat.jpg)
+
+To align image and add some text next to it you must put in div with class `result`:
+
+```md title="Aligned image"
+<div class="result" markdown>
+![omg-lolcat](files/omg-lolcat.jpg){ align=left }
+</div>
+```
+
+<div class="result" markdown>
+![omg-lolcat](files/omg-lolcat.jpg){ align=left }
+
+Some OMG cat is displayed here.
+
+Some more text here...
+</div>
 
 ### Hotkeys
 
