@@ -27,11 +27,13 @@ theme:
         - navigation.indexes
 
 extra_css:
-    - _css/extra.css
-    - _css/pdf.css
+    - _extra/css/extra.css
+    - _extra/css/pdf.css
 
 extra_javascript:
-  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+  - _extra/js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
     url_prefix: !ENV MM_DOCS_URL_PREFIX
@@ -82,7 +84,8 @@ markdown_extensions:
     - pymdownx.emoji:
         emoji_index: !!python/name:materialx.emoji.twemoji
         emoji_generator: !!python/name:materialx.emoji.to_svg
-    - pymdownx.arithmatex
+    - pymdownx.arithmatex:
+        generic: true
 
     # Extra extensions
     - markdown_include.include:

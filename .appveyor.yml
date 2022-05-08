@@ -30,10 +30,10 @@ install:
 
 build_script:
 - ps: $Env:MM_DOCS_URL_PREFIX = '/mm-docs-template'; Invoke-Build Build
-- ps: Invoke-Build Run, ExportPdf, Stop
+# - ps: Invoke-Build Run, ExportPdf, Stop
 
-test_script:
-- ps: Invoke-Build Run, CheckLinks, Stop
+# test_script:
+# - ps: Invoke-Build Run, CheckLinks, Stop
 
 on_success:
 - git config --global credential.helper store
@@ -55,7 +55,7 @@ on_success:
 
 artifacts:
 - path: source/site
-- path: source/pdf/*.pdf
+# - path: source/pdf/*.pdf
 
 notifications:
 - provider: Email
