@@ -10,6 +10,11 @@ dev_addr: 0.0.0.0:8000
 
 theme:
     custom_dir: overrides
+    features:
+        - navigation.expand
+        - navigation.instant
+        - navigation.top
+        - navigation.indexes
     name: material
     palette:
         - scheme: default
@@ -20,15 +25,10 @@ theme:
           toggle:
               icon: material/lightbulb
               name: Switch to light mode
-    features:
-        - navigation.expand
-        - navigation.instant
-        - navigation.top
-        - navigation.indexes
 
 extra_css:
-    - _extra/css/extra.css
-    - _extra/css/pdf.css
+  - _extra/css/extra.css
+  - _extra/css/pdf.css
 
 extra_javascript:
   - _extra/js/mathjax.js
@@ -64,11 +64,18 @@ markdown_extensions:
     - tables
 
     # PyMdown Extensions extensions: https://facelessuser.github.io/pymdown-extensions/
+    - pymdownx.arithmatex:
+        generic: true
     - pymdownx.betterem:
         smart_enable: all
     - pymdownx.caret
     - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
     - pymdownx.inlinehilite
+    - pymdownx.keys
     - pymdownx.magiclink
     - pymdownx.mark
     - pymdownx.superfences:
@@ -82,13 +89,6 @@ markdown_extensions:
     - pymdownx.tasklist:
         custom_checkbox: true
     - pymdownx.tilde
-    - pymdownx.keys
-    - pymdownx.details
-    - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
-    - pymdownx.arithmatex:
-        generic: true
 
     # Extra extensions
     - markdown_include.include:
@@ -97,19 +97,19 @@ markdown_extensions:
         cachedir: __pycache__
 
 plugins:
+    - exclude:
+        glob: _*.md
+    - macros:
+        include_dir: inc
     - search:
         language: en    # https://squidfunk.github.io/mkdocs-material/getting-started/#language
     - tags:
         tags_file: tags.md
-    - exclude:
-        glob: _*.md
     - pdf-export:
         verbose: false
         media_type: print
         enabled_if_env: MM_DOCS_ENABLE_PDF_EXPORT
         combined: false
-    - macros:
-        include_dir: inc
     - print-site: #https://github.com/timvink/mkdocs-print-site-plugin/blob/master/docs/options.md
         add_to_navigation: false
         print_page_title: 'Print Site'
