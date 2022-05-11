@@ -63,10 +63,10 @@ After building it, static site is available at `source\site` directory and it ca
 
 ## Adding documents
 
-- Add new markdown somewhere in the `source\docs` directory.
-- To be visible in navigation, add to `source\mkdocs.yml` `nav` section, otherwise, the page is available via direct link
-- Add footer, header, abbreviations etc. in `source\inc` folder
-- Add python function and modules in `source\main.py`
-- Override specific mkdocs material theme partials in `source\overrides`
-- Configure PDF and single page stuff in `source\pdf`
-- Configure extra CSS in `docs\_css\extra.css`
+- Add new markdown somewhere in the `source/docs` directory.
+- To be visible in navigation, add to `source/mkdocs.yml` `nav` section, otherwise, the page is available via direct link
+- Add footer, header, abbreviations etc. in `source/inc` folder
+- Add python function and modules in `source/main.py`
+- Override specific mkdocs material theme partials in `source/overrides`
+- Configure PDF and single page stuff in `source/pdf`
+- Configure extra CSS in `docs/_extra/css`
