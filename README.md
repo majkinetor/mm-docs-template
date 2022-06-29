@@ -70,3 +70,7 @@ After building it, static site is available at `source\site` directory and it ca
 - Override specific mkdocs material theme partials in `source/overrides`
 - Configure PDF and single page stuff in `source/pdf`
 - Configure extra CSS in `docs/_extra/css`
+
+## Notes
+
+- To build only specific section (using `ib -aSection <sectionName>`), make sure you have `regex: []` under `exclude` plugin. Because mkdocs builds all pages no matter if they are present in the `nav` section or not, this plugin option is used to NOT build other sections.
