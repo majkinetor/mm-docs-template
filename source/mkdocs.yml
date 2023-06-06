@@ -15,6 +15,7 @@ theme:
         - navigation.instant
         - navigation.top
         - navigation.indexes
+        - content.action.edit
     name: material
     palette:
         - scheme: default
