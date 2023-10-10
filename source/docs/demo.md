@@ -228,12 +228,9 @@ Examples:
 - `:smile:` :smile:
 - `:heart:` :heart:
 - `:thumbsup:` :thumbsup:
+- [:octicons-file-code-24: In a link](#1)
 
 :purple_heart: :exclamation: :clock1: :tractor: :chicken: :imp:
-
-- :material-account-circle:  – `:material-account-circle:` (icon in `.icons/material/account-circle.svg`)
-- :fontawesome-regular-face-laugh: – `:fontawesome-regular-face-laugh:` (icon in `.icons/fontawesome/regular/face-laugh.svg`)
-- [:octicons-file-code-24: In a link](#1)
 
 
 ## Lists
