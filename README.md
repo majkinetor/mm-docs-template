@@ -26,7 +26,7 @@ See entire docs as a [single page](https://majkinetor.github.io/mm-docs-template
 - Bad link checker for internal and external links
 - Metainformation for every page - last git modification date, source file, authors, etc.
 - GitLab/GitHub repository connection for editing within a browser
-- Automated AppVeyor build and deploy to GitHub pages using Ubuntu image
+- Automated AppVeyor and Github actions build and deploy to GitHub pages using Ubuntu image
 - Live reload during editing
 - Cross platform for hosting and development with convenient optional PowerShell task system
 
