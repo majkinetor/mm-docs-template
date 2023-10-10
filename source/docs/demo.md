@@ -219,6 +219,8 @@ Use more than 7.000 icons and thousands of emojis in your project documentation 
 - [More info](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#icons-emojis)
 - [List of emoji codes](https://web.archive.org/save/https://www.webfx.com/tools/emoji-cheat-sheet/)
 
+Examples:
+
 - `:tada:` :tada:
 - `:jack_o_lantern:` :jack_o_lantern:
 - `:alien:` :alien:
@@ -229,10 +231,9 @@ Use more than 7.000 icons and thousands of emojis in your project documentation 
 
 :purple_heart: :exclamation: :clock1: :tractor: :chicken: :imp:
 
-- :material-account-circle:  – `:material-account-circle:` --> `.icons/material/account-circle.svg`
-- :fontawesome-regular-laugh-wink: – `:fontawesome-regular-laugh-wink:` --> `.icons/fontawesome/regular/laugh-wink.svg`
-
-[:octicons-file-code-24: Source](#1)
+- :material-account-circle:  – `:material-account-circle:` (icon in `.icons/material/account-circle.svg`)
+- :fontawesome-regular-face-laugh: – `:fontawesome-regular-face-laugh:` (icon in `.icons/fontawesome/regular/face-laugh.svg`)
+- [:octicons-file-code-24: In a link](#1)
 
 
 ## Lists
