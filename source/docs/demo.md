@@ -287,8 +287,7 @@ rectangle checkout {
 ``&#x60;
 </pre>
 
-```
-plantuml format="svg"
+```plantuml format="svg"
 title PlantUml Demo
 left to right direction
 skinparam packageStyle rectangle
