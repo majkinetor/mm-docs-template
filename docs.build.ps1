@@ -94,6 +94,20 @@ task ExportPdf {
     Copy-Item $pdfPath source/site/
 }
 
+# Synopsis: Export standalone HTML of the entire site
+task ExportHTML Build,{
+    Write-Host "Exporting HTML"
+    $ContainerName = "$ContainerName-$aPort"
+    $htmlPath = "$ProjectName.html"
+    Remove-Item $htmlPath -ea 0
+    $cmd = 'docker exec -t {0} /bin/sh -c "cd site; htmlark print_page/index.html -o {1}"' -f $ContainerName, $htmlPath
+    Write-Host $cmd -ForegroundColor yellow
+    exec { Invoke-Expression $cmd }
+
+    $htmlPath = "source/site/$htmlPath"
+    if (!(Test-Path $htmlPath)) { throw 'HTML was not generated' }
+}
+
 # Synopsis: Clean generated documentation files (not docker images)
 task Clean { remove source\site, source\__pycache__ }
 
