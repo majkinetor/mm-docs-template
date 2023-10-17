@@ -1,6 +1,6 @@
 # MM-DOCS Template
 
-[![Build status](https://ci.appveyor.com/api/projects/status/1sybv5w5lgywnwc4?svg=true)](https://ci.appveyor.com/project/majkinetor/mm-docs-template)
+[![Build status](https://github.com/majkinetor/mm-docs-template/actions/workflows/mm-docs.yml/badge.svg)](https://github.com/majkinetor/mm-docs-template/actions/workflows/mm-docs.yml)
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [VIEW DEMO](https://majkinetor.github.io/mm-docs-template)
