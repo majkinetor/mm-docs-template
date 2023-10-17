@@ -12,7 +12,6 @@ theme:
     custom_dir: overrides
     features:
         - navigation.expand
-        - navigation.instant
         - navigation.top
         - navigation.indexes
         - navigation.footer
@@ -132,6 +131,7 @@ plugins:
       include_css: false
       enabled: true
       exclude:
+  - offline
 nav:
 - Home: index.md
 - Demonstration: demo.md

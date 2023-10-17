@@ -41,10 +41,16 @@ See entire docs as a [single page](https://majkinetor.github.io/mm-docs-template
 
 Within PowerShell use `Invoke-Build` (ib):
 
-|       Command        |                                             Description                                              |
-| -------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ib Build`           | Build static site |
-| `ib Run` | Serve static site locally with live reload  |
+|     Task     |                Description                 |
+| ------------ | ------------------------------------------ |
+| `Build`      | Build static site                          |
+| `Run`        | Serve static site locally with live reload |
+| `Stop`       | Stop  running container                    |
+| `CheckLinks` | Check internal and external links          |
+| `ExportPdf`  | Export PDF of entire site                  |
+| `ExportHTML` | Export standalone HTML of the entire site  |
+| `ExportSite` | Export entire site archive for offline use |
+| `Clean`      | Remove generated data                      |
 
 Otherwise, run appropriate docker commands:
 

@@ -108,6 +108,16 @@ task ExportHTML {
     if (!(Test-Path $htmlPath)) { throw 'HTML was not generated' }
 }
 
+# Synopsis: Export entire site (requires Build and offline plugin)
+task ExporSite {
+    Write-Host "Exporting Site"
+    $sitePath = "$ProjectName.zip"
+    Remove-Item $sitePath -ea 0
+    Compress-Archive source/site/* $sitePath
+    if (!(Test-Path $sitePath)) { throw 'Site zip was not generated' }
+    Move-Item $sitePath source/site
+}
+
 # Synopsis: Clean generated documentation files (not docker images)
 task Clean { remove source\site, source\__pycache__ }
 
