@@ -99,6 +99,7 @@ markdown_extensions:
     - plantuml_markdown
 
 plugins:
+  - offline
   - exclude:
       glob: _*.md
   - macros:
@@ -131,7 +132,6 @@ plugins:
       include_css: false
       enabled: true
       exclude:
-  - offline
 nav:
 - Home: index.md
 - Demonstration: demo.md
