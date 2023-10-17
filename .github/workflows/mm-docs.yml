@@ -8,8 +8,16 @@ jobs:
         shell: pwsh
     steps:
       - uses: actions/checkout@v3
+
       - run: ./Invoke-Build.ps1 Build
+      - run: ./Invoke-Build.ps1 ExportHTML
       - run: ./Invoke-Build.ps1 Run, ExportPdf, Stop
+
+      - name: Upload Artifact - HTML
+        uses: actions/upload-artifact@v2
+        with:
+          name: html
+          path: ./source/site/docs.html
       - name: Upload Artifact - PDF
         uses: actions/upload-artifact@v2
         with:
