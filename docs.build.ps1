@@ -94,8 +94,8 @@ task ExportPdf {
     Copy-Item $pdfPath source/site/
 }
 
-# Synopsis: Export standalone HTML of the entire site
-task ExportHTML Build,{
+# Synopsis: Export standalone HTML of the entire site (requires Build, Run and print_page plugin)
+task ExportHTML {
     Write-Host "Exporting HTML"
     $ContainerName = "$ContainerName-$aPort"
     $htmlPath = "$ProjectName.html"
