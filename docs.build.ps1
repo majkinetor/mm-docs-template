@@ -109,7 +109,7 @@ task ExportHTML {
 }
 
 # Synopsis: Export entire site (requires Build and offline plugin)
-task ExporSite {
+task ExportSite {
     Write-Host "Exporting Site"
     $sitePath = "$ProjectName.zip"
     Remove-Item $sitePath -ea 0
