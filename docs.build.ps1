@@ -15,7 +15,7 @@ param (
     [switch] $aNoProxy,
 
     # Top level section to publish judged by the folder name
-    [ValidateSet("", "full", "user", 'tech', 'funspec', 'admin')]
+    [ValidateSet("", "user", 'tech', 'funspec', 'admin')]
     [string] $aSection = ""
 )
 
@@ -148,6 +148,7 @@ function docker-run( [switch] $Interactive, [switch] $Detach, [switch] $Expose) 
         '-v',    "'${pwd}:/docs'"
         '--name', $ContainerName
         '--env', 'MM_DOCS_ENABLE_PDF_EXPORT'
+        '--env', 'MM_DOCS_NAV'
         '--env', 'MM_DOCS_URL_PREFIX'
 
         if ($IsLinux)     { '--user {0}:{1}' -f $(id -u), $(id -g)  }
@@ -211,40 +212,31 @@ function Wait-Action ([ScriptBlock]$Action, [int]$Timeout=20, [string] $Message,
     throw "Action timedout. Last error: $err"
 }
 
-# Create mkdocs-<section>.yml file and return its file name
-# SectionName is first level nav section and it is specified by folder name
-# For function to work, the first item in the section MUST point to to the file (e.g. it can't be submenu)
-function Set-MkdocsNavSection ([string] $ConfigPath = "$PSScriptRoot/source/mkdocs.yml", [string]$SectionName)
+# Create mkdocs-<sections>.yml file and return its file name
+# Sections are added as comments in a format "### <folder_name>" above the top level nav section
+function Set-MkdocsNavSection ([string] $ConfigPath = "$PSScriptRoot/source/mkdocs.yml", [string[]] $SectionName)
 {
-    $conf = Get-Content $ConfigPath
-    $navStart = $secStart = $null; $navEnd = $conf.Length; $sections = @()
-    $section = for($i=0; $i -lt $conf.Length; $i++) {
-        if ( $conf[$i] -eq "nav:" ) { $navStart = $i; continue }
-        if (!$navStart) {continue } else { $line = $conf[$i] }
-        if ( $line -notmatch '^(\s+|-)') { $navEnd = $i; break }
-
-        if (!$secEnd) { $secEnd = $secStart -and ($line -like '-*') }
-
-        if ($line -match " $SectionName/" ) {
-            if (!$secStart) { $secStart = $i; $trimLeftIdx = $line.IndexOf('-') }
-            $line.Substring($trimLeftIdx)
-        } else {
-            if ($secStart -and !$secEnd) { $line.Substring($trimLeftIdx) } else {
-                if ($line -match "(?<=: )(.+?)(?=/.+)") {
-                    if ($Matches[0].Trim() -notin $sections) { $sections += $Matches[0] }
-                }
-            }
-        }
+    $conf = Get-Content $ConfigPath -Raw
+    $aSections = $conf -split '##'
+    $allSections = @{}
+    for ($i=1; $i -le $aSections.Count; $i++) {
+        $aSections[$i] -match '#\s*(\w+)' | Out-Null
+        $allSections.$($Matches[1]) = $aSections[$i]
     }
-    if (!$secStart) { throw "Unable to find section '$SectionName'" }
-    $res = $conf[0..$navStart], $section, $conf[$navEnd..$conf.Length]
+
+    $res = $aSections[0]; $excluded = @()
+    foreach ($section in $allSections.Keys) {
+        if ($section -notin $SectionName) { $excluded += $section; continue }
+        $res += $allSections.$section
+    }
 
     # Add other sections to excludes or they will got build anyway
-    $excludeRegEx = 'regex: [({0})/.+]' -f ($sections -join '|')
+    $excludeRegEx = 'regex: [({0})/.+]' -f ($excluded -join '|')
     $res = $res.Replace('regex: []', $excludeRegEx )
 
+    $joined = $SectionName -join '-'
     $outDir   = Split-Path $ConfigPath
-    $fileName = (Split-Path -Leaf $ConfigPath) -replace '\.yml', "-$SectionName.yml"
+    $fileName = (Split-Path -Leaf $ConfigPath) -replace '\.yml', "-$joined.yml"
     $outPath = Join-Path $outDir $fileName
     if (Test-Path $outPath) { Remove-Item $outPath }
     Set-Content $outPath $res
