@@ -33,8 +33,7 @@ Enter-Build {
     $script:DocsDir = 'source/docs/'
     $script:RevisionPathToRemove  = "$DocsDir"
 
-    if (!$aSection) { $aSection = "full" }
-    if ($aSection -ne 'full') {
+    if ($aSection) {
         Write-Host "Using section '$aSection'"
         $script:ConfigParam = "--config-file " + (Set-MkdocsNavSection -Section $aSection)
     }
