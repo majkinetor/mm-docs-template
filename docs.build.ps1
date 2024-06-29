@@ -218,7 +218,7 @@ function Set-MkdocsNavSection ([string] $ConfigPath = "$PSScriptRoot/source/mkdo
     $conf = Get-Content $ConfigPath -Raw
     $aSections = $conf -split '##'
     $allSections = @{}
-    for ($i=1; $i -le $aSections.Count; $i++) {
+    for ($i=1; $i -lt $aSections.Count; $i++) {
         $aSections[$i] -match '#\s*(\w+)' | Out-Null
         $allSections.$($Matches[1]) = $aSections[$i]
     }
