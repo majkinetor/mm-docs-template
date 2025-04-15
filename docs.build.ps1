@@ -83,7 +83,7 @@ task ExportPdf {
     $ContainerName = "$ContainerName-$aPort"
     $pdfPath = "pdf/$ProjectName.pdf"
     Remove-Item $pdfPath -ea 0
-    $cmd = 'docker exec -t {0} /bin/sh -c "npm --no-update-notifier link puppeteer; node pdf/print.js {1}/print_page.html {2} {3}"' -f $ContainerName, $Url, $pdfPath, $ProjectName
+    $cmd = 'docker exec -t {0} /bin/sh -c "set -o pipefail; node pdf/print.js http://localhost:{1}/print_page/ {2} {3}"' -f $ContainerName, $aPort, $pdfPath, $ProjectName
     Write-Host $cmd -ForegroundColor yellow
     exec { Invoke-Expression $cmd }
 
