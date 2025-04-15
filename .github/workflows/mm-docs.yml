@@ -13,12 +13,12 @@ jobs:
       - run: ./Invoke-Build.ps1 Run,ExportSite,ExportHTML,ExportPdf,Stop
 
       - name: Upload Artifact - PDF
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: pdf
           path: ./source/pdf/docs.pdf
       - name: Upload Artifact - Site
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: site
           path: ./source/site
