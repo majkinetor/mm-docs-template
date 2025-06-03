@@ -11,7 +11,7 @@ The documentation is created using the [mm-docs](https://github.com/majkinetor/m
 
 View how compiled static site looks like on [demo site](https://majkinetor.github.io/mm-docs-template) or grab generated [artifact](https://ci.appveyor.com/project/majkinetor/mm-docs-template/build/artifacts). Check out [pdf export](https://majkinetor.github.io/mm-docs-template/docs.pdf) of [single demo page](https://majkinetor.github.io/mm-docs-template/demo).
 
-See entire docs as a [single page](https://majkinetor.github.io/mm-docs-template/print_page/) and/or [download](https://majkinetor.github.io/mm-docs-template/download/) it.
+See entire docs as a [single page](https://majkinetor.github.io/mm-docs-template/docs.html) and/or [download](https://majkinetor.github.io/mm-docs-template/download.html) it.
 
 ## Features
 
